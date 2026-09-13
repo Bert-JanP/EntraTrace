@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "MFASweep"
   repository_url: "https://github.com/dafthack/MFASweep"
-last_checked_utc: "2026-09-13T15:51:39Z"
-last_update_utc: "2026-09-13T15:51:39Z"
+last_checked_utc: "2026-09-13T18:33:51Z"
+last_update_utc: "2026-09-13T18:33:51Z"
 user_agents:
   - "Apple-iPhone9C1/1602.92"
   - "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
