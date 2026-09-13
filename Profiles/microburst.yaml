@@ -1,0 +1,196 @@
+version: "1.0"
+tool:
+  name: "MicroBurst"
+  repository_url: "https://github.com/NetSPI/MicroBurst"
+last_checked_utc: "2026-09-13T15:51:40Z"
+last_update_utc: "2026-09-13T15:51:40Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 78
+  total_endpoint_mentions: 159
+  files_scanned: 73
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 52
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 22
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 4
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "http://169.254.169.254/metadata/identity/oauth2/token"
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/&api-version=2019-08-01"
+      - "https://graph.microsoft.com/v1.0/myorganization/applications"
+    resources:
+      - "metadata"
+      - "root"
+      - "&api-version=2019-08-01"
+      - "myorganization"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/$($_.Id)/providers/microsoft.authorization/permissions?api-version=2022-04-01"
+      - "https://management.azure.com/&api-version=2019-08-01"
+      - "https://management.azure.com/providers/microsoft.authorization/elevateaccess?api-version=2016-07-01"
+      - "https://management.azure.com/providers/microsoft.authorization/roleassignments?api-version=2015-07-01"
+      - "https://management.azure.com/providers/microsoft.authorization/roledefinitions?api-version=2015-07-01"
+      - "https://management.azure.com/providers/microsoft.automation/automationaccounts"
+      - "https://management.azure.com/providers/microsoft.automation/automationaccounts?api-version=2015-10-31"
+      - "https://management.azure.com/providers/microsoft.compute/disks?api-version=2020-12-01"
+      - "https://management.azure.com/providers/microsoft.compute/virtualmachines"
+      - "https://management.azure.com/providers/microsoft.compute/virtualmachines?api-version=2020-06-01"
+      - "https://management.azure.com/providers/microsoft.keyvault/vaults?api-version=2019-09-01"
+      - "https://management.azure.com/providers/microsoft.network/networkinterfaces?api-version=2020-11-01"
+      - "https://management.azure.com/providers/microsoft.network/networksecuritygroups?api-version=2020-11-01"
+      - "https://management.azure.com/providers/microsoft.network/publicipaddresses?api-version=2020-11-01"
+      - "https://management.azure.com/providers/microsoft.sql/servers?api-version=2020-08-01-preview"
+      - "https://management.azure.com/providers/microsoft.storage/storageaccounts"
+      - "https://management.azure.com/providers/microsoft.storage/storageaccounts?api-version=2019-06-01"
+      - "https://management.azure.com/providers/microsoft.web/locations"
+      - "https://management.azure.com/providers/microsoft.web/sites"
+      - "https://management.azure.com/providers/microsoft.web/sites?api-version=2019-08-01"
+      - "https://management.azure.com/subscriptions"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/modules?api-version=2019-06-01"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/powershell72modules?api-version=2019-06-01"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/powershell7modules?api-version=2019-06-01"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/python2packages?api-version=2018-06-30"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/python3packages?api-version=2018-06-30"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/python3packages?api-version=2018-06-30&runtimeVersion=3.10"
+      - "https://management.azure.com/subscriptions/$($_.SubscriptionId)/resourcegroups/$($_.ResourceGroupName)/providers/microsoft.automation/automationaccounts/$($_.AutomationAccountName)/runtimeenvironments?api-version=2023-05-15-preview"
+      - "https://management.azure.com/subscriptions/$($subscriptionId)/resourcegroups/$($RGName)/providers/microsoft.network/bastionhosts/$($BastionName)/createshareablelinks?api-version=2022-05-01"
+      - "https://management.azure.com/subscriptions/$($subscriptionId)/resourcegroups/$($RGName)/providers/microsoft.network/bastionhosts/$($BastionName)/getshareablelinks?api-version=2022-05-01"
+      - "https://management.azure.com/subscriptions/$($subscriptionId)/resourcegroups/$($RGName)/providers/microsoft.network/bastionhosts/$($BastionName)?api-version=2022-05-01"
+      - "https://management.azure.com/subscriptions/$Subscription/resourcegroups/$ResourceGroupName/providers/microsoft.machinelearningservices/workspaces/$currentWorkspace/connections/$connectionName/listsecrets?api-version=2023-08-01-preview"
+      - "https://management.azure.com/subscriptions/$Subscription/resourcegroups/$ResourceGroupName/providers/microsoft.machinelearningservices/workspaces/$currentWorkspace/connections?api-version=2023-08-01-preview"
+      - "https://management.azure.com/subscriptions/$SubscriptionID/resourcegroups/$ResourceGroupName/providers/microsoft.containerregistry/registries/$Name/runs/$($taskRun.name)/listlogsasurl?api-version=2019-04-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionID/resourcegroups/$ResourceGroupName/providers/microsoft.containerregistry/registries/$Name/schedulerun?api-version=2019-04-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionID/resourcegroups/$ResourceGroupName/providers/microsoft.containerregistry/registries/$Name/tasks/$($taskName)?api-version=2019-04-01"
+      - "https://management.azure.com/subscriptions/$subID/resourcegroups/$($_.name)/providers/microsoft.app/containerapps?api-version=2022-03-01"
+      - "https://management.azure.com/subscriptions/$subID/resourcegroups?api-version=2022-01-01"
+      - "https://management.azure.com/subscriptions/',$SubscriptionID"
+      - "https://management.azure.com/subscriptions/',$SubscriptionID,'/providers/microsoft.authorization/roledefinitions?api-version=2015-07-01"
+      - "https://management.azure.com/subscriptions/',$SubscriptionId"
+      - "https://management.azure.com/subscriptions/',$SubscriptionId,'/providers/microsoft.storage/storageaccounts?api-version=2019-06-01"
+      - "https://management.azure.com/subscriptions/',$SubscriptionId,'/resourcegroups/',$SARG,'/providers/microsoft.storage/storageaccounts/',$accountName,'/listkeys?api-version=2019-06-01"
+      - "https://management.azure.com/subscriptions/',$SubscriptionId,'?api-version=2019-11-01"
+      - "https://management.azure.com/subscriptions/',$subID,'/resourcegroups/',$_.ResourceGroup,'/providers/microsoft.web/sites/',$_.Name,'/config/authsettingsv2/list?api-version=2018-11-01"
+      - "https://management.azure.com/subscriptions/',$subscriptionId,'/resourcegroups/',$resourceGroupId,'/providers/microsoft.automation/automationaccounts/',$automationAccount,'/jobs/',$jobGUID,'/output?api-version=2015-10-31"
+      - "https://management.azure.com/subscriptions/',$subscriptionId,'/resourcegroups/',$resourceGroupId,'/providers/microsoft.automation/automationaccounts/',$automationAccount,'/jobs/',$jobGUID,'?api-version=2015-10-31"
+      - "https://management.azure.com/subscriptions/',$subscriptionId,'/resourcegroups/',$resourceGroupId,'/providers/microsoft.automation/automationaccounts/',$automationAccount,'/runbooks/',$runbookName,'/draft/content?api-version=2015-10-31"
+      - "https://management.azure.com/subscriptions/',$subscriptionId,'/resourcegroups/',$resourceGroupId,'/providers/microsoft.automation/automationaccounts/',$automationAccount,'/runbooks/',$runbookName,'/draft/publish?api-version=2015-10-31"
+      - "https://management.azure.com/subscriptions/',$subscriptionId,'/resourcegroups/',$resourceGroupId,'/providers/microsoft.automation/automationaccounts/',$automationAccount,'/runbooks/',$runbookName,'?api-version=2015-10-31"
+      - "https://management.azure.com/subscriptions?api-version=2019-11-01"
+    resources:
+      - "root"
+      - "$($_.Id)"
+      - "&api-version=2019-08-01"
+      - "providers"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "$($batchcontext.accountendpoint)"
+      endpoints:
+        - "https://$($batchcontext.accountendpoint)/jobs?api-version=2022-10-01.16.0&maxresults=1000&paginationeffort=1"
+      resources:
+        - "jobs"
+    -
+      host: "$($endpoint)"
+      endpoints:
+        - "https://$($endpoint)/tests/$($testGUID)?api-version=2024-12-01-preview"
+      resources:
+        - "tests"
+    -
+      host: "$appconfiguration.azconfig.io"
+      endpoints:
+        - "https://$appconfiguration.azconfig.io/kv?api-version=1.0"
+        - "https://$appconfiguration.azconfig.io/kv?snapshot=$SnapshotName&api-version=2023-11-01"
+        - "https://$appconfiguration.azconfig.io/snapshots?api-version=2023-11-01"
+      resources:
+        - "kv"
+        - "snapshots"
+    -
+      host: "$endpoint"
+      endpoints:
+        - "https://$endpoint/test-runs/$($runGUID)?api-version=2024-12-01-preview"
+        - "https://$endpoint/test-runs?testId=$($testGUID)&api-version=2024-12-01-preview"
+        - "https://$endpoint/tests/$($testGUID)?api-version=2024-12-01-preview"
+        - "https://$endpoint/tests/$testGUID/files/microburst.jmx?fileType=TEST_SCRIPT&api-version=2024-12-01-preview"
+        - "https://$endpoint/tests/$testGUID/files/microburst.py?fileType=TEST_SCRIPT&api-version=2024-12-01-preview"
+      resources:
+        - "test-runs"
+        - "tests"
+    -
+      host: "',$registry,'"
+      endpoints:
+        - "https://',$registry,'/v2/',$_,'/tags/list"
+        - "https://',$registry,'/v2/_catalog"
+      resources:
+        - "v2"
+    -
+      host: "',$vault.name,'.vault.azure.net"
+      endpoints:
+        - "https://',$vault.name,'.vault.azure.net/keys?api-version=7.0"
+        - "https://',$vault.name,'.vault.azure.net/secrets?api-version=7.0"
+      resources:
+        - "keys"
+        - "secrets"
+    -
+      host: "api.bing.microsoft.com"
+      endpoints:
+        - "https://api.bing.microsoft.com/v7.0/search?q=$BingQuery&count=50"
+      resources:
+        - "v7.0"
+    -
+      host: "docs.docker.com"
+      endpoints:
+        - "https://docs.docker.com/registry/spec/api"
+      resources:
+        - "registry"
+    -
+      host: "management.azure.com$($_.id)"
+      endpoints:
+        - "https://management.azure.com$($_.id)/listSecrets?api-version=2022-03-01"
+      resources:
+        - "listsecrets"
+    -
+      host: "management.azure.com$($app.id)"
+      endpoints:
+        - "https://management.azure.com$($app.id)/Config/authsettings/list?api-version=2016-03-01"
+      resources:
+        - "config"
+    -
+      host: "management.azure.com',$clusterid,'"
+      endpoints:
+        - "https://management.azure.com',$clusterid,'/listClusterAdminCredential?api-version=2021-05-01"
+        - "https://management.azure.com',$clusterid,'/listClusterUserCredential?api-version=2021-05-01"
+      resources:
+        - "listclusteradmincredential"
+        - "listclusterusercredential"
+    -
+      host: "management.azure.com',$server.id,'"
+      endpoints:
+        - "https://management.azure.com',$server.id,'/databases?api-version=2020-08-01-preview"
+      resources:
+        - "databases"
+    -
+      host: "ml.azure.com"
+      endpoints:
+        - "https://ml.azure.com/api"
+      resources:
+        - "api"

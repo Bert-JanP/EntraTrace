@@ -1,0 +1,35 @@
+version: "1.0"
+tool:
+  name: "o365enum"
+  repository_url: "https://github.com/gremwell/o365enum"
+last_checked_utc: "2026-09-13T15:51:42Z"
+last_update_utc: "2026-09-13T15:51:42Z"
+user_agents:
+  - "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro"
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+summary:
+  total_unique_endpoints: 1
+  total_endpoint_mentions: 1
+  files_scanned: 1
+  api_families:
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []

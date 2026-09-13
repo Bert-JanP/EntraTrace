@@ -1,0 +1,33 @@
+version: "1.0"
+tool:
+  name: "MSOLSpray"
+  repository_url: "https://github.com/dafthack/MSOLSpray"
+last_checked_utc: "2026-09-13T15:51:41Z"
+last_update_utc: "2026-09-13T15:51:41Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 1
+  total_endpoint_mentions: 1
+  files_scanned: 1
+  api_families:
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []

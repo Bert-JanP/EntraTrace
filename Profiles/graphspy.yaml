@@ -1,0 +1,111 @@
+version: "1.0"
+tool:
+  name: "GraphSpy"
+  repository_url: "https://github.com/RedByte1337/GraphSpy"
+last_checked_utc: "2026-09-13T15:51:37Z"
+last_update_utc: "2026-09-13T15:51:37Z"
+user_agents:
+  - "Dsreg/10.0 (Windows 10.0.19044.1826)"
+summary:
+  total_unique_endpoints: 38
+  total_endpoint_mentions: 51
+  files_scanned: 36
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 20
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 18
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/approleassignments"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/drives"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/owners"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/sites"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/team"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/transitivememberof"
+      - "https://graph.microsoft.com/groups/{parsed_group_id}/transitivemembers"
+      - "https://graph.microsoft.com/users/{parsed_user_id}/approleassignments"
+      - "https://graph.microsoft.com/users/{parsed_user_id}/oauth2permissiongrants"
+      - "https://graph.microsoft.com/users/{parsed_user_id}/owneddevices"
+      - "https://graph.microsoft.com/users/{parsed_user_id}/ownedobjects"
+      - "https://graph.microsoft.com/v1.0/$batch"
+      - "https://graph.microsoft.com/v1.0/drives"
+      - "https://graph.microsoft.com/v1.0/drives/${drive_id}"
+      - "https://graph.microsoft.com/v1.0/drives/${drive_id}/items/${item_id}"
+      - "https://graph.microsoft.com/v1.0/me/drive"
+      - "https://graph.microsoft.com/v1.0/users?$top=999"
+    resources:
+      - "root"
+      - ".default"
+      - "groups"
+      - "users"
+      - "$batch"
+      - "drives"
+      - "me"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "api.azrbac.mspim.azure.com"
+      endpoints:
+        - "https://api.azrbac.mspim.azure.com/api/v2/privilegedAccess/aadroles/resources?$select=id,displayName,type,externalId&$expand=parent"
+      resources:
+        - "api"
+    -
+      host: "enterpriseregistration.windows.net"
+      endpoints:
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device?api-version=2.0"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/key?api-version=1.0"
+      resources:
+        - "enrollmentserver"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"
+    -
+      host: "login.windows.net"
+      endpoints:
+        - "https://login.windows.net/common/oauth2/v2.0/token"
+      resources:
+        - "common"
+    -
+      host: "mysignins.microsoft.com"
+      endpoints:
+        - "https://mysignins.microsoft.com/api/authenticationmethods/availablemethods"
+        - "https://mysignins.microsoft.com/api/authenticationmethods/delete"
+        - "https://mysignins.microsoft.com/api/authenticationmethods/initializemobileapp"
+        - "https://mysignins.microsoft.com/api/authenticationmethods/new"
+        - "https://mysignins.microsoft.com/api/authenticationmethods/verify"
+        - "https://mysignins.microsoft.com/api/captcha/validation"
+        - "https://mysignins.microsoft.com/api/captcha?challengeType=Visual&locale=en-US"
+        - "https://mysignins.microsoft.com/api/session/authorize"
+      resources:
+        - "api"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/authsvc/v1.0/authz"
+      resources:
+        - "api"

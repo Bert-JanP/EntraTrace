@@ -1,0 +1,153 @@
+version: "1.0"
+tool:
+  name: "TeamFiltration"
+  repository_url: "https://github.com/Flangvik/TeamFiltration"
+last_checked_utc: "2026-09-13T15:51:53Z"
+last_update_utc: "2026-09-13T15:51:53Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+summary:
+  total_unique_endpoints: 62
+  total_endpoint_mentions: 99
+  files_scanned: 95
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 29
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 23
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 10
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/domains"
+      - "https://graph.microsoft.com/v1.0/drives/{driveId}"
+      - "https://graph.microsoft.com/v1.0/drives/{item.ParentReference.DriveId}/items/{item.Id}"
+      - "https://graph.microsoft.com/v1.0/drives/{item.ParentReference.DriveId}/items/{item.Id}/children"
+      - "https://graph.microsoft.com/v1.0/drives/{item.ParentReference.DriveId}/items/{item.Id}/content"
+      - "https://graph.microsoft.com/v1.0/drives/{item.RemoteItem.ParentReference.DriveId}/items/{item.RemoteItem.Id}"
+      - "https://graph.microsoft.com/v1.0/drives/{item.RemoteItem.ParentReference.DriveId}/items/{item.RemoteItem.Id}/children"
+      - "https://graph.microsoft.com/v1.0/drives/{item.RemoteItem.ParentReference.DriveId}/items/{item.RemoteItem.Id}/content"
+      - "https://graph.microsoft.com/v1.0/groups/{groupId}/members"
+      - "https://graph.microsoft.com/v1.0/groups?$top=800&$select=mailNickname,id,displayName"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/drive"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{id}"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{id}/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{id}/children?$skiptoken="
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{item.Id}"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{item.Id}/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{item.Id}/content"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{parentFolder.Id}/children/{filename}/content"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{parentFolder.Id}/children/{filename}/createuploadsession"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{parentFolder.Id}:/{fileName}:/content"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{parentFolder.Id}:/{fileName}:/createuploadsession"
+      - "https://graph.microsoft.com/v1.0/me/drive/root/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/sharedwithme"
+      - "https://graph.microsoft.com/v1.0/sites"
+      - "https://graph.microsoft.com/v1.0/sites/root"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "root"
+      - "v1.0"
+      - "domains"
+      - "drives"
+      - "groups"
+      - "me"
+      - "sites"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/75bbd831-230c-4b8e-ba6a-c9517320c1b1/$metadata"
+      - "https://graph.windows.net/{tenantId}/domains?&api-version=1.6"
+      - "https://graph.windows.net/{tenantId}/domains?&api-version=1.6&$skiptoken="
+      - "https://graph.windows.net/{tenantId}/groups/{groupId}/members?&api-version=1.6&$select=userPrincipalName,mail,mailNickname,objectId,displayName,facsimileTelephoneNumber,department,mobile"
+      - "https://graph.windows.net/{tenantId}/groups/{groupId}/members?&api-version=1.6&$select=userPrincipalName,mail,mailNickname,objectId,displayName,facsimileTelephoneNumber,department,mobile&$skiptoken="
+      - "https://graph.windows.net/{tenantId}/groups?&api-version=1.6&$top=800&$select=objectType,description,objectId,displayName,mailNickname,onPremisesSamAccountName"
+      - "https://graph.windows.net/{tenantId}/groups?&api-version=1.6&$top=800&$select=objectType,description,objectId,displayName,mailNickname,onPremisesSamAccountName&$skiptoken="
+      - "https://graph.windows.net/{tenantId}/users?&api-version=1.6"
+      - "https://graph.windows.net/{tenantId}/users?&api-version=1.6&$skiptoken="
+    resources:
+      - "root"
+      - "75bbd831-230c-4b8e-ba6a-c9517320c1b1"
+      - "domains"
+      - "groups"
+      - "users"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "api.dehashed.com"
+      endpoints:
+        - "https://api.dehashed.com/v2/search"
+      resources:
+        - "v2"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+        - "https://api.spaces.skype.com/.default"
+      resources:
+        - "root"
+        - ".default"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"
+    -
+      host: "outlook.office.com"
+      endpoints:
+        - "https://outlook.office.com/api/v2.0/me/events"
+        - "https://outlook.office.com/api/v2.0/me/events?$top=20&$skip="
+        - "https://outlook.office.com/api/v2.0/me/messages/{msgId}/attachments/{attachemntId}"
+        - "https://outlook.office.com/api/v2.0/me/messages/{msgid}/attachments"
+        - "https://outlook.office.com/api/v2.0/me/messages/{msgid}?$select=body,from,subject,id,ReceivedDateTime,HasAttachments"
+        - "https://outlook.office.com/api/v2.0/me/messages?$top=500&$select=id"
+        - "https://outlook.office.com/api/v2.0/me/messages?$top=500&$skip="
+      resources:
+        - "api"
+    -
+      host: "presence.teams.microsoft.com"
+      endpoints:
+        - "https://presence.teams.microsoft.com/v1/presence/getpresence"
+      resources:
+        - "v1"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/mt"
+        - "https://teams.microsoft.com/api/mt/{TeamsRegion}/beta/me/files/availability"
+        - "https://teams.microsoft.com/api/mt/{TeamsRegion}/beta/me/recent/files"
+        - "https://teams.microsoft.com/api/mt/{TeamsRegion}/beta/users/8:orgid:{tenantId}/workingWith?enableEnhancedSearch=false&enableGuest=true"
+        - "https://teams.microsoft.com/api/mt/{TeamsRegion}/beta/users/searchV2?includeDLs=true&includeBots=true&enableGuest=true&source=newChat&skypeTeamsInfo=true"
+        - "https://teams.microsoft.com/api/mt/{TeamsRegion}/beta/users/tenants"
+        - "https://teams.microsoft.com/v1/users/ME/properties"
+      resources:
+        - "api"
+        - "v1"
+    -
+      host: "{teamsregion}.ng.msg.teams.microsoft.com"
+      endpoints:
+        - "https://{teamsregion}.ng.msg.teams.microsoft.com/v1/threads/{meetingId}?view=msnp24Equivalent"
+        - "https://{teamsregion}.ng.msg.teams.microsoft.com/v1/users/ME/conversations"
+      resources:
+        - "v1"

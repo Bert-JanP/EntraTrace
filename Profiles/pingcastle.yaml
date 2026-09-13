@@ -1,0 +1,81 @@
+version: "1.0"
+tool:
+  name: "pingcastle"
+  repository_url: "https://github.com/netwrix/pingcastle"
+last_checked_utc: "2026-09-13T15:51:43Z"
+last_update_utc: "2026-09-13T15:51:43Z"
+user_agents:
+  - "PingCastleAutoUpdater"
+summary:
+  total_unique_endpoints: 14
+  total_endpoint_mentions: 16
+  files_scanned: 543
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 8
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 5
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/drives/drive"
+      - "https://graph.microsoft.com/groups/user"
+      - "https://login.microsoftonline.com/organizations/oauth2/nativeclient"
+    resources:
+      - "root"
+      - ".default"
+      - "drives"
+      - "groups"
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis:
+    -
+      host: "api.github.com"
+      endpoints:
+        - "https://api.github.com/repos/netwrix/pingcastle/releases"
+      resources:
+        - "repos"
+    -
+      host: "https:"
+      endpoints:
+        - "https://https:/learn.microsoft.com/en-us/dotnet/api/system.net.securityprotocoltype?view=netcore-3.1"
+        - "https://https:/learn.microsoft.com/en-us/windows/win32/api/winnt/ne-winnt-token_elevation_type"
+        - "https://https:/learn.microsoft.com/en-us/windows/win32/api/winnt/ne-winnt-token_information_class"
+      resources:
+        - "learn.microsoft.com"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"
+    -
+      host: "main.iam.ad.ext.azure.com"
+      endpoints:
+        - "https://main.iam.ad.ext.azure.com/api/Directories"
+      resources:
+        - "api"

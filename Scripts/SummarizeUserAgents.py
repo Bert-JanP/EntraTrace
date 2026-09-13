@@ -8,8 +8,8 @@ from pathlib import Path
 
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_PROFILES_DIR = REPO_ROOT / "api-behavior-agent" / "profiles"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_PROFILES_DIR = REPO_ROOT / "Profiles"
 DEFAULT_OUTPUT = REPO_ROOT / "Indicator Lists" / "UserAgents.csv"
 
 

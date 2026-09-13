@@ -1,0 +1,70 @@
+version: "1.0"
+tool:
+  name: "AzureHound"
+  repository_url: "https://github.com/SpecterOps/AzureHound"
+last_checked_utc: "2026-09-13T15:51:34Z"
+last_update_utc: "2026-09-13T15:51:34Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 28
+  total_endpoint_mentions: 39
+  files_scanned: 561
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 25
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01"
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/policies/rolemanagementpolicyassignments"
+    resources:
+      - "metadata"
+      - "root"
+      - "policies"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/providers/microsoft.management/managementgroups"
+      - "https://management.azure.com/providers/microsoft.management/managementgroups/%s/descendants"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.automation/automationaccounts"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.compute/virtualmachines"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.compute/virtualmachinescalesets"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.containerregistry/registries"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.containerservice/managedclusters"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.keyvault/vaults"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.logic/workflows"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.storage/storageaccounts"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.web/sites"
+      - "https://management.azure.com/subscriptions/%s/resourcegroups"
+      - "https://management.azure.com/subscriptions/%s/resourcegroups/%s/providers/microsoft.storage/storageaccounts/%s/blobservices/default/containers"
+      - "https://management.azure.com/subscriptions/s/resourcegroups/bhe_rg/providers/microsoft.containerregistry/registries/specterdev"
+      - "https://management.azure.com/subscriptions/s/resourcegroups/rg-1"
+      - "https://management.azure.com/subscriptions/s/resourcegroups/rg/providers/vm-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1/providers/kv-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1/providers/mc-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1/providers/sa-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1/providers/sa-1/blobservices/default/containers/c-1"
+      - "https://management.azure.com/subscriptions/sub-1/resourcegroups/rg-1/providers/vm-1"
+      - "https://management.azure.com/subscriptions/subid/resourcegroups/rg1/providers/microsoft.network/virtualnetworks/test-vnet/subnets/subnet1"
+      - "https://management.azure.com/subscriptions/{subscriptionId}/resourcegroups/{groupName}/providers/microsoft.managedidentity/userassignedidentities/{identityName}"
+    resources:
+      - "root"
+      - "providers"
+      - "subscriptions"
+  other_apis: []

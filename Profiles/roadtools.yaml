@@ -1,0 +1,1965 @@
+version: "1.0"
+tool:
+  name: "ROADtools"
+  repository_url: "https://github.com/dirkjanm/ROADtools"
+last_checked_utc: "2026-09-13T18:28:03Z"
+last_update_utc: "2026-09-13T18:28:03Z"
+user_agents:
+  - "DeviceRegistrationClient"
+  - "Dsreg/10.0 (Windows 10.0.19044.1826)"
+  - "Microsoft ADO.NET Data Services"
+  - "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0 Teams/24295.605.3225.8804/49"
+summary:
+  total_unique_endpoints: 434
+  total_endpoint_mentions: 863
+  files_scanned: 110
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 402
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 16
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 10
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 6
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/beta/me"
+      - "https://graph.microsoft.com/beta/users/{args.user}"
+      - "https://graph.microsoft.com/files.read"
+      - "https://graph.microsoft.com/groups"
+      - "https://graph.microsoft.com/policies/locations"
+      - "https://graph.microsoft.com/users"
+      - "https://graph.microsoft.com/users/:objectid"
+      - "https://login.microsoftonline.com/organizations/oauth2/nativeclient"
+      - "https://login.microsoftonline.us/organizations/oauth2/nativeclient"
+    resources:
+      - "root"
+      - "me"
+      - "users"
+      - "files.read"
+      - "groups"
+      - "policies"
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/%s/%s/%s/$links/%s?api-version=%s"
+      - "https://graph.windows.net/%s/%s/%s/%s?api-version=%s"
+      - "https://graph.windows.net/%s/%s/%s?api-version=%s"
+      - "https://graph.windows.net/%s/%s/%s?api-version=%s&$select=strongAuthenticationDetail,objectId"
+      - "https://graph.windows.net/%s/%s?api-version=%s&$expand=%s"
+      - "https://graph.windows.net/%s/%s?api-version=1.61-internal"
+      - "https://graph.windows.net/%s/%s?api-version=1.61-internal&$select=keyCredentials,objectId"
+      - "https://graph.windows.net/%s/eligibleroleassignments?api-version=%s&$filter=roleDefinitionId"
+      - "https://graph.windows.net/%s/roleassignments?api-version=%s&$filter=roleDefinitionId"
+      - "https://graph.windows.net/.default"
+      - "https://graph.windows.net/groups"
+      - "https://graph.windows.net/policies/locations"
+      - "https://graph.windows.net/users"
+      - "https://graph.windows.net/users/:objectid"
+      - "https://graph.windows.net/{urlparts[3]}/$batch?api-version=1.61-internal"
+    resources:
+      - "root"
+      - "%s"
+      - ".default"
+      - "groups"
+      - "policies"
+      - "users"
+      - "$batch"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/providers/microsoft.authorization/roledefinitions?api-version=2015-06-01"
+      - "https://management.azure.com/providers/microsoft.resourcegraph/resources?api-version=2021-03-01"
+      - "https://management.azure.com/subscriptions/{subscription['subscriptionId']}/providers/microsoft.authorization/roleassignments?api-version=2022-04-01"
+      - "https://management.azure.com/subscriptions/{subscription['subscriptionId']}/providers/microsoft.authorization/roleeligibilityscheduleinstances?api-version=2020-10-01"
+      - "https://management.azure.com/subscriptions?api-version=2024-11-01"
+    resources:
+      - "root"
+      - "providers"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "127.0.0.1:5000"
+      endpoints:
+        - "http://127.0.0.1:5000/api"
+      resources:
+        - "api"
+    -
+      host: "4psconstruct.api.bc.dynamics.com"
+      endpoints:
+        - "https://4psconstruct.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "aad.portal.azure.com"
+      endpoints:
+        - "https://aad.portal.azure.com/TokenAuthorize"
+        - "https://aad.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://aad.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "accounts.accesscontrol.windows.net"
+      endpoints:
+        - "https://accounts.accesscontrol.windows.net/{self.tenant}/tokens/OAuth/2"
+      resources:
+        - "tokens"
+    -
+      host: "ae-metricservice-dev.azurewebsites.net"
+      endpoints:
+        - "https://ae-metricservice-dev.azurewebsites.net/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "ai.azure.com"
+      endpoints:
+        - "https://ai.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "aircapi.commerceapi.office.net"
+      endpoints:
+        - "https://aircapi.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://aircapi.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "aircapi.proposal.microsoft.com"
+      endpoints:
+        - "https://aircapi.proposal.microsoft.com/v1/my-org/commercial/getindex"
+        - "https://aircapi.proposal.microsoft.com/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "amp.api.bc.dynamics.com"
+      endpoints:
+        - "https://amp.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "ams-frontdoors-prod.azurefd.net"
+      endpoints:
+        - "https://ams-frontdoors-prod.azurefd.net/swagger/oauth2-redirect.html"
+      resources:
+        - "swagger"
+    -
+      host: "ams-service-prod-wus2.azurewebsites.net"
+      endpoints:
+        - "https://ams-service-prod-wus2.azurewebsites.net/swagger/oauth2-redirect.html"
+      resources:
+        - "swagger"
+    -
+      host: "analysis.usgovcloudapi.net"
+      endpoints:
+        - "https://analysis.usgovcloudapi.net/powerbi/api"
+      resources:
+        - "powerbi"
+    -
+      host: "analysis.windows.net"
+      endpoints:
+        - "https://analysis.windows.net/powerbi/api"
+      resources:
+        - "powerbi"
+    -
+      host: "api.aadr.mspim.azure.com"
+      endpoints:
+        - "https://api.aadr.mspim.azure.com"
+      resources:
+        - "root"
+    -
+      host: "api.aadrm.com"
+      endpoints:
+        - "https://api.aadrm.com"
+      resources:
+        - "root"
+    -
+      host: "api.aadrm.sovnext2.us"
+      endpoints:
+        - "https://api.aadrm.sovnext2.us"
+      resources:
+        - "root"
+    -
+      host: "api.aadrm.us"
+      endpoints:
+        - "https://api.aadrm.us"
+      resources:
+        - "root"
+    -
+      host: "api.accessreviews.identitygovernance.azure.com"
+      endpoints:
+        - "https://api.accessreviews.identitygovernance.azure.com"
+      resources:
+        - "root"
+    -
+      host: "api.acompli.com"
+      endpoints:
+        - "https://api.acompli.com/exchange"
+      resources:
+        - "exchange"
+    -
+      host: "api.adu.microsoft.com"
+      endpoints:
+        - "https://api.adu.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.advisor.powerapps.com"
+      endpoints:
+        - "https://api.advisor.powerapps.com"
+      resources:
+        - "root"
+    -
+      host: "api.agent-oauth.azureml.ms"
+      endpoints:
+        - "https://api.agent-oauth.azureml.ms/agent-oauth/v1.0/redirect"
+      resources:
+        - "agent-oauth"
+    -
+      host: "api.aimon.applicationinsights.io"
+      endpoints:
+        - "https://api.aimon.applicationinsights.io"
+      resources:
+        - "root"
+    -
+      host: "api.analysis.insights.svc.cloud.microsoft"
+      endpoints:
+        - "https://api.analysis.insights.svc.cloud.microsoft"
+      resources:
+        - "root"
+    -
+      host: "api.applicationinsights.io"
+      endpoints:
+        - "https://api.applicationinsights.io"
+      resources:
+        - "root"
+    -
+      host: "api.azrbac.mspim.azure.com"
+      endpoints:
+        - "https://api.azrbac.mspim.azure.com"
+        - "https://api.azrbac.mspim.azure.com/api/{self.api_version}/{objecttype}/{parent.id}/{linktype}"
+        - "https://api.azrbac.mspim.azure.com/api/{self.api_version}/{objecttype}?$expand=subject&$select=subject,id"
+      resources:
+        - "root"
+        - "api"
+    -
+      host: "api.bing.microsoft.com"
+      endpoints:
+        - "https://api.bing.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.businesscentral.dynamics.com"
+      endpoints:
+        - "https://api.businesscentral.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "api.cc.skype.com"
+      endpoints:
+        - "https://api.cc.skype.com"
+      resources:
+        - "root"
+    -
+      host: "api.cfp.microsoft-int.com"
+      endpoints:
+        - "https://api.cfp.microsoft-int.com"
+      resources:
+        - "root"
+    -
+      host: "api.cfp.microsoft-ppe.com"
+      endpoints:
+        - "https://api.cfp.microsoft-ppe.com"
+      resources:
+        - "root"
+    -
+      host: "api.cfp.microsoft.com"
+      endpoints:
+        - "https://api.cfp.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.ci.ai.dynamics.com"
+      endpoints:
+        - "https://api.ci.ai.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "api.ci.ai.microsoft.com"
+      endpoints:
+        - "https://api.ci.ai.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.connections.ms"
+      endpoints:
+        - "https://api.connections.ms"
+      resources:
+        - "root"
+    -
+      host: "api.conv.skype.com"
+      endpoints:
+        - "https://api.conv.skype.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.dynamics-int.com"
+      endpoints:
+        - "https://api.dfp.dynamics-int.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.dynamics-ppe.com"
+      endpoints:
+        - "https://api.dfp.dynamics-ppe.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.dynamics.com"
+      endpoints:
+        - "https://api.dfp.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.microsoft-dev.com"
+      endpoints:
+        - "https://api.dfp.microsoft-dev.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.microsoft-int.com"
+      endpoints:
+        - "https://api.dfp.microsoft-int.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.microsoft-ppe.com"
+      endpoints:
+        - "https://api.dfp.microsoft-ppe.com"
+      resources:
+        - "root"
+    -
+      host: "api.dfp.microsoft.com"
+      endpoints:
+        - "https://api.dfp.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.diagnostics-eudb.office.com"
+      endpoints:
+        - "https://api.diagnostics-eudb.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.diagnostics.office.com"
+      endpoints:
+        - "https://api.diagnostics.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.diagnosticssdf.office.com"
+      endpoints:
+        - "https://api.diagnosticssdf.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.dm-beta.microsoft.com"
+      endpoints:
+        - "https://api.dm-beta.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.dm-mig.microsoft.com"
+      endpoints:
+        - "https://api.dm-mig.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.dm-selfhost.microsoft.com"
+      endpoints:
+        - "https://api.dm-selfhost.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.dm.microsoft.com"
+      endpoints:
+        - "https://api.dm.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.engage.cloud.microsoft"
+      endpoints:
+        - "https://api.engage.cloud.microsoft"
+      resources:
+        - "root"
+    -
+      host: "api.fabric.microsoft.com"
+      endpoints:
+        - "https://api.fabric.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.financials.dynamics.com"
+      endpoints:
+        - "https://api.financials.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "api.gcc.analysis.insights.svc.cloud.microsoft"
+      endpoints:
+        - "https://api.gcc.analysis.insights.svc.cloud.microsoft"
+      resources:
+        - "root"
+    -
+      host: "api.gcc.orginsights.viva.office.com"
+      endpoints:
+        - "https://api.gcc.orginsights.viva.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.gcc.teams.microsoft.com"
+      endpoints:
+        - "https://api.gcc.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.gov.powerplatform.microsoft.us"
+      endpoints:
+        - "https://api.gov.powerplatform.microsoft.us"
+      resources:
+        - "root"
+    -
+      host: "api.hostedmigrationservice.microsoft.com"
+      endpoints:
+        - "https://api.hostedmigrationservice.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.informationprotection.azure.com"
+      endpoints:
+        - "https://api.informationprotection.azure.com"
+      resources:
+        - "root"
+    -
+      host: "api.insightsplatform.microsoft.com"
+      endpoints:
+        - "https://api.insightsplatform.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.interfaces.records.teams.microsoft.com"
+      endpoints:
+        - "https://api.interfaces.records.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.loganalytics.io"
+      endpoints:
+        - "https://api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "api.manage-beta.microsoft.com"
+      endpoints:
+        - "https://api.manage-beta.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.manage-selfhost.microsoft.com"
+      endpoints:
+        - "https://api.manage-selfhost.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.manage.microsoft.com"
+      endpoints:
+        - "https://api.manage.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.manage.staffhub.office.com"
+      endpoints:
+        - "https://api.manage.staffhub.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.medeina-dev.defender.microsoft.com"
+      endpoints:
+        - "https://api.medeina-dev.defender.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.medeina-ppe.defender.microsoft.com"
+      endpoints:
+        - "https://api.medeina-ppe.defender.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.medeina.defender.microsoft.com"
+      endpoints:
+        - "https://api.medeina.defender.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.meetingmigrationservice.microsoft.com"
+      endpoints:
+        - "https://api.meetingmigrationservice.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.mipwebservice.com"
+      endpoints:
+        - "https://api.mipwebservice.com"
+      resources:
+        - "root"
+    -
+      host: "api.mix.microsoft.com"
+      endpoints:
+        - "https://api.mix.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.mix.microsoft.us"
+      endpoints:
+        - "https://api.mix.microsoft.us"
+      resources:
+        - "root"
+    -
+      host: "api.msftclouddiagnostics.net"
+      endpoints:
+        - "https://api.msftclouddiagnostics.net"
+      resources:
+        - "root"
+    -
+      host: "api.office.com"
+      endpoints:
+        - "https://api.office.com/discovery"
+      resources:
+        - "discovery"
+    -
+      host: "api.office.net"
+      endpoints:
+        - "https://api.office.net"
+      resources:
+        - "root"
+    -
+      host: "api.onedrive.com"
+      endpoints:
+        - "https://api.onedrive.com"
+      resources:
+        - "root"
+    -
+      host: "api.orginsights.viva.office.com"
+      endpoints:
+        - "https://api.orginsights.viva.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.partner.microsoft-int.com"
+      endpoints:
+        - "https://api.partner.microsoft-int.com"
+      resources:
+        - "root"
+    -
+      host: "api.partner.microsoft.com"
+      endpoints:
+        - "https://api.partner.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.partnercenter.microsoft.com"
+      endpoints:
+        - "https://api.partnercenter.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.partnercustomeradministration.microsoft.com"
+      endpoints:
+        - "https://api.partnercustomeradministration.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.powerapps.com"
+      endpoints:
+        - "https://api.powerapps.com"
+      resources:
+        - "root"
+    -
+      host: "api.powerplatform.com"
+      endpoints:
+        - "https://api.powerplatform.com"
+      resources:
+        - "root"
+    -
+      host: "api.purview.microsoft.com"
+      endpoints:
+        - "https://api.purview.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.scheduler.teams.microsoft.com"
+      endpoints:
+        - "https://api.scheduler.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.security.microsoft.com"
+      endpoints:
+        - "https://api.security.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.securitycenter.microsoft.com"
+      endpoints:
+        - "https://api.securitycenter.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.securitycenter.windows.com"
+      endpoints:
+        - "https://api.securitycenter.windows.com"
+      resources:
+        - "root"
+    -
+      host: "api.securitycenter.windows.us"
+      endpoints:
+        - "https://api.securitycenter.windows.us"
+      resources:
+        - "root"
+    -
+      host: "api.securitycopilot.microsoft.com"
+      endpoints:
+        - "https://api.securitycopilot.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+      resources:
+        - "root"
+    -
+      host: "api.staffhub.office.com"
+      endpoints:
+        - "https://api.staffhub.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.teams.contacts.skype.com"
+      endpoints:
+        - "https://api.teams.contacts.skype.com"
+      resources:
+        - "root"
+    -
+      host: "api.tenant-user.infra.teams.microsoft.com"
+      endpoints:
+        - "https://api.tenant-user.infra.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.timeseries.azure.com"
+      endpoints:
+        - "https://api.timeseries.azure.com"
+      resources:
+        - "root"
+    -
+      host: "api.yammer.com"
+      endpoints:
+        - "https://api.yammer.com"
+      resources:
+        - "root"
+    -
+      host: "apis2.exp.microsoft.com"
+      endpoints:
+        - "https://apis2.exp.microsoft.com/api/auth/callback"
+      resources:
+        - "api"
+    -
+      host: "app.beta.clipchamp.com"
+      endpoints:
+        - "https://app.beta.clipchamp.com/v2/auth/microsoft"
+        - "https://app.beta.clipchamp.com/v2/link/microsoft"
+        - "https://app.beta.clipchamp.com/v2/link/microsoft1p"
+      resources:
+        - "v2"
+    -
+      host: "app.cfp.microsoft-ppe.com"
+      endpoints:
+        - "https://app.cfp.microsoft-ppe.com/api/auth"
+      resources:
+        - "api"
+    -
+      host: "app.cfp.microsoft.com"
+      endpoints:
+        - "https://app.cfp.microsoft.com/api/auth"
+      resources:
+        - "api"
+    -
+      host: "app.clipchamp.com"
+      endpoints:
+        - "https://app.clipchamp.com/v2/auth/microsoft"
+        - "https://app.clipchamp.com/v2/link/microsoft"
+        - "https://app.clipchamp.com/v2/link/microsoft1p"
+      resources:
+        - "v2"
+    -
+      host: "app.local.clipchamp.dev"
+      endpoints:
+        - "https://app.local.clipchamp.dev/v2/link/microsoft1p"
+      resources:
+        - "v2"
+    -
+      host: "app.smoke.clipchamp.com"
+      endpoints:
+        - "https://app.smoke.clipchamp.com/v2/auth/microsoft"
+        - "https://app.smoke.clipchamp.com/v2/link/microsoft"
+        - "https://app.smoke.clipchamp.com/v2/link/microsoft1p"
+      resources:
+        - "v2"
+    -
+      host: "app.test.clipchamp.com"
+      endpoints:
+        - "https://app.test.clipchamp.com/v2/auth/microsoft"
+        - "https://app.test.clipchamp.com/v2/link/microsoft"
+        - "https://app.test.clipchamp.com/v2/link/microsoft1p"
+      resources:
+        - "v2"
+    -
+      host: "app.vssps.visualstudio.com"
+      endpoints:
+        - "https://app.vssps.visualstudio.com/oauth2/receive"
+      resources:
+        - "oauth2"
+    -
+      host: "arm.sphere.azure.net"
+      endpoints:
+        - "https://arm.sphere.azure.net/api"
+      resources:
+        - "api"
+    -
+      host: "australiasoutheast.api.loganalytics.io"
+      endpoints:
+        - "https://australiasoutheast.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "business.bing.com"
+      endpoints:
+        - "https://business.bing.com/api/v2/authtools/gettoken"
+      resources:
+        - "api"
+    -
+      host: "canary-ms.portal.azure.com"
+      endpoints:
+        - "https://canary-ms.portal.azure.com/TokenAuthorize"
+        - "https://canary-ms.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://canary-ms.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "canary.oai.azure.com"
+      endpoints:
+        - "https://canary.oai.azure.com/resource/oauth"
+      resources:
+        - "resource"
+    -
+      host: "canary.portal.azure.com"
+      endpoints:
+        - "https://canary.portal.azure.com/TokenAuthorize"
+        - "https://canary.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://canary.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+        - "https://canary.portal.azure.com/tokenauthorize"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "cds.api.powerapps.com"
+      endpoints:
+        - "https://cds.api.powerapps.com"
+      resources:
+        - "root"
+    -
+      host: "cds.api.powerapps.us"
+      endpoints:
+        - "https://cds.api.powerapps.us"
+      resources:
+        - "root"
+    -
+      host: "client.wvd.microsoft.com"
+      endpoints:
+        - "https://client.wvd.microsoft.com/arm/webclient/v2/index.html"
+      resources:
+        - "arm"
+    -
+      host: "commerceapi.office.net"
+      endpoints:
+        - "https://commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "config-staging.exp.microsoft.com"
+      endpoints:
+        - "https://config-staging.exp.microsoft.com/swagger/oauth2-redirect.html"
+      resources:
+        - "swagger"
+    -
+      host: "config.exp.microsoft.com"
+      endpoints:
+        - "https://config.exp.microsoft.com/swagger/oauth2-redirect.html"
+      resources:
+        - "swagger"
+    -
+      host: "cortana.ai"
+      endpoints:
+        - "https://cortana.ai/api"
+      resources:
+        - "api"
+    -
+      host: "data.insider.proposals.microsoft.com"
+      endpoints:
+        - "https://data.insider.proposals.microsoft.com/graphql"
+        - "https://data.insider.proposals.microsoft.com/graphql/playground"
+      resources:
+        - "graphql"
+    -
+      host: "data.prodv2.proposals.microsoft.com"
+      endpoints:
+        - "https://data.prodv2.proposals.microsoft.com/graphql"
+        - "https://data.prodv2.proposals.microsoft.com/graphql/playground"
+      resources:
+        - "graphql"
+    -
+      host: "dataintegrator.trafficmanager.net"
+      endpoints:
+        - "https://dataintegrator.trafficmanager.net/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "deonline.api.bc.dynamics.com"
+      endpoints:
+        - "https://deonline.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "dev.api.insightsplatform.microsoft-int.com"
+      endpoints:
+        - "https://dev.api.insightsplatform.microsoft-int.com"
+      resources:
+        - "root"
+    -
+      host: "devspaces.skype.com"
+      endpoints:
+        - "https://devspaces.skype.com/v2/auth"
+        - "https://devspaces.skype.com/v2/authv2"
+      resources:
+        - "v2"
+    -
+      host: "dfp.microsoft-int.com"
+      endpoints:
+        - "https://dfp.microsoft-int.com/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfp.microsoft.com"
+      endpoints:
+        - "https://dfp.microsoft.com/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-canadacentral-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-canadacentral-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-canadacentral.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-canadacentral.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-canadaeast-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-canadaeast-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-canadaeast.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-canadaeast.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-frontdoor-ewa2buhye5cceghg.z01.azurefd.net"
+      endpoints:
+        - "https://dfppmeprod-frontdoor-ewa2buhye5cceghg.z01.azurefd.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-northeurope-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-northeurope-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-northeurope.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-northeurope.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-southcentralus-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-southcentralus-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-southcentralus.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-southcentralus.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-westeurope-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-westeurope-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-westeurope.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-westeurope.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-westus2-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-westus2-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmeprod-westus2.azurewebsites.net"
+      endpoints:
+        - "https://dfppmeprod-westus2.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-canadacentral-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-canadacentral-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-canadacentral.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-canadacentral.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-canadaeast-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-canadaeast-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-canadaeast.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-canadaeast.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-frontdoor-gfgmhkfxdth4gedx.z01.azurefd.net"
+      endpoints:
+        - "https://dfppmestaging-frontdoor-gfgmhkfxdth4gedx.z01.azurefd.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-northeurope-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-northeurope-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-northeurope.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-northeurope.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-southcentralus-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-southcentralus-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-southcentralus.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-southcentralus.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-westeurope-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-westeurope-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-westeurope.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-westeurope.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-westus2-offline.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-westus2-offline.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "dfppmestaging-westus2.azurewebsites.net"
+      endpoints:
+        - "https://dfppmestaging-westus2.azurewebsites.net/api/auth"
+      resources:
+        - "api"
+    -
+      host: "discovery.api.office.net"
+      endpoints:
+        - "https://discovery.api.office.net"
+      resources:
+        - "root"
+    -
+      host: "eastus.api.loganalytics.io"
+      endpoints:
+        - "https://eastus.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "eastus.publisher-aircapi.1pp.microsoft.com"
+      endpoints:
+        - "https://eastus.publisher-aircapi.1pp.microsoft.com/v1/my-org/commercial/getindex"
+        - "https://eastus.publisher-aircapi.1pp.microsoft.com/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "eastus2euap.ai.azure.com"
+      endpoints:
+        - "https://eastus2euap.ai.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "eastus2euap.api.azureml.ms"
+      endpoints:
+        - "https://eastus2euap.api.azureml.ms/agent-oauth/v1.0/redirect"
+      resources:
+        - "agent-oauth"
+    -
+      host: "eastus2euap.ml.azure.com"
+      endpoints:
+        - "https://eastus2euap.ml.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "edog.onenote.com"
+      endpoints:
+        - "https://edog.onenote.com/api/auth/signin"
+      resources:
+        - "api"
+    -
+      host: "electronjs.org"
+      endpoints:
+        - "https://electronjs.org/docs/api/app"
+      resources:
+        - "docs"
+    -
+      host: "elm.iga.azure.com"
+      endpoints:
+        - "https://elm.iga.azure.com/api/%s/%s"
+        - "https://elm.iga.azure.com/api/{self.api_version}/{objecttype}/{parent.id}/{linktype}"
+        - "https://elm.iga.azure.com/api/{self.api_version}/{objecttype}?$expand={expandprop}&$select={expandprop},id"
+      resources:
+        - "api"
+    -
+      host: "engagecenter.microsoft.com"
+      endpoints:
+        - "https://engagecenter.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub"
+        - "https://engagecenter.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub_Support"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "engagehub.microsoft.com"
+      endpoints:
+        - "https://engagehub.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "enterpriseregistration.windows.net"
+      endpoints:
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device/{deviceid}?api-version=2.0"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device?api-version={api_version}"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/key?api-version=1.0"
+      resources:
+        - "enrollmentserver"
+    -
+      host: "entra.microsoft.com"
+      endpoints:
+        - "https://entra.microsoft.com/TokenAuthorize"
+        - "https://entra.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://entra.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "eudb.webshell.suite.office.com"
+      endpoints:
+        - "https://eudb.webshell.suite.office.com/iframe/TokenFactoryIframe"
+      resources:
+        - "iframe"
+    -
+      host: "eus.commerceapi.office.net"
+      endpoints:
+        - "https://eus.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://eus.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "eusprv.commerceapi.office.net"
+      endpoints:
+        - "https://eusprv.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://eusprv.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "eusprv2.commerceapi.office.net"
+      endpoints:
+        - "https://eusprv2.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://eusprv2.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "eusprv3.commerceapi.office.net"
+      endpoints:
+        - "https://eusprv3.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://eusprv3.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "exchangelabs.live-int.com"
+      endpoints:
+        - "https://exchangelabs.live-int.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "exp.microsoft.com"
+      endpoints:
+        - "https://exp.microsoft.com/api/auth/callback"
+        - "https://exp.microsoft.com/oauth"
+        - "https://exp.microsoft.com/vivace/oauth"
+      resources:
+        - "api"
+        - "oauth"
+        - "vivace"
+    -
+      host: "ffc-oauth.officeapps.live.com"
+      endpoints:
+        - "https://ffc-oauth.officeapps.live.com/oa/OAuth.html"
+      resources:
+        - "oa"
+    -
+      host: "firstparty.sphere.azure.net"
+      endpoints:
+        - "https://firstparty.sphere.azure.net/api"
+      resources:
+        - "api"
+    -
+      host: "frentals.api.bc.dynamics.com"
+      endpoints:
+        - "https://frentals.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "gbc-oauth.gcc.officeapps.live.com"
+      endpoints:
+        - "https://gbc-oauth.gcc.officeapps.live.com/oa/OAuth.html"
+      resources:
+        - "oa"
+    -
+      host: "gbc-oauth.officeapps.live.com"
+      endpoints:
+        - "https://gbc-oauth.officeapps.live.com/oa/OAuth.html"
+      resources:
+        - "oa"
+    -
+      host: "gevis-erp.api.bc.dynamics.com"
+      endpoints:
+        - "https://gevis-erp.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "global.rel.tunnels.api.visualstudio.com"
+      endpoints:
+        - "https://global.rel.tunnels.api.visualstudio.com/auth/aad/signin"
+      resources:
+        - "auth"
+    -
+      host: "gov.api.advisor.powerapps.us"
+      endpoints:
+        - "https://gov.api.advisor.powerapps.us"
+      resources:
+        - "root"
+    -
+      host: "gov.api.powerapps.us"
+      endpoints:
+        - "https://gov.api.powerapps.us"
+      resources:
+        - "root"
+    -
+      host: "high.analysis.usgovcloudapi.net"
+      endpoints:
+        - "https://high.analysis.usgovcloudapi.net/powerbi/api"
+      resources:
+        - "powerbi"
+    -
+      host: "identityapp.hdinsight-stable.azure-test.net"
+      endpoints:
+        - "https://identityapp.hdinsight-stable.azure-test.net/api/v1/MicrosoftIdentity/Redirect"
+        - "https://identityapp.hdinsight-stable.azure-test.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+        - "https://identityapp.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxyprodcentralindia.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxyprodcentralindia.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxyprodeastus.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxyprodeastus.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+        - "https://identityapp.hdiproxyprodeastus.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxyprodwesteurope.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxyprodwesteurope.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxytipcentralindia.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxytipcentralindia.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxytipeastus2.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxytipeastus2.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+        - "https://identityapp.hdiproxytipeastus2.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxytipeastus2euap.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxytipeastus2euap.hdinsightservices.net/api/v1/MicrosoftIdentity/Redirect"
+        - "https://identityapp.hdiproxytipeastus2euap.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "identityapp.hdiproxytipwesteurope.hdinsightservices.net"
+      endpoints:
+        - "https://identityapp.hdiproxytipwesteurope.hdinsightservices.net/api/v1/MicrosoftIdentity/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "ids.api.iris.microsoft.com"
+      endpoints:
+        - "https://ids.api.iris.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "incadea-fastfit.api.bc.dynamics.com"
+      endpoints:
+        - "https://incadea-fastfit.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "infoma.api.bc.dynamics.com"
+      endpoints:
+        - "https://infoma.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "int.ai.azure.com"
+      endpoints:
+        - "https://int.ai.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "int.ai.azureml-test.ms"
+      endpoints:
+        - "https://int.ai.azureml-test.ms/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "int.api.admin.infra.teams.microsoft.com"
+      endpoints:
+        - "https://int.api.admin.infra.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "int.ml.azure.com"
+      endpoints:
+        - "https://int.ml.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "int.ml.azureml-test.ms"
+      endpoints:
+        - "https://int.ml.azureml-test.ms/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "int.oai.azureml-test.ms"
+      endpoints:
+        - "https://int.oai.azureml-test.ms/resource/oauth"
+      resources:
+        - "resource"
+    -
+      host: "int.teams.microsoft.com"
+      endpoints:
+        - "https://int.teams.microsoft.com/v2/auth"
+        - "https://int.teams.microsoft.com/v2/authv2"
+      resources:
+        - "v2"
+    -
+      host: "intune.microsoft.com"
+      endpoints:
+        - "https://intune.microsoft.com/TokenAuthorize"
+        - "https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "launcher.myapps.microsoft.com"
+      endpoints:
+        - "https://launcher.myapps.microsoft.com/api/passwordsso"
+        - "https://launcher.myapps.microsoft.com/api/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "local.teams.office.com"
+      endpoints:
+        - "https://local.teams.office.com/v2/auth"
+        - "https://local.teams.office.com/v2/authv2"
+      resources:
+        - "v2"
+    -
+      host: "localhost"
+      endpoints:
+        - "https://localhost/api/v1/MicrosoftIdentity/Redirect"
+        - "https://localhost/api/v1/MicrosoftIdentity/signin-oidc"
+        - "https://localhost/api/v2/authtools/gettoken"
+      resources:
+        - "api"
+    -
+      host: "localhost:8000"
+      endpoints:
+        - "https://localhost:8000/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "login-us.microsoftonline.com"
+      endpoints:
+        - "https://login-us.microsoftonline.com/common/oauth2/nativeclient"
+      resources:
+        - "common"
+    -
+      host: "login.live.com"
+      endpoints:
+        - "https://login.live.com/oauth20_desktop.srf"
+      resources:
+        - "oauth20_desktop.srf"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id=29d9ed98-a469-4536-ade2-f981bc1d605e&redirect_uri=ms-appx-web%3a%2f%2fMicrosoft.AAD.BrokerPlugin%2fDRS&resource=urn%3aaad%3atb%3aupdate%3aprt&add_account=noheadsup&scope=openid{hint}&response_mode=form_post&windows_api_version=2.0&amr_values=ngcmfa"
+        - "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id=dd762716-544d-4aeb-a526-687b73838a22&redirect_uri=ms-appx-web%3a%2f%2fMicrosoft.AAD.BrokerPlugin%2fdd762716-544d-4aeb-a526-687b73838a22&resource=urn%3ams-drs%3aenterpriseregistration.windows.net&add_account=noheadsup&scope=openid{hint}&response_mode=form_post&windows_api_version=2.0&amr_values=ngcmfa"
+        - "https://login.microsoftonline.com/common/oauth2/deviceauth"
+        - "https://login.microsoftonline.com/common/oauth2/edgeclient"
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/logout"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/oauth2/nativeclient"
+      resources:
+        - "common"
+        - "oauth2"
+    -
+      host: "login.microsoftonline.us"
+      endpoints:
+        - "https://login.microsoftonline.us/common/oauth2/nativeclient"
+      resources:
+        - "common"
+    -
+      host: "login.windows.net"
+      endpoints:
+        - "https://login.windows.net/common/oauth2/nativeclient"
+        - "https://login.windows.net/common/oauth2/v2.0/token"
+      resources:
+        - "common"
+    -
+      host: "lscentral.api.bc.dynamics.com"
+      endpoints:
+        - "https://lscentral.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "mil.analysis.usgovcloudapi.net"
+      endpoints:
+        - "https://mil.analysis.usgovcloudapi.net/powerbi/api"
+      resources:
+        - "powerbi"
+    -
+      host: "ml.azure.com"
+      endpoints:
+        - "https://ml.azure.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "ms.portal.azure.com"
+      endpoints:
+        - "https://ms.portal.azure.com/TokenAuthorize"
+        - "https://ms.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://ms.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+        - "https://ms.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Network"
+        - "https://ms.portal.azure.com/TokenAuthorize/ExtensionName/WebsitesExtension"
+        - "https://ms.portal.azure.com/tokenauthorize"
+        - "https://ms.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://ms.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "msit.api.interfaces.records.teams.microsoft.com"
+      endpoints:
+        - "https://msit.api.interfaces.records.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "msmamservice.api.application"
+      endpoints:
+        - "https://msmamservice.api.application"
+      resources:
+        - "root"
+    -
+      host: "myapplications.microsoft.com"
+      endpoints:
+        - "https://myapplications.microsoft.com/api/signin-oidc"
+      resources:
+        - "api"
+    -
+      host: "neu.commerceapi.office.net"
+      endpoints:
+        - "https://neu.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://neu.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "oai.azure.com"
+      endpoints:
+        - "https://oai.azure.com/resource/oauth"
+      resources:
+        - "resource"
+    -
+      host: "oauth.officeapps.live.com"
+      endpoints:
+        - "https://oauth.officeapps.live.com/oa/OAuth.html"
+      resources:
+        - "oa"
+    -
+      host: "oauth.powerbi.com"
+      endpoints:
+        - "https://oauth.powerbi.com/views/oauthredirect.html"
+      resources:
+        - "views"
+    -
+      host: "outlook-sdf.live.com"
+      endpoints:
+        - "https://outlook-sdf.live.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook-sdf.office.com"
+      endpoints:
+        - "https://outlook-sdf.office.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook-sdf.office365.com"
+      endpoints:
+        - "https://outlook-sdf.office365.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook-tdf.live.com"
+      endpoints:
+        - "https://outlook-tdf.live.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook-tdf.office.com"
+      endpoints:
+        - "https://outlook-tdf.office.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook.cloud.microsoft"
+      endpoints:
+        - "https://outlook.cloud.microsoft/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook.live.com"
+      endpoints:
+        - "https://outlook.live.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook.office.com"
+      endpoints:
+        - "https://outlook.office.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "outlook.office365.com"
+      endpoints:
+        - "https://outlook.office365.com/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "places-sdf.cloud.microsoft"
+      endpoints:
+        - "https://places-sdf.cloud.microsoft/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "places.cloud.microsoft"
+      endpoints:
+        - "https://places.cloud.microsoft/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "portal.azure.cn"
+      endpoints:
+        - "https://portal.azure.cn/TokenAuthorize"
+        - "https://portal.azure.cn/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://portal.azure.cn/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "portal.azure.com"
+      endpoints:
+        - "https://portal.azure.com/TokenAuthorize"
+        - "https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+        - "https://portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Network"
+        - "https://portal.azure.com/TokenAuthorize/ExtensionName/WebsitesExtension"
+        - "https://portal.azure.com/tokenauthorize"
+        - "https://portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "portal.azure.us"
+      endpoints:
+        - "https://portal.azure.us/TokenAuthorize"
+        - "https://portal.azure.us/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://portal.azure.us/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "ppc-oauth.officeapps.live.com"
+      endpoints:
+        - "https://ppc-oauth.officeapps.live.com/oa/OAuth.html"
+      resources:
+        - "oa"
+    -
+      host: "ppe.exp.microsoft.com"
+      endpoints:
+        - "https://ppe.exp.microsoft.com/api/auth/callback"
+      resources:
+        - "api"
+    -
+      host: "ppeui.exp.microsoft.com"
+      endpoints:
+        - "https://ppeui.exp.microsoft.com/oauth"
+      resources:
+        - "oauth"
+    -
+      host: "preview.portal.azure.com"
+      endpoints:
+        - "https://preview.portal.azure.com/TokenAuthorize"
+        - "https://preview.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://preview.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+        - "https://preview.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_Azure_Network"
+        - "https://preview.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://preview.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "preview.powerbi.com"
+      endpoints:
+        - "https://preview.powerbi.com/views/oauthredirect.html"
+      resources:
+        - "views"
+    -
+      host: "prodware-scm.api.bc.dynamics.com"
+      endpoints:
+        - "https://prodware-scm.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "profiles.view.api.account.microsoft.com"
+      endpoints:
+        - "https://profiles.view.api.account.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "projectsophia.api.microsoft.com"
+      endpoints:
+        - "https://projectsophia.api.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "projectsophia.microsoft.com"
+      endpoints:
+        - "https://projectsophia.microsoft.com/api"
+      resources:
+        - "api"
+    -
+      host: "projectsophia.preprod.microsoft.com"
+      endpoints:
+        - "https://projectsophia.preprod.microsoft.com/api"
+      resources:
+        - "api"
+    -
+      host: "projectsophia.test.microsoft.com"
+      endpoints:
+        - "https://projectsophia.test.microsoft.com/api"
+      resources:
+        - "api"
+    -
+      host: "proposal.microsoft.com"
+      endpoints:
+        - "https://proposal.microsoft.com/v1/my-org/commercial/getindex"
+        - "https://proposal.microsoft.com/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "publisher-aircapi.1pp.microsoft.com"
+      endpoints:
+        - "https://publisher-aircapi.1pp.microsoft.com/v1/my-org/commercial/getindex"
+        - "https://publisher-aircapi.1pp.microsoft.com/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "rc.engagecenter.microsoft.com"
+      endpoints:
+        - "https://rc.engagecenter.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub"
+        - "https://rc.engagecenter.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub_Support"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "rc.engagehub.microsoft.com"
+      endpoints:
+        - "https://rc.engagehub.microsoft.com/tokenAuthorize/ExtensionName/Microsoft_AzureCXP_EngageHub"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "rc.portal.azure.com"
+      endpoints:
+        - "https://rc.portal.azure.com/TokenAuthorize"
+        - "https://rc.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_B2CAdmin"
+        - "https://rc.portal.azure.com/TokenAuthorize/ExtensionName/Microsoft_AAD_RegisteredApps"
+        - "https://rc.portal.azure.com/TokenAuthorize/ExtensionName/WebsitesExtension"
+        - "https://rc.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_IPAddressManager"
+        - "https://rc.portal.azure.com/tokenauthorize/ExtensionName/Microsoft_Azure_ManagedNetwork"
+      resources:
+        - "tokenauthorize"
+    -
+      host: "rdweb.wvd.microsoft.com"
+      endpoints:
+        - "https://rdweb.wvd.microsoft.com/arm/webclient/v2/index.html"
+      resources:
+        - "arm"
+    -
+      host: "ring0.api.interfaces.records.teams.microsoft.com"
+      endpoints:
+        - "https://ring0.api.interfaces.records.teams.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "rp.sphere.azure.net"
+      endpoints:
+        - "https://rp.sphere.azure.net/api"
+      resources:
+        - "api"
+    -
+      host: "scu.commerceapi.office.net"
+      endpoints:
+        - "https://scu.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://scu.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "scuprv.commerceapi.office.net"
+      endpoints:
+        - "https://scuprv.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://scuprv.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "sdf.outlook.cloud.microsoft"
+      endpoints:
+        - "https://sdf.outlook.cloud.microsoft/mail/oauthRedirect.html"
+      resources:
+        - "mail"
+    -
+      host: "sea.commerceapi.office.net"
+      endpoints:
+        - "https://sea.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://sea.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "serenicnavigator.api.bc.dynamics.com"
+      endpoints:
+        - "https://serenicnavigator.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "southeastasia.api.loganalytics.io"
+      endpoints:
+        - "https://southeastasia.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "sparkrock365.api.bc.dynamics.com"
+      endpoints:
+        - "https://sparkrock365.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "substrate-msb-bingatwork-service.test-westus01.substrate-msb-bingatwork.westus-test.cosmic-int.office.net"
+      endpoints:
+        - "https://substrate-msb-bingatwork-service.test-westus01.substrate-msb-bingatwork.westus-test.cosmic-int.office.net/api/v2/authtools/gettoken"
+      resources:
+        - "api"
+    -
+      host: "substrate-sdf.office.com"
+      endpoints:
+        - "https://substrate-sdf.office.com/api"
+      resources:
+        - "api"
+    -
+      host: "substrate.office.com"
+      endpoints:
+        - "https://substrate.office.com/CompliancePolicy/api/v1.0/ClientSyncFileV2"
+        - "https://substrate.office.com/api"
+      resources:
+        - "compliancepolicy"
+        - "api"
+    -
+      host: "teams.cloud.microsoft"
+      endpoints:
+        - "https://teams.cloud.microsoft/v2/auth"
+        - "https://teams.cloud.microsoft/v2/authv2"
+      resources:
+        - "v2"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/platform/v1.0/oAuthConsentRedirect"
+        - "https://teams.microsoft.com/v2/auth"
+        - "https://teams.microsoft.com/v2/authv2"
+      resources:
+        - "api"
+        - "v2"
+    -
+      host: "test.api.bap.microsoft.com"
+      endpoints:
+        - "https://test.api.bap.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "tip.cds.api.powerapps.com"
+      endpoints:
+        - "https://tip.cds.api.powerapps.com"
+      resources:
+        - "root"
+    -
+      host: "to-increase-food.api.bc.dynamics.com"
+      endpoints:
+        - "https://to-increase-food.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "tunnels.api.visualstudio.com"
+      endpoints:
+        - "https://tunnels.api.visualstudio.com/auth/aad/signin"
+      resources:
+        - "auth"
+    -
+      host: "usgov.business.bing.com"
+      endpoints:
+        - "https://usgov.business.bing.com/api/v2/authtools/gettoken"
+      resources:
+        - "api"
+    -
+      host: "view.api.account.microsoft.com"
+      endpoints:
+        - "https://view.api.account.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "vivace.exp.microsoft.com"
+      endpoints:
+        - "https://vivace.exp.microsoft.com/oauth"
+        - "https://vivace.exp.microsoft.com/swagger/oauth2-redirect.html"
+      resources:
+        - "oauth"
+        - "swagger"
+    -
+      host: "vivace.int.exp.microsoft.com"
+      endpoints:
+        - "https://vivace.int.exp.microsoft.com/oauth"
+        - "https://vivace.int.exp.microsoft.com/swagger/oauth2-redirect.html"
+      resources:
+        - "oauth"
+        - "swagger"
+    -
+      host: "vivapulseapp.prod.microsoft.com"
+      endpoints:
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/AcceptDelegationInvite"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/DeclineDelegationInvite"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/EnhancedFeedbackResponse"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/ExtendFeedbackRequest"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/FeedbackResponse"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/LogAdaptiveCardEmailRender"
+        - "https://vivapulseapp.prod.microsoft.com/fabric/api/v1.0/InlineEmail/SubmitFeedbackResponse"
+      resources:
+        - "fabric"
+    -
+      host: "webshell.suite.office.com"
+      endpoints:
+        - "https://webshell.suite.office.com/iframe/TokenFactoryIframe"
+      resources:
+        - "iframe"
+    -
+      host: "westcentralus.api.loganalytics.io"
+      endpoints:
+        - "https://westcentralus.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "westeurope.api.loganalytics.io"
+      endpoints:
+        - "https://westeurope.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "westus.publisher-aircapi.1pp.microsoft.com"
+      endpoints:
+        - "https://westus.publisher-aircapi.1pp.microsoft.com/v1/my-org/commercial/getindex"
+        - "https://westus.publisher-aircapi.1pp.microsoft.com/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "westus2.api.loganalytics.io"
+      endpoints:
+        - "https://westus2.api.loganalytics.io"
+      resources:
+        - "root"
+    -
+      host: "weu.commerceapi.office.net"
+      endpoints:
+        - "https://weu.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://weu.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "wiise.api.bc.dynamics.com"
+      endpoints:
+        - "https://wiise.api.bc.dynamics.com"
+      resources:
+        - "root"
+    -
+      host: "wus2.commerceapi.office.net"
+      endpoints:
+        - "https://wus2.commerceapi.office.net/v1/my-org/commercial/getindex"
+        - "https://wus2.commerceapi.office.net/v1/my-org/proposal/getindex"
+      resources:
+        - "v1"
+    -
+      host: "wwdb.webshell.suite.office.com"
+      endpoints:
+        - "https://wwdb.webshell.suite.office.com/iframe/TokenFactoryIframe"
+      resources:
+        - "iframe"
+    -
+      host: "www.microsoft.com"
+      endpoints:
+        - "https://www.microsoft.com/rpsauth/v2/account/aad/signincallback"
+      resources:
+        - "rpsauth"
+    -
+      host: "www.onenote-int.com"
+      endpoints:
+        - "https://www.onenote-int.com/stickynotes/oauthredirect"
+      resources:
+        - "stickynotes"
+    -
+      host: "www.onenote.com"
+      endpoints:
+        - "https://www.onenote.com/api/auth/signin"
+        - "https://www.onenote.com/stickynotes/oauthredirect"
+      resources:
+        - "api"
+        - "stickynotes"
+    -
+      host: "xcard-preprod.exp.microsoft.com"
+      endpoints:
+        - "https://xcard-preprod.exp.microsoft.com/xcard/oauth"
+      resources:
+        - "xcard"
+    -
+      host: "{6}"
+      endpoints:
+        - "https://{6}/{3}/oauth2/authorize?response_type={4}&client_id={0}&resource={2}&redirect_uri={1}&state={5}"
+        - "https://{6}/{3}/oauth2/v2.0/authorize?response_type={4}&client_id={0}&scope={2}&redirect_uri={1}&state={5}"
+      resources:
+        - "oauth2"

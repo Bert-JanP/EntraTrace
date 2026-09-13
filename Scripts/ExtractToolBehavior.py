@@ -86,6 +86,9 @@ DISPLAY_NAME = {
 }
 
 KNOWN_API_HOSTS = set(FAMILY_BY_HOST)
+EXCLUDED_HOSTS = {
+    "registry.npmjs.org",
+}
 GRAPH_PATH_PREFIXES = (
     "v1.0/",
     "beta/",
@@ -365,6 +368,12 @@ def is_likely_api_url(url: str) -> bool:
     return False
 
 
+def is_excluded_host(url: str) -> bool:
+    parsed = safe_urlparse(url)
+    host = ((parsed.hostname if parsed else "") or "").lower()
+    return host in EXCLUDED_HOSTS
+
+
 def is_likely_api_path(path: str) -> bool:
     candidate = path.strip()
     if not candidate:
@@ -483,6 +492,8 @@ def scan_source(
         sanitized = sanitize_endpoint(endpoint)
         canonical = canonicalize_url(sanitized)
         if not canonical:
+            return
+        if is_excluded_host(canonical):
             return
         if not include_non_api_urls and not is_likely_api_url(canonical):
             return
