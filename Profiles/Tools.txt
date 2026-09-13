@@ -1,0 +1,12 @@
+https://github.com/gerenios/aadinternals
+https://github.com/SpecterOps/AzureHound
+https://github.com/RedByte1337/GraphSpy
+https://github.com/dafthack/MFASweep
+https://github.com/NetSPI/MicroBurst
+https://github.com/dafthack/MSOLSpray
+https://github.com/gremwell/o365enum
+https://github.com/netwrix/pingcastle
+https://github.com/dirkjanm/ROADtools
+https://github.com/Azure/Stormspotter
+https://github.com/Flangvik/TeamFiltration
+https://github.com/rvrsh3ll/TokenTactics
