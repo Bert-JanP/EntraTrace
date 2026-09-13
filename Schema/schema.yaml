@@ -1,0 +1,47 @@
+version: "1.0"
+tool:
+  name: "string"
+  repository_url: "https://github.com/org/repo"
+last_checked_utc: "YYYY-MM-DDTHH:MM:SSZ"
+last_update_utc: "YYYY-MM-DDTHH:MM:SSZ"
+user_agents:
+  - "Mozilla/5.0 (...)"
+summary:
+  total_unique_endpoints: 0
+  total_endpoint_mentions: 0
+  files_scanned: 0
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 0
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 0
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net/{tenantId}/users?&api-version=1.6"
+    resources:
+      - "users"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "example.com"
+      endpoints:
+        - "https://example.com/api/v2/search"
+      resources:
+        - "v2"
