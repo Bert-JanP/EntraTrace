@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "aadinternals"
   repository_url: "https://github.com/gerenios/aadinternals"
-last_checked_utc: "2026-09-14T12:20:55Z"
-last_update_utc: "2026-09-14T12:20:55Z"
+last_checked_utc: "2026-09-15T12:19:36Z"
+last_update_utc: "2026-09-15T12:19:36Z"
 user_agents:
   - "AADInternals"
   - "AutodiscoverClient"
