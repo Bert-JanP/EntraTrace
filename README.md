@@ -55,12 +55,12 @@ The repository is updated daily, but local deployment is supported. To run local
 
 ⚠️ - Running the script locally may result in security alerts as repos containing offensive tools are downloaded locally to extract the information needed to create a profile.
 
-```powershell
-# Export tool user agents from YAML profiles into a CSV
-python3.13.exe .\Scripts\SummarizeUserAgents.py --profiles-dir .\Profiles --output .\Indicator Lists\UserAgents.csv
-
+```python
 # Extract API behavior from a repo or refresh all profile entries
-python3.13.exe .\Scripts\ExtractToolBehavior.py --all-profiles --output-dir .\Profiles
+python .\Scripts\ExtractToolBehavior.py --all-profiles --output-dir .\Profiles
+
+# Export tool user agents from YAML profiles into a CSV
+python .\Scripts\SummarizeUserAgents.py --profiles-dir .\Profiles --output .\Indicator Lists\UserAgents.csv
 ```
 
 - `SummarizeUserAgents.py` exports user-agent data from profile YAML files into a hunting CSV.
