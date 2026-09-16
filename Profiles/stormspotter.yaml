@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "Stormspotter"
   repository_url: "https://github.com/Azure/Stormspotter"
-last_checked_utc: "2026-09-15T12:19:53Z"
-last_update_utc: "2026-09-15T12:19:53Z"
+last_checked_utc: "2026-09-16T12:20:58Z"
+last_update_utc: "2026-09-16T12:20:58Z"
 user_agents: []
 summary:
   total_unique_endpoints: 4
