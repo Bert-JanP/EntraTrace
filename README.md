@@ -55,6 +55,8 @@ Always ensure that testing and analysis is performed against environments you ow
 
 The repository is updated daily, but local deployment is supported. To run locally from the repository root with Python. Use the built-in help output to confirm the available options before running them.
 
+⚠️ - Running the script locally may result in security alerts as repos containing offensive tools are downloaded locally to extract the information needed to create a profile.
+
 ```powershell
 # Export tool user agents from YAML profiles into a CSV
 python3.13.exe .\Scripts\SummarizeUserAgents.py --profiles-dir .\Profiles --output .\Indicator Lists\UserAgents.csv
