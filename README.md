@@ -2,19 +2,17 @@
 
 **EntraTrace** is a defensive security research tool for documenting and identifying the observable behavior of offensive tooling targeting Microsoft Entra ID.
 
-The project builds a knowledge base around tools such as **AzureHound, AADInternals, O365Enum, PingCastle**, and others, with a focus on the network-level artifacts they generate.
+The project builds a automatic knowledge base around tools such as **AzureHound, AADInternals, O365Enum, PingCastle**, and others, with a focus on the UserAgent and API artifacts they generate.
 
 ## What does it track?
 
 EntraTrace focuses on information that can be useful to defenders, including:
 
-* 🔎 **API endpoints** — Entra ID and Microsoft Graph endpoints accessed by tooling
+* 🔎 **API endpoints** — Microsoft Graph, Azure AD Graph and other API endpoints accessed by tooling
 * 🕵️ **User agents** — HTTP user agents associated with offensive tools
-* 🔐 **Authentication behavior** — Observable authentication and token-related patterns
-* 🌐 **Network activity** — Requests and other network indicators
 * 🛡️ **Detection opportunities** — Data that can support detection engineering, hunting, and incident response
 
-The goal is to make offensive tooling behavior easier for defensive teams to understand and turn into actionable detections.
+The goal is to make offensive tooling behavior easier for defensive teams to understand and turn into actionable information.
 
 ## Why?
 
@@ -69,6 +67,15 @@ python3.13.exe .\Scripts\ExtractToolBehavior.py --all-profiles --output-dir .\Pr
 - `ExtractToolBehavior.py` reads repository URLs from `Profiles\Tools.txt` when present, and otherwise falls back to every `repository_url` found in the YAML profile files in the output directory.
 - Run either script with `-h` or `--help` to view the full parameter set and behavior.
 
+## Related Content
+- [Investigating Microsoft Graph Activity Logs](https://kqlquery.com/posts/graphactivitylogs/)
+- [GraphApiAuditEvents: The new Graph API Logs](https://kqlquery.com/posts/graphapiauditevents/)
+- [Detect threats using Microsoft Graph activity logs - Part 1](https://cloudbrothers.info/detect-threats-microsoft-graph-logs-part-1/) by Fabian Bader
+- [Detect threats using Microsoft Graph activity logs - Part 2](https://cloudbrothers.info/en/detect-threats-microsoft-graph-logs-part-2/) by Fabian Bader
+- [Detect threats using GraphAPIAuditEvents - Part 3](https://cloudbrothers.info/en/detect-threats-graphapiauditevents-part-3/) by Fabian Bader
+- [Everything you need to know about the MicrosoftGraphActivityLogs](https://www.invictus-ir.com/news/everything-you-need-to-know-about-the-microsoftgraphactivitylogs) by Invictus IR
+- [The Missing Link: AADGraphActivityLogs Finally Arrives](https://www.invictus-ir.com/news/the-missing-link-aadgraphactivitylogs-finally-arrives) by Invictus IR
+
 ## License
 
-See [LICENSE](LICENSE) for licensing information.
+See [LICENSE](./LICENCE) for licensing information.
