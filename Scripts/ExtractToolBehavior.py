@@ -139,7 +139,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--tool-name", default=None, help="Override inferred tool name")
     parser.add_argument(
         "--output-dir",
-        default="api-behavior-agent/profiles",
+        default="profiles",
         help="Directory for generated YAML profiles",
     )
     parser.add_argument(
@@ -173,6 +173,41 @@ def read_profile_source(profile_path: Path) -> tuple[str, str]:
     if not name_match or not repo_match:
         raise ValueError("profile must contain tool.name and tool.repository_url")
     return name_match.group(1).strip(), repo_match.group(1).strip()
+
+
+def collect_update_jobs(output_dir: Path) -> list[tuple[str, str, Path]]:
+    tools_file = output_dir / "Tools.txt"
+    if tools_file.exists():
+        urls: list[str] = []
+        for raw_line in tools_file.read_text(encoding="utf-8").splitlines():
+            candidate = raw_line.strip()
+            if not candidate or candidate.startswith("#"):
+                continue
+            if is_repo_candidate_url(candidate):
+                urls.append(candidate)
+        if urls:
+            jobs: list[tuple[str, str, Path]] = []
+            for repo_link in urls:
+                tool_name = infer_name_from_repo(repo_link)
+                jobs.append(
+                    (
+                        tool_name,
+                        repo_link,
+                        output_dir / f"{slugify(tool_name)}.yaml",
+                    )
+                )
+            return jobs
+
+    jobs = []
+    for profile_path in sorted(output_dir.glob("*.y*ml")):
+        try:
+            tool_name, repo_link = read_profile_source(profile_path)
+        except (OSError, ValueError):
+            continue
+        if not is_repo_candidate_url(repo_link):
+            continue
+        jobs.append((tool_name, repo_link, profile_path))
+    return jobs
 
 
 def now_utc_iso() -> str:
@@ -260,9 +295,33 @@ def is_repo_url(value: str) -> bool:
     return value.lower().startswith("http://") or value.lower().startswith("https://")
 
 
+def is_repo_candidate_url(value: str) -> bool:
+    candidate = normalize_url(value)
+    if not candidate or not is_repo_url(candidate):
+        return False
+
+    parsed = safe_urlparse(candidate)
+    if parsed is None:
+        return False
+
+    host = (parsed.hostname or "").lower()
+    if not host:
+        return False
+
+    path_segments = [segment for segment in (parsed.path or "").split("/") if segment and segment != "."]
+    if len(path_segments) < 2:
+        return False
+
+    if host == "github.com":
+        if path_segments[0] in {"orgs", "organizations", "login", "features", "explore", "marketplace", "pricing", "topics", "collections", "sponsors"}:
+            return False
+
+    return True
+
+
 def prepare_source(repo: str, no_clone: bool) -> tuple[Path, str, Path | None]:
     if is_repo_url(repo) and not no_clone:
-        temp_dir = Path(tempfile.mkdtemp(prefix="api-behavior-agent-"))
+        temp_dir = Path(tempfile.mkdtemp(prefix="Profiles"))
         clone_dir = temp_dir / "repo"
         cmd = ["git", "clone", "--depth", "1", repo, str(clone_dir)]
         try:
@@ -703,15 +762,14 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     if args.all_profiles:
-        jobs: list[tuple[str, str, Path]] = []
-        for profile_path in sorted(output_dir.glob("*.y*ml")):
-            try:
-                tool_name, repo_link = read_profile_source(profile_path)
-            except (OSError, ValueError) as ex:
-                print(f"Skipping {profile_path}: {ex}")
-                continue
-            jobs.append((tool_name, repo_link, profile_path))
+        jobs = collect_update_jobs(output_dir)
+        if not jobs:
+            print(f"No valid profile repository URLs found in {output_dir} or {output_dir / 'Tools.txt'}")
     else:
+        if is_repo_url(args.repo) and not is_repo_candidate_url(args.repo):
+            raise SystemExit(
+                f"Invalid repository URL: {args.repo}. Expected a repo URL like https://github.com/owner/repo."
+            )
         jobs = [
             (
                 args.tool_name or infer_name_from_repo(args.repo),

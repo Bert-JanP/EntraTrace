@@ -2,8 +2,13 @@ version: "1.0"
 tool:
   name: "aadinternals"
   repository_url: "https://github.com/gerenios/aadinternals"
+<<<<<<< Updated upstream
 last_checked_utc: "2026-09-16T12:20:49Z"
 last_update_utc: "2026-09-16T12:20:49Z"
+=======
+last_checked_utc: "2026-09-16T18:14:16Z"
+last_update_utc: "2026-09-16T18:14:16Z"
+>>>>>>> Stashed changes
 user_agents:
   - "AADInternals"
   - "AutodiscoverClient"

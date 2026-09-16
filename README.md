@@ -51,6 +51,22 @@ Always ensure that testing and analysis is performed against environments you ow
 
 > 🤖 **EntraTrace is developed with the assistance of AI.** AI is used throughout the development and research process, with human review and validation of the resulting work.
 
+## Local Deployment
+
+The repository is updated daily, but local deployment is supported. To run locally from the repository root with Python. Use the built-in help output to confirm the available options before running them.
+
+```powershell
+# Export tool user agents from YAML profiles into a CSV
+python3.13.exe .\Scripts\SummarizeUserAgents.py --profiles-dir .\Profiles --output .\Indicator Lists\UserAgents.csv
+
+# Extract API behavior from a repo or refresh all profile entries
+python3.13.exe .\Scripts\ExtractToolBehavior.py --all-profiles --output-dir .\Profiles
+```
+
+- `SummarizeUserAgents.py` exports user-agent data from profile YAML files into a hunting CSV.
+- `ExtractToolBehavior.py` reads repository URLs from `Profiles\Tools.txt` when present, and otherwise falls back to every `repository_url` found in the YAML profile files in the output directory.
+- Run either script with `-h` or `--help` to view the full parameter set and behavior.
+
 ## License
 
 See [LICENSE](LICENSE) for licensing information.
