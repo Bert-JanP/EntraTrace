@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "GraphSpy"
   repository_url: "https://github.com/RedByte1337/GraphSpy"
-last_checked_utc: "2026-09-18T12:19:22Z"
-last_update_utc: "2026-09-18T12:19:22Z"
+last_checked_utc: "2026-09-19T12:17:53Z"
+last_update_utc: "2026-09-19T12:17:53Z"
 user_agents:
   - "Dsreg/10.0 (Windows 10.0.19044.1826)"
 summary:
