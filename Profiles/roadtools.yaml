@@ -2,14 +2,16 @@ version: "1.0"
 tool:
   name: "ROADtools"
   repository_url: "https://github.com/dirkjanm/ROADtools"
-last_checked_utc: "2026-09-20T12:18:12Z"
-last_update_utc: "2026-09-20T12:18:12Z"
+last_checked_utc: "2026-09-20T17:47:00Z"
+last_update_utc: "2026-09-20T17:47:00Z"
 user_agents:
   - "DeviceRegistrationClient"
   - "Dsreg/10.0 (Windows 10.0.19044.1826)"
   - "Microsoft ADO.NET Data Services"
   - "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
   - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0 Teams/24295.605.3225.8804/49"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; WebView/3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19044"
 summary:
   total_unique_endpoints: 434
   total_endpoint_mentions: 863

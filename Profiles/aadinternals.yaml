@@ -2,10 +2,11 @@ version: "1.0"
 tool:
   name: "aadinternals"
   repository_url: "https://github.com/gerenios/aadinternals"
-last_checked_utc: "2026-09-20T12:18:04Z"
-last_update_utc: "2026-09-20T12:18:04Z"
+last_checked_utc: "2026-09-20T17:46:51Z"
+last_update_utc: "2026-09-20T17:46:51Z"
 user_agents:
   - "AADInternals"
+  - "Android/8.0"
   - "AutodiscoverClient"
   - "Azure-Storage/8.2.0 (.NET CLR 4.0.30319.42000; Win32NT 10.0.17763.0)"
   - "Dalvik/2.1.0 (Linux; U; Android 8.1.0; AADInternals)"
@@ -13,11 +14,14 @@ user_agents:
   - "ENROLLClient"
   - "MSFT OMA DM Client/1.2.0.1"
   - "Microsoft SkyDriveSync 19.192.0926.0012 ship; Windows NT 10.0 (17763)"
+  - "Microsoft SkyDriveSync 20.169.0823.0006 ship; Mac OS X 10.15.7"
   - "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Tablet PC 2.0; Microsoft Outlook 16.0.4266)"
   - "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
   - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
   - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Teams/1.3.00.24755 Chrome/69.0.3497.128 Electron/4.2.12 Safari/537.36"
   - "Outlook-Android/2.0"
+  - "PassthroughAuthenticationConnector/1.5.643.0"
+  - "SyncFabricConnector/1.1.96.0"
   - "saraclient"
 summary:
   total_unique_endpoints: 110
