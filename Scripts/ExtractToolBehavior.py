@@ -70,7 +70,8 @@ API_PATH_FRAGMENT_PATTERN = re.compile(
 )
 API_CONTEXT_PATTERN = re.compile(r"(?i)uri|url|endpoint|graph|api|rest|resource|path|request")
 UA_HEADER_PATTERN = re.compile(
-    r"(?i)(?:['\"]user-agent['\"]\s*[:=]\s*[fF]?['\"]([^'\"]{3,250})['\"]|\buser[_-]?agent\b\s*=\s*[fF]?['\"]([^'\"]{3,250})['\"]|\b-UserAgent\b\s+[\"']([^\"']{3,250})[\"'])"
+    r"(?i)(?:['\"]?user[_-]?agent['\"]?\]?\s*[:=]\s*[fF]?['\"]([^'\"]{3,250})['\"]"
+    r"|(?<![A-Za-z0-9_-])-UserAgent\b\s+[\"']([^\"']{3,250})[\"'])"
 )
 
 FAMILY_BY_HOST = {
