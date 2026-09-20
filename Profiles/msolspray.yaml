@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "MSOLSpray"
   repository_url: "https://github.com/dafthack/MSOLSpray"
-last_checked_utc: "2026-09-19T12:17:56Z"
-last_update_utc: "2026-09-19T12:17:56Z"
+last_checked_utc: "2026-09-20T12:18:09Z"
+last_update_utc: "2026-09-20T12:18:09Z"
 user_agents: []
 summary:
   total_unique_endpoints: 1
