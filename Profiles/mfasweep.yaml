@@ -2,9 +2,10 @@ version: "1.0"
 tool:
   name: "MFASweep"
   repository_url: "https://github.com/dafthack/MFASweep"
-last_checked_utc: "2026-09-20T12:18:07Z"
-last_update_utc: "2026-09-20T12:18:07Z"
+last_checked_utc: "2026-09-20T17:46:55Z"
+last_update_utc: "2026-09-20T17:46:55Z"
 user_agents:
+  - "$UserAgent"
   - "Apple-iPhone9C1/1602.92"
   - "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
   - "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.7; rv:137.0) Gecko/20100101 Firefox/137.0"
@@ -13,6 +14,8 @@ user_agents:
   - "Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254"
   - "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:135.0) Gecko/20100101 Firefox/135.0"
   - "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Mobile/15E148 Safari/605.1.15"
+  - "NintendoSwitch"
+  - "iPhone"
 summary:
   total_unique_endpoints: 17
   total_endpoint_mentions: 31

@@ -2,10 +2,11 @@ version: "1.0"
 tool:
   name: "GraphSpy"
   repository_url: "https://github.com/RedByte1337/GraphSpy"
-last_checked_utc: "2026-09-20T12:18:06Z"
-last_update_utc: "2026-09-20T12:18:06Z"
+last_checked_utc: "2026-09-20T17:46:54Z"
+last_update_utc: "2026-09-20T17:46:54Z"
 user_agents:
   - "Dsreg/10.0 (Windows 10.0.19044.1826)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
 summary:
   total_unique_endpoints: 38
   total_endpoint_mentions: 51

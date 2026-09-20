@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "o365enum"
   repository_url: "https://github.com/gremwell/o365enum"
-last_checked_utc: "2026-09-20T12:18:10Z"
-last_update_utc: "2026-09-20T12:18:10Z"
+last_checked_utc: "2026-09-20T17:46:58Z"
+last_update_utc: "2026-09-20T17:46:58Z"
 user_agents:
   - "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro"
   - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
