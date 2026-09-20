@@ -756,6 +756,65 @@ def slugify(name: str) -> str:
     return cleaned or "unknown-tool"
 
 
+def parse_profile_summary(profile_path: Path) -> dict[str, Any] | None:
+    text = profile_path.read_text(encoding="utf-8")
+    name_match = re.search(r'^  name:\s*"([^"]*)"\s*$', text, re.MULTILINE)
+    endpoints_match = re.search(r'^  total_unique_endpoints:\s*(\d+)\s*$', text, re.MULTILINE)
+    if not name_match or not endpoints_match:
+        return None
+
+    unique_apis = len(re.findall(r'^\s+family:\s*"', text, re.MULTILINE))
+
+    user_agent_count = 0
+    ua_block_match = re.search(r"^user_agents:\n((?:  - .*\n?)*)", text, re.MULTILINE)
+    if ua_block_match:
+        user_agent_count = len(re.findall(r"^  - ", ua_block_match.group(1), re.MULTILINE))
+
+    return {
+        "name": name_match.group(1).strip(),
+        "unique_apis": unique_apis,
+        "unique_api_calls": int(endpoints_match.group(1)),
+        "user_agents": user_agent_count,
+    }
+
+
+def build_tool_profile_table(output_dir: Path) -> str:
+    rows = []
+    for profile_path in sorted(output_dir.glob("*.y*ml")):
+        summary = parse_profile_summary(profile_path)
+        if summary:
+            summary["link"] = f"{output_dir.name}/{profile_path.name}"
+            rows.append(summary)
+    rows.sort(key=lambda item: item["name"].lower())
+
+    lines = ["| Tool | Unique APIs | Unique API calls | UserAgents |", "| --- | --- | --- | --- |"]
+    for row in rows:
+        lines.append(
+            f"| [{row['name']}]({row['link']}) | {row['unique_apis']} | {row['unique_api_calls']} | {row['user_agents']} |"
+        )
+    return "\n".join(lines)
+
+
+def update_readme_table(output_dir: Path, readme_path: Path) -> None:
+    if not readme_path.exists():
+        return
+
+    start_marker = "<!-- TOOL_PROFILE_TABLE_START -->"
+    end_marker = "<!-- TOOL_PROFILE_TABLE_END -->"
+    pattern = re.compile(re.escape(start_marker) + r".*?" + re.escape(end_marker), re.DOTALL)
+
+    readme_text = readme_path.read_text(encoding="utf-8")
+    if not pattern.search(readme_text):
+        return
+
+    table = build_tool_profile_table(output_dir)
+    replacement = f"{start_marker}\n{table}\n{end_marker}"
+    new_text = pattern.sub(replacement, readme_text)
+    if new_text != readme_text:
+        readme_path.write_text(new_text, encoding="utf-8")
+        print(f"README table updated: {readme_path}")
+
+
 def main() -> None:
     args = parse_args()
     timestamp = args.last_checked_utc or now_utc_iso()
@@ -808,6 +867,8 @@ def main() -> None:
         finally:
             if temp_root:
                 shutil.rmtree(temp_root, ignore_errors=True)
+
+    update_readme_table(output_dir, Path(__file__).resolve().parent.parent / "README.md")
 
     if failures:
         raise SystemExit(f"{failures} profile(s) failed to update")

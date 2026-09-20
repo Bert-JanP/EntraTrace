@@ -22,6 +22,25 @@ EntraTrace focuses on information that can be useful to defenders, including:
 
 The goal is to make offensive tooling behavior easier for defensive teams to understand and turn into actionable information.
 
+## Tool Profiles
+
+<!-- TOOL_PROFILE_TABLE_START -->
+| Tool | Unique APIs | Unique API calls | UserAgents |
+| --- | --- | --- | --- |
+| [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
+| [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
+| [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
+| [MFASweep](Profiles/mfasweep.yaml) | 4 | 17 | 11 |
+| [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
+| [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
+| [o365enum](Profiles/o365enum.yaml) | 1 | 1 | 2 |
+| [pingcastle](Profiles/pingcastle.yaml) | 3 | 14 | 1 |
+| [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
+| [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
+| [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
+| [TokenTactics](Profiles/tokentactics.yaml) | 4 | 8 | 16 |
+<!-- TOOL_PROFILE_TABLE_END -->
+
 ## Why?
 
 Offensive security tools are frequently used to assess and attack identity environments. Understanding **how those tools interact with Entra ID** can help defenders identify their use, investigate suspicious activity, and improve detection coverage.
