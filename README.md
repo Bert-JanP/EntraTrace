@@ -4,6 +4,14 @@
 
 The project builds a automatic knowledge base around tools such as **AzureHound, AADInternals, O365Enum, PingCastle**, and others, with a focus on the UserAgent and API artifacts they generate.
 
+## Project Status
+
+🚧 **Early development**
+
+The project is actively being developed. Data, tooling coverage, and functionality will evolve over time.
+
+Contributions, research, corrections, and additional tool analysis are welcome.
+
 ## What does it track?
 
 EntraTrace focuses on information that can be useful to defenders, including:
@@ -30,20 +38,6 @@ EntraTrace can be used to:
 * Identify tooling during incident response
 * Research the behavior of offensive identity tooling
 * Improve defensive visibility into identity attack techniques
-
-## Project Status
-
-🚧 **Early development**
-
-The project is actively being developed. Data, tooling coverage, and functionality will evolve over time.
-
-Contributions, research, corrections, and additional tool analysis are welcome.
-
-## Responsible Use
-
-EntraTrace is intended for **defensive security research, detection engineering, threat hunting, and authorized security testing**.
-
-Always ensure that testing and analysis is performed against environments you own or have explicit permission to assess.
 
 ## AI-Assisted Development
 
