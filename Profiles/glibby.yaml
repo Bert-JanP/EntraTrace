@@ -1,0 +1,78 @@
+version: "1.0"
+tool:
+  name: "glibby"
+  repository_url: "https://github.com/0xRoyR/glibby"
+last_checked_utc: "2026-09-21T21:14:26Z"
+last_update_utc: "2026-09-21T21:14:26Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 17
+  total_endpoint_mentions: 20
+  files_scanned: 19
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 8
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 7
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/&api-version=2017-09-01"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/groups?$select=id,displayName,mailEnabled,securityEnabled,groupTypes,onPremisesSyncEnabled,mail,isAssignableToRole,writebackConfiguration,isManagementRestricted,resourceProvisioningOptions,expirationDateTime,createdDateTime,membershipRuleProcessingState&$search="
+      - "https://graph.microsoft.com/beta/rolemanagement/directory/roledefinitions"
+      - "https://graph.microsoft.com/beta/serviceprincipals?$select=displayName,appId,id,preferredSingleSignOnMode,publisherName,homepage,appOwnerOrganizationId,accountEnabled,tags,applicationTemplateId,servicePrincipalType,createdDateTime,keyCredentials,servicePrincipalNames,preferredTokenSigningKeyThumbprint,&$search="
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "root"
+      - "&api-version=2017-09-01"
+      - ".default"
+      - "groups"
+      - "rolemanagement"
+      - "serviceprincipals"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/.default"
+      - "https://management.azure.com/providers/microsoft.authorization/roledefinitions?$filter=type"
+      - "https://management.azure.com/providers/microsoft.resourcegraph/resources?api-version=2021-03-01"
+      - "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers"
+      - "https://management.azure.com/subscriptions/{0}/resourcegroups/{1}/providers/microsoft.logic/workflows/{2}"
+      - "https://management.azure.com/subscriptions?api-version=2018-02-01"
+    resources:
+      - "root"
+      - ".default"
+      - "providers"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "{0}.azurewebsites.net"
+      endpoints:
+        - "https://{0}.azurewebsites.net/api/httptrigger_3"
+      resources:
+        - "api"
+    -
+      host: "{function_app_name}.azurewebsites.net"
+      endpoints:
+        - "https://{function_app_name}.azurewebsites.net/api/{function_name}?code={code}"
+      resources:
+        - "api"
