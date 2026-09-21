@@ -1,0 +1,38 @@
+version: "1.0"
+tool:
+  name: "squarephish2"
+  repository_url: "https://github.com/nromsdahl/squarephish2"
+last_checked_utc: "2026-09-21T21:14:04Z"
+last_update_utc: "2026-09-21T21:14:04Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 31
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/{entra_config.tenant}/oauth2/v2.0/deviceCode"
+        - "https://login.microsoftonline.com/{entra_config.tenant}/oauth2/v2.0/token"
+      resources:
+        - "oauth2"
