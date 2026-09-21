@@ -9,4 +9,5 @@ https://github.com/netwrix/pingcastle
 https://github.com/dirkjanm/ROADtools
 https://github.com/Azure/Stormspotter
 https://github.com/Flangvik/TeamFiltration
+https://github.com/JumpsecLabs/TokenSmith
 https://github.com/rvrsh3ll/TokenTactics

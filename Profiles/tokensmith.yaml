@@ -1,0 +1,51 @@
+version: "1.0"
+tool:
+  name: "TokenSmith"
+  repository_url: "https://github.com/JumpsecLabs/TokenSmith"
+last_checked_utc: "2026-09-21T07:05:43Z"
+last_update_utc: "2026-09-21T07:05:43Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 8
+  total_endpoint_mentions: 10
+  files_scanned: 13
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 5
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/&refresh_token=0.ar"
+      - "https://graph.microsoft.com/.default"
+    resources:
+      - "root"
+      - "&refresh_token=0.ar"
+      - ".default"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/nativeClient?code=0.A"
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"

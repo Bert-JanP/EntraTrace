@@ -38,6 +38,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
 | [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
+| [TokenSmith](Profiles/tokensmith.yaml) | 2 | 8 | 0 |
 | [TokenTactics](Profiles/tokentactics.yaml) | 4 | 8 | 16 |
 <!-- TOOL_PROFILE_TABLE_END -->
 
