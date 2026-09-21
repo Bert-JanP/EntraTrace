@@ -43,6 +43,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [ropci](Profiles/ropci.yaml) | 3 | 15 | 0 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
 | [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
+| [TeamsPhisher](Profiles/teamsphisher.yaml) | 1 | 8 | 1 |
 | [TokenSmith](Profiles/tokensmith.yaml) | 2 | 8 | 0 |
 | [TokenTactics](Profiles/tokentactics.yaml) | 4 | 8 | 16 |
 | [TokenTacticsV2](Profiles/tokentacticsv2.yaml) | 4 | 30 | 23 |
