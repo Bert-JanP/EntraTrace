@@ -1,0 +1,38 @@
+version: "1.0"
+tool:
+  name: "o365spray"
+  repository_url: "https://github.com/0xZDH/o365spray"
+last_checked_utc: "2026-09-21T07:05:36Z"
+last_update_utc: "2026-09-21T07:05:36Z"
+user_agents:
+  - "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 1
+  total_endpoint_mentions: 2
+  files_scanned: 34
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "common"

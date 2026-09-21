@@ -35,6 +35,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
 | [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
 | [o365enum](Profiles/o365enum.yaml) | 1 | 1 | 2 |
+| [o365spray](Profiles/o365spray.yaml) | 1 | 1 | 2 |
 | [pingcastle](Profiles/pingcastle.yaml) | 3 | 14 | 1 |
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
