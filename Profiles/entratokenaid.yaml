@@ -1,0 +1,51 @@
+version: "1.0"
+tool:
+  name: "EntraTokenAid"
+  repository_url: "https://github.com/zh54321/EntraTokenAid"
+last_checked_utc: "2026-09-21T21:14:05Z"
+last_update_utc: "2026-09-21T21:14:05Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+  - "python-requests/2.32.3"
+summary:
+  total_unique_endpoints: 6
+  total_endpoint_mentions: 10
+  files_scanned: 1
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 5
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+    resources:
+      - ".default"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$Tenant/oauth2/v2.0/authorize?response_type=code&client_id=$ClientID&redirect_uri=$RedirectURL&state=$State&scope=$ApiScopeUrl&client_info=1"
+        - "https://login.microsoftonline.com/$Tenant/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/$Tenant/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/$tenantId/oauth2/v2.0/token"
+      resources:
+        - "$Tenant"
+        - "$TenantId"
+        - "$tenantId"
