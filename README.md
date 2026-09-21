@@ -34,6 +34,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
 | [MFASweep](Profiles/mfasweep.yaml) | 4 | 17 | 11 |
 | [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
+| [Microsoft365_devicePhish](Profiles/microsoft365_devicephish.yaml) | 1 | 4 | 1 |
 | [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
 | [o365enum](Profiles/o365enum.yaml) | 1 | 1 | 2 |
 | [o365spray](Profiles/o365spray.yaml) | 1 | 1 | 2 |
