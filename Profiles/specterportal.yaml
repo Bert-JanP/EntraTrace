@@ -1,0 +1,201 @@
+version: "1.0"
+tool:
+  name: "SpecterPortal"
+  repository_url: "https://github.com/R3alM0m1X82/SpecterPortal"
+last_checked_utc: "2026-09-21T21:14:17Z"
+last_update_utc: "2026-09-21T21:14:17Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+summary:
+  total_unique_endpoints: 97
+  total_endpoint_mentions: 206
+  files_scanned: 84
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 57
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 23
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 11
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 6
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource={resource}"
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/':"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta"
+      - "https://graph.microsoft.com/beta/administrativeunits"
+      - "https://graph.microsoft.com/beta/administrativeunits/{au_id}/scopedrolemembers"
+      - "https://graph.microsoft.com/beta/administrativeunits/{unit_id}/scopedrolemembers"
+      - "https://graph.microsoft.com/beta/{beta_endpoint}"
+      - "https://graph.microsoft.com/chat.read"
+      - "https://graph.microsoft.com/chat.readwrite"
+      - "https://graph.microsoft.com/drives/{drive_id}/items/{folder_id}/children"
+      - "https://graph.microsoft.com/drives/{drive_id}/items/{item_id}"
+      - "https://graph.microsoft.com/drives/{drive_id}/root/children"
+      - "https://graph.microsoft.com/files.readwrite.all"
+      - "https://graph.microsoft.com/groups/{group_id}/members"
+      - "https://graph.microsoft.com/groups/{group_id}?$select=id,displayName,mailNickname"
+      - "https://graph.microsoft.com/groups?$top={top}"
+      - "https://graph.microsoft.com/mail.read"
+      - "https://graph.microsoft.com/mail.readwrite"
+      - "https://graph.microsoft.com/mail.send"
+      - "https://graph.microsoft.com/policies/authenticationmethodspolicy"
+      - "https://graph.microsoft.com/policies/authenticationstrengthpolicies"
+      - "https://graph.microsoft.com/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/rolemanagement/directory/roleassignments?$filter={filter_query}"
+      - "https://graph.microsoft.com/sites"
+      - "https://graph.microsoft.com/sites.read.all"
+      - "https://graph.microsoft.com/sites.readwrite.all"
+      - "https://graph.microsoft.com/sites/<path:site_id"
+      - "https://graph.microsoft.com/sites/<path:site_id>/drives"
+      - "https://graph.microsoft.com/sites/<path:site_id>/lists"
+      - "https://graph.microsoft.com/sites/<path:site_id>/permissions"
+      - "https://graph.microsoft.com/sites/{site_id}"
+      - "https://graph.microsoft.com/sites/{site_id}/drives"
+      - "https://graph.microsoft.com/sites/{site_id}/lists"
+      - "https://graph.microsoft.com/sites/{site_id}/permissions"
+      - "https://graph.microsoft.com/sites?search={search_query}"
+      - "https://graph.microsoft.com/user.read"
+      - "https://graph.microsoft.com/users/{principal_id}"
+      - "https://graph.microsoft.com/users/{user_id}"
+      - "https://graph.microsoft.com/users/{user_id}/authentication/methods"
+      - "https://graph.microsoft.com/users/{user_id}/licensedetails"
+      - "https://graph.microsoft.com/users/{user_id}/memberof/microsoft.graph.directoryrole"
+      - "https://graph.microsoft.com/users/{user_id}/ownedobjects"
+      - "https://graph.microsoft.com/users/{user_id}?$select=id,userPrincipalName,displayName"
+      - "https://graph.microsoft.com/users?$top={top}&$select={select}"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/groups/{object_id}"
+      - "https://graph.microsoft.com/v1.0/groups/{principal_id}"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/events/{event_id}/attachments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{object_id}"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{oid}"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{principal_id}"
+      - "https://graph.microsoft.com/v1.0/users"
+      - "https://graph.microsoft.com/v1.0/users/{object_id}"
+      - "https://graph.microsoft.com/v1.0/users/{principal_id}"
+    resources:
+      - "metadata"
+      - "root"
+      - "':"
+      - ".default"
+      - "beta"
+      - "administrativeunits"
+      - "{beta_endpoint}"
+      - "chat.read"
+      - "chat.readwrite"
+      - "drives"
+      - "files.readwrite.all"
+      - "groups"
+      - "mail.read"
+      - "mail.readwrite"
+      - "mail.send"
+      - "policies"
+      - "rolemanagement"
+      - "sites"
+      - "sites.read.all"
+      - "sites.readwrite.all"
+      - "user.read"
+      - "users"
+      - "v1.0"
+      - "me"
+      - "serviceprincipals"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/sites/<path:site_id"
+      - "https://graph.windows.net/sites/<path:site_id>/drives"
+      - "https://graph.windows.net/sites/<path:site_id>/lists"
+      - "https://graph.windows.net/sites/<path:site_id>/permissions"
+      - "https://graph.windows.net/users/{user_id}"
+    resources:
+      - "root"
+      - "sites"
+      - "users"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/.default"
+      - "https://management.azure.com/providers/microsoft.authorization/elevateaccess?api-version=2016-07-01"
+      - "https://management.azure.com/providers/microsoft.authorization/roleassignments/{assignment_id}?api-version=2022-04-01"
+      - "https://management.azure.com/providers/microsoft.authorization/roleassignments?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/.../virtualmachines/vm-name"
+      - "https://management.azure.com/subscriptions/<subscription_id>/resource-groups"
+      - "https://management.azure.com/subscriptions/{sub_id}/providers/microsoft.authorization/roleassignments?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/{sub_id}/resources?api-version=2021-04-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.authorization/roleassignments?api-version=2022-04-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.authorization/roleassignments?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.automation/automationaccounts?api-version=2023-11-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.compute/virtualmachines?api-version=2023-03-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.compute/virtualmachines?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.keyvault/vaults?api-version=2023-02-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.keyvault/vaults?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.network/publicipaddresses?api-version=2023-05-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.sql/servers?api-version=2021-11-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.storage/storageaccounts?api-version=2023-01-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.storage/storageaccounts?api-version={self.api_version}"
+      - "https://management.azure.com/subscriptions/{subscription_id}/providers/microsoft.web/sites?api-version=2022-09-01"
+      - "https://management.azure.com/subscriptions/{subscription_id}/resourcegroups?api-version={self.api_version}"
+      - "https://management.azure.com{resource_id}/providers/Microsoft.Authorization/roleAssignments/{assignment_id}?api-version=2022-04-01"
+    resources:
+      - "root"
+      - ".default"
+      - "providers"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "localhost:5000"
+      endpoints:
+        - "http://localhost:5000/api"
+        - "http://localhost:5000/api/auth/logout"
+        - "http://localhost:5000/api/auth/verify"
+      resources:
+        - "api"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+      resources:
+        - "root"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{self.tenant_id}/oauth2/token"
+        - "https://login.microsoftonline.com/{self.tenant_id}/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token"
+      resources:
+        - "common"
+        - "oauth2"
+    -
+      host: "management.azure.com{role_def_id}"
+      endpoints:
+        - "https://management.azure.com{role_def_id}?api-version=2022-04-01"
+      resources:
+        - "root"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/authsvc/v1.0/authz"
+      resources:
+        - "api"

@@ -41,6 +41,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [PowerZure](Profiles/powerzure.yaml) | 3 | 29 | 0 |
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
 | [ropci](Profiles/ropci.yaml) | 3 | 15 | 0 |
+| [SpecterPortal](Profiles/specterportal.yaml) | 4 | 97 | 1 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
 | [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
 | [TokenSmith](Profiles/tokensmith.yaml) | 2 | 8 | 0 |
