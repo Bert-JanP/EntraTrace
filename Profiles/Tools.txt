@@ -1,5 +1,6 @@
 https://github.com/gerenios/aadinternals
 https://github.com/SpecterOps/AzureHound
+https://github.com/mlcsec/Graphpython
 https://github.com/RedByte1337/GraphSpy
 https://github.com/dafthack/MFASweep
 https://github.com/NetSPI/MicroBurst
