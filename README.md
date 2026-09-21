@@ -28,6 +28,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | Tool | Unique APIs | Unique API calls | UserAgents |
 | --- | --- | --- | --- |
 | [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
+| [Azure-AD-Password-Checker](Profiles/azure-ad-password-checker.yaml) | 1 | 1 | 0 |
 | [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
 | [Graphpython](Profiles/graphpython.yaml) | 3 | 119 | 17 |
 | [GraphRunner](Profiles/graphrunner.yaml) | 4 | 67 | 21 |
