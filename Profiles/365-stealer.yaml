@@ -1,0 +1,65 @@
+version: "1.0"
+tool:
+  name: "365-Stealer"
+  repository_url: "https://github.com/AlteredSecurity/365-Stealer"
+last_checked_utc: "2026-09-21T21:15:31Z"
+last_update_utc: "2026-09-21T21:15:31Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 16
+  total_endpoint_mentions: 34
+  files_scanned: 32
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 14
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications/{app_id}/addpassword"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/drive"
+      - "https://graph.microsoft.com/v1.0/me/drive/items"
+      - "https://graph.microsoft.com/v1.0/me/drive/root/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/root:"
+      - "https://graph.microsoft.com/v1.0/me/mailfolders/inbox/messagerules"
+      - "https://graph.microsoft.com/v1.0/me/mailfolders/inbox/messages"
+      - "https://graph.microsoft.com/v1.0/me/mailfolders/inbox/messages?$top=999"
+      - "https://graph.microsoft.com/v1.0/me/onenote/pages"
+      - "https://graph.microsoft.com/v1.0/me/sendmail"
+      - "https://graph.microsoft.com/v1.0/users?$top=999"
+    resources:
+      - ".default"
+      - "applications"
+      - "me"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "vimeo.com"
+      endpoints:
+        - "https://vimeo.com/api/v2/video"
+      resources:
+        - "api"
+    -
+      host: "vzaar.com"
+      endpoints:
+        - "https://vzaar.com/api/videos"
+      resources:
+        - "api"
