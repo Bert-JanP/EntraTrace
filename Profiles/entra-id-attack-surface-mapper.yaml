@@ -1,0 +1,37 @@
+version: "1.0"
+tool:
+  name: "entra-id-attack-surface-mapper"
+  repository_url: "https://github.com/ainharamk/entra-id-attack-surface-mapper"
+last_checked_utc: "2026-09-21T21:14:38Z"
+last_update_utc: "2026-09-21T21:14:38Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 3
+  total_endpoint_mentions: 4
+  files_scanned: 22
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/users/{f.principal}"
+      - "https://graph.microsoft.com/v1.0"
+    resources:
+      - ".default"
+      - "users"
+      - "v1.0"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
