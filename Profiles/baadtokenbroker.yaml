@@ -1,0 +1,38 @@
+version: "1.0"
+tool:
+  name: "BAADTokenBroker"
+  repository_url: "https://github.com/temp43487580/BAADTokenBroker"
+last_checked_utc: "2026-09-21T21:14:12Z"
+last_update_utc: "2026-09-21T21:14:12Z"
+user_agents:
+  - "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E)"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 7
+  files_scanned: 6
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "common"
