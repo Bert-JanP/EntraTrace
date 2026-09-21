@@ -29,6 +29,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | --- | --- | --- | --- |
 | [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
 | [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
+| [GraphRunner](Profiles/graphrunner.yaml) | 4 | 67 | 21 |
 | [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
 | [MFASweep](Profiles/mfasweep.yaml) | 4 | 17 | 11 |
 | [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
