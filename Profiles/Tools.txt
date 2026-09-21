@@ -12,3 +12,4 @@ https://github.com/dirkjanm/ROADtools
 https://github.com/Azure/Stormspotter
 https://github.com/Flangvik/TeamFiltration
 https://github.com/rvrsh3ll/TokenTactics
+https://github.com/f-bader/TokenTacticsV2
