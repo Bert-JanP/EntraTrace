@@ -1,0 +1,192 @@
+version: "1.0"
+tool:
+  name: "GraphRunner"
+  repository_url: "https://github.com/dafthack/GraphRunner"
+last_checked_utc: "2026-09-21T07:05:29Z"
+last_update_utc: "2026-09-21T07:05:29Z"
+user_agents:
+  - "Mozilla/5.0"
+  - "Mozilla/5.0 (Android 4.4; Mobile; rv:70.0) Gecko/70.0 Firefox/70.0"
+  - "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Mobile Safari/537.36"
+  - "Mozilla/5.0 (Linux; Android 8.1.0; Pixel Build/OPM4.171019.021.D1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36 EdgA/42.0.0.2057"
+  - "Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:70.0) Gecko/20100101 Firefox/70.0"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/604.1 Edg/91.0.100.0"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Safari/605.1.15"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+  - "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
+  - "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+  - "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:70.0) Gecko/20100101 Firefox/70.0"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.123 Safari/537.36"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19042"
+  - "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.3031"
+  - "Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 EdgiOS/44.5.0.10 Mobile/15E148 Safari/604.1"
+  - "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/91.0.4472.114 Mobile/15E148 Safari/604.1"
+  - "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+  - "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4"
+summary:
+  total_unique_endpoints: 67
+  total_endpoint_mentions: 146
+  files_scanned: 6
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 44
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 13
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 5
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 5
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/beta/directorysync"
+      - "https://graph.microsoft.com/beta/identity/conditionalaccess/policies"
+      - "https://graph.microsoft.com/beta/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/beta/rolemanagement/directory/estimateaccess"
+      - "https://graph.microsoft.com/beta/teams/$teamId/channels/$channelId/members"
+      - "https://graph.microsoft.com/users"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications/$ObjectID"
+      - "https://graph.microsoft.com/v1.0/applications/$applicationid/addpassword"
+      - "https://graph.microsoft.com/v1.0/directoryobjects"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/$Guid"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/$userId"
+      - "https://graph.microsoft.com/v1.0/domains"
+      - "https://graph.microsoft.com/v1.0/drives"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/groups/$groupId"
+      - "https://graph.microsoft.com/v1.0/groups/$groupId/members"
+      - "https://graph.microsoft.com/v1.0/groups/$groupguid"
+      - "https://graph.microsoft.com/v1.0/groups/$guid"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/namedlocations"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/policies"
+      - "https://graph.microsoft.com/v1.0/invitations"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/events"
+      - "https://graph.microsoft.com/v1.0/me/joinedteams"
+      - "https://graph.microsoft.com/v1.0/me/messages/$RestID"
+      - "https://graph.microsoft.com/v1.0/oauth2permissiongrants"
+      - "https://graph.microsoft.com/v1.0/organization"
+      - "https://graph.microsoft.com/v1.0/policies/authenticationmethodspolicy"
+      - "https://graph.microsoft.com/v1.0/policies/authenticationstrengthpolicies"
+      - "https://graph.microsoft.com/v1.0/search/query"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$graphIdInternal"
+      - "https://graph.microsoft.com/v1.0/teams/$teamId/channels"
+      - "https://graph.microsoft.com/v1.0/teams/$teamId/channels/$channelId/tabs"
+      - "https://graph.microsoft.com/v1.0/users"
+      - "https://graph.microsoft.com/v1.0/users/$encodedUser/calendar/calendarpermissions"
+      - "https://graph.microsoft.com/v1.0/users/$mbx/mailfolders/inbox/messages"
+      - "https://graph.microsoft.com/v1.0/users/$upn"
+      - "https://graph.microsoft.com/v1.0/users/$userid/mailfolders/inbox/messages"
+      - "https://graph.microsoft.com/v1.0/{0}"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id="
+    resources:
+      - "root"
+      - "directorysync"
+      - "identity"
+      - "policies"
+      - "rolemanagement"
+      - "teams"
+      - "users"
+      - "v1.0"
+      - "applications"
+      - "directoryobjects"
+      - "domains"
+      - "drives"
+      - "groups"
+      - "invitations"
+      - "me"
+      - "oauth2permissiongrants"
+      - "organization"
+      - "search"
+      - "serviceprincipals"
+      - "{0}"
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/$TenantId"
+      - "https://graph.windows.net/$TenantId/directoryobjects/$guid?api-version=1.61-internal"
+      - "https://graph.windows.net/$TenantId/tenantdetails?api-version=1.61-internal"
+      - "https://graph.windows.net/users"
+    resources:
+      - "root"
+      - "$TenantId"
+      - "users"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/resourcegroups/$rgName/providers/microsoft.network/frontdoorwebapplicationfirewallpolicies/${policyName}?api-version=2022-05-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/resourcegroups/${rgName}/providers/microsoft.network/frontdoorwebapplicationfirewallpolicies?api-version=2022-05-01"
+      - "https://management.azure.com/subscriptions/${SubscriptionId}/resourcegroups?api-version=2022-09-01"
+      - "https://management.azure.com/subscriptions?api-version=2020-01-01"
+    resources:
+      - "root"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com/.default"
+      resources:
+        - ".default"
+    -
+      host: "login.microsoft.com"
+      endpoints:
+        - "https://login.microsoft.com/common/oauth2/token"
+      resources:
+        - "common"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$Tenant/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/$Tenant/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/$TenantId/oauth2/token"
+        - "https://login.microsoftonline.com/$tenantid/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/Common/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "$Tenant"
+        - "$TenantId"
+        - "$tenantid"
+        - "common"
+    -
+      host: "main.iam.ad.ext.azure.com"
+      endpoints:
+        - "https://main.iam.ad.ext.azure.com/api/EnterpriseApplications"
+      resources:
+        - "api"
+    -
+      host: "substrate.office.com"
+      endpoints:
+        - "https://substrate.office.com/search/api/v2/query"
+      resources:
+        - "search"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/authsvc/v1.0/authz"
+        - "https://teams.microsoft.com/api/mt/amer/beta/channels/$channelId/email"
+      resources:
+        - "api"
