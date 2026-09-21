@@ -1,0 +1,63 @@
+version: "1.0"
+tool:
+  name: "AdPack"
+  repository_url: "https://github.com/Yenn503/AdPack"
+last_checked_utc: "2026-09-21T21:14:26Z"
+last_update_utc: "2026-09-21T21:14:26Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 11
+  total_endpoint_mentions: 12
+  files_scanned: 224
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 9
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/%s/messages/%s?$select=id,subject,body,from,toRecipients,ccRecipients,receivedDateTime"
+      - "https://graph.microsoft.com/v1.0/%s?$top=999"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/drives/%s/items/%s/content"
+      - "https://graph.microsoft.com/v1.0/drives/%s/root/children?$top=999"
+      - "https://graph.microsoft.com/v1.0/me/joinedteams?$search="
+      - "https://graph.microsoft.com/v1.0/me/messages?$top=%d&$search="
+      - "https://graph.microsoft.com/v1.0/sites?search="
+    resources:
+      - "root"
+      - "%s"
+      - "applications"
+      - "drives"
+      - "me"
+      - "sites"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      resources:
+        - "common"
