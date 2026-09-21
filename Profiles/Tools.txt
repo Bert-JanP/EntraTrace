@@ -6,6 +6,7 @@ https://github.com/NetSPI/MicroBurst
 https://github.com/dafthack/MSOLSpray
 https://github.com/gremwell/o365enum
 https://github.com/netwrix/pingcastle
+https://github.com/hausec/PowerZure
 https://github.com/dirkjanm/ROADtools
 https://github.com/Azure/Stormspotter
 https://github.com/Flangvik/TeamFiltration
