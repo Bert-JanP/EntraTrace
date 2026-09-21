@@ -1,0 +1,66 @@
+version: "1.0"
+tool:
+  name: "ropci"
+  repository_url: "https://github.com/wunderwuzzi23/ropci"
+last_checked_utc: "2026-09-21T07:05:41Z"
+last_update_utc: "2026-09-21T07:05:41Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 15
+  total_endpoint_mentions: 25
+  files_scanned: 55
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 9
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 3
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/beta"
+      - "https://graph.microsoft.com/groups"
+      - "https://graph.microsoft.com/groups/%s/members"
+      - "https://graph.microsoft.com/groups/%s/members/$ref"
+      - "https://graph.microsoft.com/groups/%s/owners"
+      - "https://graph.microsoft.com/groups/%s/owners/$ref"
+      - "https://graph.microsoft.com/users"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/%s"
+      - "https://graph.microsoft.com/v1.0/users/%s"
+    resources:
+      - "beta"
+      - "groups"
+      - "users"
+      - "directoryobjects"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/subscriptions/%s/providers/microsoft.compute/virtualmachines"
+      - "https://management.azure.com/subscriptions/%s/resourcegroups/%s/providers/microsoft.compute/virtualmachines/%s/runcommand?api-version=%s"
+    resources:
+      - "root"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/%s/oauth2/v2.0/auth"
+        - "https://login.microsoftonline.com/%s/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/%s/oauth2/v2.0/token"
+      resources:
+        - "%s"
