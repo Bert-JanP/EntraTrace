@@ -14,6 +14,7 @@ https://github.com/dirkjanm/ROADtools
 https://github.com/wunderwuzzi23/ropci
 https://github.com/Azure/Stormspotter
 https://github.com/Flangvik/TeamFiltration
+https://github.com/lucidra-security/TeamsEnum
 https://github.com/JumpsecLabs/TokenSmith
 https://github.com/rvrsh3ll/TokenTactics
 https://github.com/rvrsh3ll/TokenTactics
