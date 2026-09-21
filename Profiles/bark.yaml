@@ -1,0 +1,174 @@
+version: "1.0"
+tool:
+  name: "BARK"
+  repository_url: "https://github.com/BloodHoundAD/BARK"
+last_checked_utc: "2026-09-21T07:05:38Z"
+last_update_utc: "2026-09-21T07:05:38Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 77
+  total_endpoint_mentions: 130
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 35
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 33
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 9
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/applications"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices"
+      - "https://graph.microsoft.com/beta/devicemanagement/roleassignments"
+      - "https://graph.microsoft.com/beta/devicemanagement/roledefinitions"
+      - "https://graph.microsoft.com/beta/devices/$($DeviceID)/registeredusers"
+      - "https://graph.microsoft.com/beta/groups"
+      - "https://graph.microsoft.com/beta/serviceprincipals"
+      - "https://graph.microsoft.com/beta/users"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications/$($AppObjectID)/owners"
+      - "https://graph.microsoft.com/v1.0/applications/$($AppRegObjectID)/addpassword"
+      - "https://graph.microsoft.com/v1.0/applications/$($TargetAppId)/addpassword"
+      - "https://graph.microsoft.com/v1.0/applications/$($TargetAppId)/owners"
+      - "https://graph.microsoft.com/v1.0/directoryroles"
+      - "https://graph.microsoft.com/v1.0/directoryroles/$($_.id)/members"
+      - "https://graph.microsoft.com/v1.0/directoryroletemplates"
+      - "https://graph.microsoft.com/v1.0/groups/$($GroupID)/members"
+      - "https://graph.microsoft.com/v1.0/groups/$($GroupObjectID)/owners"
+      - "https://graph.microsoft.com/v1.0/groups/$($TargetGroupId)/members"
+      - "https://graph.microsoft.com/v1.0/groups/$($TargetGroupId)/owners"
+      - "https://graph.microsoft.com/v1.0/organization/6c12b0b0-b2cc-4a73-8252-0b94bfca2145/certificatebasedauthconfiguration"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($MSGraphSP.id)/approleassignedto"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($SPObjectID)/approleassignedto"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($ServicePrincipalID)/addpassword"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($ServicePrincipalObjectID)/owners"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($ServicePrincipalObjectId)/owners"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($TargetSPId)/addpassword"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($TargetSPId)/owners"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($TestPrincipalID)/approleassignedto"
+      - "https://graph.microsoft.com/v1.0/users"
+      - "https://graph.microsoft.com/v1.0/users/$TargetUserID"
+    resources:
+      - "root"
+      - ".default"
+      - "applications"
+      - "devicemanagement"
+      - "devices"
+      - "groups"
+      - "serviceprincipals"
+      - "users"
+      - "directoryroles"
+      - "directoryroletemplates"
+      - "organization"
+      - "rolemanagement"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/$($TargetAKSId)/runcommand?api-version=2022-11-01"
+      - "https://management.azure.com/$($TargetObjectID)/providers/microsoft.authorization/roleassignments?api-version=2018-01-01-preview&"
+      - "https://management.azure.com/$($TargetVMId)/runcommand?api-version=2018-04-01"
+      - "https://management.azure.com/$($TargetVMScaleSetVMId)/runcommand?api-version=2022-11-01"
+      - "https://management.azure.com/$($WebAppID)?api-version=2022-03-01"
+      - "https://management.azure.com/.default"
+      - "https://management.azure.com/api/invoke"
+      - "https://management.azure.com/batch?api-version=2020-06-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.authorization/roleassignments/$($RoleAssignmentGUID)?api-version=2018-01-01-preview"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.authorization/roleassignments?api-version=2018-01-01-preview"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.authorization/roledefinitions?api-version=2018-01-01-preview"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.automation/automationaccounts?api-version=2021-06-22"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.compute/virtualmachines?api-version=2022-03-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.compute/virtualmachinescalesets?api-version=2022-11-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.containerregistry/registries?api-version=2023-01-01-preview"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.containerservice/managedclusters?api-version=2022-11-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.keyvault/vaults?api-version=2021-10-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.logic/workflows?api-version=2016-06-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/providers/microsoft.web/sites?api-version=2022-03-01"
+      - "https://management.azure.com/subscriptions/$($SubscriptionID)/resourcegroups?api-version=2021-04-01"
+      - "https://management.azure.com/subscriptions/$($TargetObjectID)/providers/microsoft.authorization/roleassignments/$($RoleAssignmentGUID)?api-version=2018-01-01-preview"
+      - "https://management.azure.com/subscriptions/$(${using:SubscriptionID})/providers/microsoft.authorization/roleassignments/$($RoleToDelete.name)?api-version=2018-01-01-preview"
+      - "https://management.azure.com/subscriptions/15cb2d86-343b-49b9-9256-7c2e6975b92d/resourcegroups/myresourcegroup/providers/microsoft.compute/virtualmachinescalesets/aks-agentpool-81263570-vmss"
+      - "https://management.azure.com/subscriptions/6da4e9d4-c2bc-42a7-b5e3-f2f905db4a34/resourcegroups/webapps/providers/microsoft.web/sites/mycoolwebapp"
+      - "https://management.azure.com/subscriptions/7c669b03-41d0-4ed6-ac55-806bdcdfa84a/resourcegroups/keyvaults/providers/microsoft.keyvault/vaults/keyvault-01"
+      - "https://management.azure.com/subscriptions/bf510275-8a83-4932-988f-1b148b83f832/resourcegroups/bhe_specterdev_fa_rg/providers/microsoft.web/sites/mycoolfunctionapp"
+      - "https://management.azure.com/subscriptions/bf510275-8a83-4932-988f-1b148b83f832/resourcegroups/mc_bhe_specterdev_aks_rg_mykubernetescluster_centralus/providers/microsoft.compute/virtualmachinescalesets/aks-agentpool-81263570-vmss/virtualmachines/2"
+      - "https://management.azure.com/subscriptions/f1816681-4df5-4a31-acfa-922401687008/resourcegroups/aks_resourcegroup/providers/microsoft.containerservice/managedclusters/mykubernetescluster"
+      - "https://management.azure.com/subscriptions/f1816681-4df5-4a31-acfa-922401687008/resourcegroups/automationaccts/providers/microsoft.automation/automationaccounts/mycoolautomationaccount"
+      - "https://management.azure.com/subscriptions/f1816681-4df5-4a31-acfa-922401687008/resourcegroups/functionapps/providers/microsoft.web/sites/mycoolfunctionapp"
+      - "https://management.azure.com/subscriptions/f1816681-4df5-4a31-acfa-922401687008/resourcegroups/virtualmachines/providers/microsoft.compute/virtualmachines/mywin10virtualmachine"
+      - "https://management.azure.com/subscriptions/f5e4c53c-7ff4-41ec-ad4a-00f512eb2dcf/resourcegroups/bhe_specterdev_fa_rg/providers/microsoft.web/sites/mycoolfunctionapp"
+      - "https://management.azure.com/subscriptions?api-version=2020-01-01"
+    resources:
+      - "$($TargetAKSId)"
+      - "$($TargetObjectID)"
+      - "$($TargetVMId)"
+      - "$($TargetVMScaleSetVMId)"
+      - "$($WebAppID)"
+      - ".default"
+      - "api"
+      - "batch"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "$($functionname)"
+      endpoints:
+        - "https://$($functionname)/$($FileName)?relativePath=1&api-version=2018-11-01"
+      resources:
+        - "$($FileName)"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$TenantId/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/$TenantName/oauth2/v2.0/token"
+      resources:
+        - "$TenantId"
+        - "$TenantName"
+    -
+      host: "login.windows.net"
+      endpoints:
+        - "https://login.windows.net/$TenantId/oauth2/token"
+      resources:
+        - "$TenantId"
+    -
+      host: "management.azure.com$($targetobjectid)"
+      endpoints:
+        - "https://management.azure.com$($targetobjectid)/accessPolicies/add?api-version=2021-10-01"
+      resources:
+        - "accesspolicies"
+    -
+      host: "management.azure.com$($vmscalesetid)"
+      endpoints:
+        - "https://management.azure.com$($vmscalesetid)/virtualMachines?api-version=2022-11-01"
+      resources:
+        - "virtualmachines"
+    -
+      host: "mycoolwindowswebapp.scm.azurewebsites.net"
+      endpoints:
+        - "https://mycoolwindowswebapp.scm.azurewebsites.net/api/command"
+      resources:
+        - "api"
+    -
+      host: "portal.azure.com"
+      endpoints:
+        - "https://portal.azure.com/api/DelegationToken?feature.cacheextensionapp=false&feature.internalgraphapiversion=true&feature.tokencaching=false"
+      resources:
+        - "api"

@@ -1,0 +1,63 @@
+version: "1.0"
+tool:
+  name: "TeamsEnum"
+  repository_url: "https://github.com/lucidra-security/TeamsEnum"
+last_checked_utc: "2026-09-21T07:05:46Z"
+last_update_utc: "2026-09-21T07:05:46Z"
+user_agents:
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)"
+summary:
+  total_unique_endpoints: 7
+  total_endpoint_mentions: 7
+  files_scanned: 5
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 7
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com/.default"
+      resources:
+        - ".default"
+    -
+      host: "presence.teams.live.com"
+      endpoints:
+        - "https://presence.teams.live.com/v1/presence/getpresence"
+      resources:
+        - "v1"
+    -
+      host: "presence.teams.microsoft.com"
+      endpoints:
+        - "https://presence.teams.microsoft.com/v1/presence/getpresence"
+      resources:
+        - "v1"
+    -
+      host: "teams.live.com"
+      endpoints:
+        - "https://teams.live.com/api/auth/v1.0/authz/consumer"
+        - "https://teams.live.com/api/mt/beta/users/searchUsers"
+      resources:
+        - "api"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/mt/emea/beta/users/%s/externalsearchv3?includeTFLUsers=true"
+        - "https://teams.microsoft.com/api/mt/emea/beta/users/tenants"
+      resources:
+        - "api"

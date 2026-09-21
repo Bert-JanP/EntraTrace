@@ -1,0 +1,89 @@
+version: "1.0"
+tool:
+  name: "PowerZure"
+  repository_url: "https://github.com/hausec/PowerZure"
+last_checked_utc: "2026-09-21T07:05:37Z"
+last_update_utc: "2026-09-21T07:05:37Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 29
+  total_endpoint_mentions: 49
+  files_scanned: 3
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 24
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 4
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/applications"
+      - "https://graph.microsoft.com/beta/applications/$appid/owners"
+      - "https://graph.microsoft.com/beta/applications/$count"
+      - "https://graph.microsoft.com/beta/applications/$id/owners"
+      - "https://graph.microsoft.com/beta/devicemanagement/devicemanagementscripts"
+      - "https://graph.microsoft.com/beta/directoryroles"
+      - "https://graph.microsoft.com/beta/directoryroles/$id/members"
+      - "https://graph.microsoft.com/beta/directoryroles/roleTemplateId=$roletemplateid/members"
+      - "https://graph.microsoft.com/beta/groups/$id/members"
+      - "https://graph.microsoft.com/beta/me"
+      - "https://graph.microsoft.com/beta/serviceprincipals"
+      - "https://graph.microsoft.com/beta/users/$id"
+      - "https://graph.microsoft.com/beta/users/$id/memberof"
+      - "https://graph.microsoft.com/beta/users/$userid"
+      - "https://graph.microsoft.com/beta/users/$userid/memberof"
+      - "https://graph.microsoft.com/v1.0/devices"
+      - "https://graph.microsoft.com/v1.0/devices/$id/registeredowners"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/$UserId"
+      - "https://graph.microsoft.com/v1.0/directoryroles/4dda258a-4568-4579-abeb-07709e34e307/members/$ref"
+      - "https://graph.microsoft.com/v1.0/users/$Id/memberof"
+      - "https://graph.microsoft.com/v1.0/users/$Username"
+    resources:
+      - "metadata"
+      - "root"
+      - ".default"
+      - "applications"
+      - "devicemanagement"
+      - "directoryroles"
+      - "groups"
+      - "me"
+      - "serviceprincipals"
+      - "users"
+      - "devices"
+      - "directoryobjects"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/.default&expiresin=3599"
+      - "https://management.azure.com/providers/microsoft.authorization/roleeligibilityschedulerequests?api-version=2020-10-01-preview"
+      - "https://management.azure.com/providers/microsoft.subscription/subscriptions/'+$subid+"
+    resources:
+      - "root"
+      - ".default&expiresin=3599"
+      - "providers"
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/{0}/oauth2/v2.0/token"
+      resources:
+        - "oauth2"

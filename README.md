@@ -28,17 +28,27 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | Tool | Unique APIs | Unique API calls | UserAgents |
 | --- | --- | --- | --- |
 | [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
+| [AzureADRecon](Profiles/azureadrecon.yaml) | 2 | 2 | 0 |
 | [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
+| [BARK](Profiles/bark.yaml) | 3 | 77 | 0 |
+| [Graphpython](Profiles/graphpython.yaml) | 3 | 119 | 17 |
+| [GraphRunner](Profiles/graphrunner.yaml) | 4 | 67 | 21 |
 | [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
 | [MFASweep](Profiles/mfasweep.yaml) | 4 | 17 | 11 |
 | [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
 | [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
 | [o365enum](Profiles/o365enum.yaml) | 1 | 1 | 2 |
+| [o365spray](Profiles/o365spray.yaml) | 1 | 1 | 2 |
 | [pingcastle](Profiles/pingcastle.yaml) | 3 | 14 | 1 |
+| [PowerZure](Profiles/powerzure.yaml) | 3 | 29 | 0 |
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
+| [ropci](Profiles/ropci.yaml) | 3 | 15 | 0 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
 | [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
+| [TeamsEnum](Profiles/teamsenum.yaml) | 1 | 7 | 1 |
+| [TokenSmith](Profiles/tokensmith.yaml) | 2 | 8 | 0 |
 | [TokenTactics](Profiles/tokentactics.yaml) | 4 | 8 | 16 |
+| [TokenTacticsV2](Profiles/tokentacticsv2.yaml) | 4 | 30 | 23 |
 <!-- TOOL_PROFILE_TABLE_END -->
 
 ## Why?
