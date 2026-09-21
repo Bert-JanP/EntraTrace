@@ -1,0 +1,69 @@
+version: "1.0"
+tool:
+  name: "Spray365"
+  repository_url: "https://github.com/MarkoH17/Spray365"
+last_checked_utc: "2026-09-21T21:14:01Z"
+last_update_utc: "2026-09-21T21:14:01Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 6
+  total_endpoint_mentions: 6
+  files_scanned: 19
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 3
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+    resources:
+      - "root"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis:
+    -
+      host: "api.diagnostics.office.com"
+      endpoints:
+        - "https://api.diagnostics.office.com"
+      resources:
+        - "root"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+      resources:
+        - "root"
+    -
+      host: "msmamservice.api.application"
+      endpoints:
+        - "https://msmamservice.api.application"
+      resources:
+        - "root"
