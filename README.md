@@ -29,6 +29,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | --- | --- | --- | --- |
 | [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
 | [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
+| [Device-Code-Phishing](Profiles/device-code-phishing.yaml) | 1 | 2 | 1 |
 | [Graphpython](Profiles/graphpython.yaml) | 3 | 119 | 17 |
 | [GraphRunner](Profiles/graphrunner.yaml) | 4 | 67 | 21 |
 | [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
