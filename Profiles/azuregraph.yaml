@@ -1,0 +1,65 @@
+version: "1.0"
+tool:
+  name: "AzureGraph"
+  repository_url: "https://github.com/JoelGMSec/AzureGraph"
+last_checked_utc: "2026-09-21T21:14:11Z"
+last_update_utc: "2026-09-21T21:14:11Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 11
+  total_endpoint_mentions: 11
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 9
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0/$_"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/devices"
+      - "https://graph.microsoft.com/v1.0/domains"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/organization"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "$_"
+      - "applications"
+      - "devices"
+      - "domains"
+      - "groups"
+      - "me"
+      - "organization"
+      - "serviceprincipals"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$TenantID/oauth2/token"
+      resources:
+        - "$TenantID"
+    -
+      host: "login.microsoftonline.com:443"
+      endpoints:
+        - "https://login.microsoftonline.com:443/common/oauth2/v2.0/token"
+      resources:
+        - "common"
