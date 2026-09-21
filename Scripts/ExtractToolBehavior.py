@@ -64,7 +64,7 @@ URL_PATTERN = re.compile(
 HOST_LITERAL_PATTERN = re.compile(
     r"(?i)(https?://)?("
     r"graph\.microsoft\.com|graph\.windows\.net|management\.azure\.com"
-    r"|login\.microsoftonline\.com|login\.windows\.net|device\.login\.microsoftonline\.com"
+    r"|login\.microsoftonline\.com|login\.windows\.net|login\.microsoft\.com|device\.login\.microsoftonline\.com"
     r"|autologon\.microsoftazuread-sso\.com"
     r"|teams\.microsoft\.com|presence\.teams\.microsoft\.com"
     r"|teams\.live\.com|presence\.teams\.live\.com|api\.spaces\.skype\.com"
@@ -87,6 +87,7 @@ FAMILY_BY_HOST = {
     "management.azure.com": "azure_resource_manager",
     "login.microsoftonline.com": "microsoft_identity",
     "login.windows.net": "microsoft_identity",
+    "login.microsoft.com": "microsoft_identity",
     "device.login.microsoftonline.com": "microsoft_identity",
     "autologon.microsoftazuread-sso.com": "microsoft_identity",
     "teams.microsoft.com": "microsoft_teams",
