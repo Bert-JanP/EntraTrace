@@ -39,6 +39,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
 | [TeamFiltration](Profiles/teamfiltration.yaml) | 3 | 62 | 2 |
 | [TokenTactics](Profiles/tokentactics.yaml) | 4 | 8 | 16 |
+| [TokenTacticsV2](Profiles/tokentacticsv2.yaml) | 4 | 30 | 23 |
 <!-- TOOL_PROFILE_TABLE_END -->
 
 ## Why?
