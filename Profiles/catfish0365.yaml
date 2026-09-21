@@ -1,0 +1,45 @@
+version: "1.0"
+tool:
+  name: "catFish0365"
+  repository_url: "https://github.com/froyo75/catFish0365"
+last_checked_utc: "2026-09-21T21:14:23Z"
+last_update_utc: "2026-09-21T21:14:23Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 3
+  total_endpoint_mentions: 3
+  files_scanned: 3
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0"
+      resources:
+        - "common"
