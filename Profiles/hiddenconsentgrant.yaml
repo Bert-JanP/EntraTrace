@@ -1,0 +1,48 @@
+version: "1.0"
+tool:
+  name: "HiddenConsentGrant"
+  repository_url: "https://github.com/Semperis/HiddenConsentGrant"
+last_checked_utc: "2026-09-21T21:14:24Z"
+last_update_utc: "2026-09-21T21:14:24Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 5
+  total_endpoint_mentions: 6
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/directoryroles"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments"
+    resources:
+      - "root"
+      - "directoryroles"
+      - "rolemanagement"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&client_id="
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"
