@@ -1,0 +1,95 @@
+version: "1.0"
+tool:
+  name: "azurenum"
+  repository_url: "https://github.com/SySS-Research/azurenum"
+last_checked_utc: "2026-09-21T21:14:06Z"
+last_update_utc: "2026-09-21T21:14:06Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.2277.112"
+summary:
+  total_unique_endpoints: 24
+  total_endpoint_mentions: 29
+  files_scanned: 32
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 16
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 5
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/identity/identityprovider"
+      - "https://graph.microsoft.com/beta/policies/deviceregistrationpolicy"
+      - "https://graph.microsoft.com/directoryobjects/getbyids"
+      - "https://graph.microsoft.com/groups/{objectId}"
+      - "https://graph.microsoft.com/policies/authenticationmethodspolicy"
+      - "https://graph.microsoft.com/policies/authorizationpolicy/authorizationpolicy"
+      - "https://graph.microsoft.com/policies/crosstenantaccesspolicy/default"
+      - "https://graph.microsoft.com/policies/crosstenantaccesspolicy/partners"
+      - "https://graph.microsoft.com/policies/deviceregistrationpolicy"
+      - "https://graph.microsoft.com/policies/identitysecuritydefaultsenforcementpolicy"
+      - "https://graph.microsoft.com/providers/microsoft.subscription/policies/default"
+      - "https://graph.microsoft.com/v1.0/directory/federationconfigurations"
+      - "https://graph.microsoft.com/v1.0/directory/federationconfigurations/graph.samlorwsfedexternaldomainfederation"
+      - "https://graph.microsoft.com/v1.0/reports/authenticationmethods/usersregisteredbymethod"
+    resources:
+      - "root"
+      - ".default"
+      - "identity"
+      - "policies"
+      - "directoryobjects"
+      - "groups"
+      - "providers"
+      - "directory"
+      - "reports"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/.default"
+      - "https://graph.windows.net/directoryobjects/getbyids"
+      - "https://graph.windows.net/groups/{objectId}"
+      - "https://graph.windows.net/policies/identitysecuritydefaultsenforcementpolicy"
+    resources:
+      - "root"
+      - ".default"
+      - "directoryobjects"
+      - "groups"
+      - "policies"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+      resources:
+        - "oauth2"
+    -
+      host: "main.iam.ad.ext.azure.com"
+      endpoints:
+        - "https://main.iam.ad.ext.azure.com/api/SecurityDefaults/GetSecurityDefaultStatus"
+      resources:
+        - "api"
