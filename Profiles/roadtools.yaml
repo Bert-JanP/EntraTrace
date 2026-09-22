@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "ROADtools"
   repository_url: "https://github.com/dirkjanm/ROADtools"
-last_checked_utc: "2026-09-21T19:04:55Z"
-last_update_utc: "2026-09-21T19:04:55Z"
+last_checked_utc: "2026-09-22T12:19:50Z"
+last_update_utc: "2026-09-22T12:19:50Z"
 user_agents:
   - "DeviceRegistrationClient"
   - "Dsreg/10.0 (Windows 10.0.19044.1826)"
