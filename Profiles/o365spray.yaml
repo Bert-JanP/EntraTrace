@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "o365spray"
   repository_url: "https://github.com/0xZDH/o365spray"
-last_checked_utc: "2026-09-23T12:20:22Z"
-last_update_utc: "2026-09-23T12:20:22Z"
+last_checked_utc: "2026-09-24T12:20:44Z"
+last_update_utc: "2026-09-24T12:20:44Z"
 user_agents:
   - "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro)"
   - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
