@@ -1,0 +1,35 @@
+version: "1.0"
+tool:
+  name: "Device-Code-Phishing"
+  repository_url: "https://github.com/LauraVoid/Device-Code-Phishing"
+last_checked_utc: "2026-09-21T21:14:38Z"
+last_update_utc: "2026-09-21T21:14:38Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/devicecode"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/token"
+    resources:
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
