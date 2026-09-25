@@ -3,6 +3,7 @@ https://github.com/SpecterOps/AzureHound
 https://github.com/mlcsec/Graphpython
 https://github.com/dafthack/GraphRunner
 https://github.com/RedByte1337/GraphSpy
+https://github.com/HarrierSecurity/HarrierOps-Azure
 https://github.com/dafthack/MFASweep
 https://github.com/NetSPI/MicroBurst
 https://github.com/dafthack/MSOLSpray
