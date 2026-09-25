@@ -1,4 +1,5 @@
 https://github.com/gerenios/aadinternals
+https://github.com/carlospolop/azure_oauth_phishing_example
 https://github.com/SpecterOps/AzureHound
 https://github.com/mlcsec/Graphpython
 https://github.com/dafthack/GraphRunner
