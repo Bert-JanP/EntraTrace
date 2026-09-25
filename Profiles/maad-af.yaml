@@ -1,0 +1,35 @@
+version: "1.0"
+tool:
+  name: "MAAD-AF"
+  repository_url: "https://github.com/vectra-ai-research/MAAD-AF"
+last_checked_utc: "2026-09-21T21:14:00Z"
+last_update_utc: "2026-09-21T21:14:00Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 34
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/beta/serviceprincipals/$ServicePrincipalId/synchronization/jobs/validatecredentials"
+      - "https://graph.microsoft.com/v1.0/policies/crosstenantaccesspolicy/partners/$ExternalTenantId/identitysynchronization"
+    resources:
+      - "serviceprincipals"
+      - "policies"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
