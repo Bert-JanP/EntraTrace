@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "TokenSmith"
   repository_url: "https://github.com/JumpsecLabs/TokenSmith"
-last_checked_utc: "2026-09-24T12:20:54Z"
-last_update_utc: "2026-09-24T12:20:54Z"
+last_checked_utc: "2026-09-25T12:21:04Z"
+last_update_utc: "2026-09-25T12:21:04Z"
 user_agents: []
 summary:
   total_unique_endpoints: 8
