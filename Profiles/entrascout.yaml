@@ -1,0 +1,156 @@
+version: "1.0"
+tool:
+  name: "EntraScout"
+  repository_url: "https://github.com/osherassor/EntraScout"
+last_checked_utc: "2026-09-21T21:14:24Z"
+last_update_utc: "2026-09-21T21:14:24Z"
+user_agents:
+  - "EntraScout"
+  - "Mozilla/5.0"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  - "blobexplorer/1.0 (+anon-readonly)"
+summary:
+  total_unique_endpoints: 34
+  total_endpoint_mentions: 37
+  files_scanned: 70
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 28
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 5
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta"
+      - "https://graph.microsoft.com/beta/applications?$filter=signInAudience+eq+'AzureADandPersonalMicrosoftAccount"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/$metadata"
+    resources:
+      - ".default"
+      - "beta"
+      - "applications"
+      - "v1.0"
+      - "$metadata"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/subscriptions"
+    resources:
+      - "subscriptions"
+  other_apis:
+    -
+      host: "api.bing.microsoft.com"
+      endpoints:
+        - "https://api.bing.microsoft.com/v7.0/search"
+      resources:
+        - "v7.0"
+    -
+      host: "api.github.com"
+      endpoints:
+        - "https://api.github.com/search/code"
+        - "https://api.github.com/search/code?q={d['query']}"
+      resources:
+        - "search"
+    -
+      host: "api.security.microsoft.com"
+      endpoints:
+        - "https://api.security.microsoft.com"
+      resources:
+        - "root"
+    -
+      host: "api.securitycenter.microsoft.com"
+      endpoints:
+        - "https://api.securitycenter.microsoft.com/api"
+      resources:
+        - "api"
+    -
+      host: "dev.azure.com"
+      endpoints:
+        - "https://dev.azure.com/{ado_org}/_apis/projects?api-version=7.1-preview.4"
+        - "https://dev.azure.com/{org}/_apis/projects?api-version=7.0&stateFilter=wellFormed"
+        - "https://dev.azure.com/{org}/{pname}/_apis/pipelines?api-version=7.0"
+        - "https://dev.azure.com/{org}/{pname}/_apis/serviceendpoint/endpoints?api-version=7.0"
+      resources:
+        - "_apis"
+        - "{pname}"
+    -
+      host: "discord.com"
+      endpoints:
+        - "https://discord.com/api/webhooks/{...}/{...}"
+      resources:
+        - "api"
+    -
+      host: "haveibeenpwned.com"
+      endpoints:
+        - "https://haveibeenpwned.com/api/v3/breaches?domain={apex}"
+      resources:
+        - "api"
+    -
+      host: "hub.docker.com"
+      endpoints:
+        - "https://hub.docker.com/v2/repositories/{brand}?page_size=100"
+      resources:
+        - "v2"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+        - "https://login.microsoftonline.com/common/userrealm/{login}?api-version=2.1"
+        - "https://login.microsoftonline.com/{apex}/oauth2"
+        - "https://login.microsoftonline.com/{apex}/oauth2/token"
+        - "https://login.microsoftonline.com/{apex}/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/{apex}/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{snap.tenant_id}/oauth2/v2.0/authorize"
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/authorize"
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+      resources:
+        - "common"
+        - "oauth2"
+    -
+      host: "prod-nn.{region}.logic.azure.com"
+      endpoints:
+        - "https://prod-nn.{region}.logic.azure.com/workflows/{guid}/triggers/manual/paths/invoke?api-version=...&sp=...&sig="
+        - "https://prod-nn.{region}.logic.azure.com/workflows/{guid}/triggers/manual/paths/invoke?api-version=...&sp=/triggers/manual/run&sv=1.0&sig="
+      resources:
+        - "workflows"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/mt/{region}/beta/users/{login}/externalsearchv3"
+      resources:
+        - "api"
+    -
+      host: "{app}.azurewebsites.net"
+      endpoints:
+        - "https://{app}.azurewebsites.net/api/{name}?code={key}"
+      resources:
+        - "api"
+    -
+      host: "{host}"
+      endpoints:
+        - "https://{host}/api/data/v9.2"
+      resources:
+        - "api"
+    -
+      host: "{name}.{region}.api.azureml.ms"
+      endpoints:
+        - "https://{name}.{region}.api.azureml.ms"
+      resources:
+        - "root"
