@@ -1,0 +1,45 @@
+version: "1.0"
+tool:
+  name: "azure_recon"
+  repository_url: "https://github.com/wardspan/azure_recon"
+last_checked_utc: "2026-09-21T21:14:37Z"
+last_update_utc: "2026-09-21T21:14:37Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 6
+  total_endpoint_mentions: 13
+  files_scanned: 20
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 5
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+    resources:
+      - ".default"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/.default"
+      - "https://management.azure.com/subscriptions/0ffec135-087e-4d1c-aa4d-aa1551d92adc/resourcegroups/compute"
+      - "https://management.azure.com/subscriptions/0ffec135-087e-4d1c-aa4d-aa1551d92adc/resourcegroups/security"
+      - "https://management.azure.com/subscriptions/{subscription_id}/resourcegroups/rg1/providers/microsoft.compute/virtualmachines/vm1"
+      - "https://management.azure.com/subscriptions/{subscription_id}/resourcegroups/rg2/providers/microsoft.storage/storageaccounts/storage1"
+    resources:
+      - ".default"
+      - "subscriptions"
+  other_apis: []
