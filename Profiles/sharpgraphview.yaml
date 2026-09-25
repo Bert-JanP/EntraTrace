@@ -1,0 +1,142 @@
+version: "1.0"
+tool:
+  name: "SharpGraphView"
+  repository_url: "https://github.com/mlcsec/SharpGraphView"
+last_checked_utc: "2026-09-21T21:14:11Z"
+last_update_utc: "2026-09-21T21:14:11Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19042"
+summary:
+  total_unique_endpoints: 75
+  total_endpoint_mentions: 82
+  files_scanned: 4
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 66
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 7
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications/{id}/addpassword"
+      - "https://graph.microsoft.com/v1.0/devices"
+      - "https://graph.microsoft.com/v1.0/directory/administrativeunits"
+      - "https://graph.microsoft.com/v1.0/directory/administrativeunits/{Config.id}/members"
+      - "https://graph.microsoft.com/v1.0/directoryroles"
+      - "https://graph.microsoft.com/v1.0/domains"
+      - "https://graph.microsoft.com/v1.0/external/connections"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/groups/{Config.id}"
+      - "https://graph.microsoft.com/v1.0/groups/{Config.id}/members"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/authenticationcontextclassreferences"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/namedlocations"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/policies"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/policies/{Config.id}"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/activities"
+      - "https://graph.microsoft.com/v1.0/me/approleassignments"
+      - "https://graph.microsoft.com/v1.0/me/authentication/methods"
+      - "https://graph.microsoft.com/v1.0/me/authentication/passwordmethods"
+      - "https://graph.microsoft.com/v1.0/me/authentication/temporaryaccesspassmethods"
+      - "https://graph.microsoft.com/v1.0/me/chats"
+      - "https://graph.microsoft.com/v1.0/me/chats/{Config.id}/messages"
+      - "https://graph.microsoft.com/v1.0/me/contacts"
+      - "https://graph.microsoft.com/v1.0/me/drive/recent"
+      - "https://graph.microsoft.com/v1.0/me/drive/root/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/sharedwithme"
+      - "https://graph.microsoft.com/v1.0/me/drives"
+      - "https://graph.microsoft.com/v1.0/me/joinedteams"
+      - "https://graph.microsoft.com/v1.0/me/memberof"
+      - "https://graph.microsoft.com/v1.0/me/messages"
+      - "https://graph.microsoft.com/v1.0/me/oauth2permissiongrants"
+      - "https://graph.microsoft.com/v1.0/me/onenote/notebooks"
+      - "https://graph.microsoft.com/v1.0/me/permissiongrants"
+      - "https://graph.microsoft.com/v1.0/me/transitivememberof"
+      - "https://graph.microsoft.com/v1.0/me?$select={property}"
+      - "https://graph.microsoft.com/v1.0/organization"
+      - "https://graph.microsoft.com/v1.0/policies/crosstenantaccesspolicy"
+      - "https://graph.microsoft.com/v1.0/policies/crosstenantaccesspolicy/templates/multitenantorganizationpartnerconfiguration"
+      - "https://graph.microsoft.com/v1.0/search/query"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/sites"
+      - "https://graph.microsoft.com/v1.0/sites/root"
+      - "https://graph.microsoft.com/v1.0/sites/{siteId}/drives"
+      - "https://graph.microsoft.com/v1.0/tenantrelationships/multitenantorganization/tenants"
+      - "https://graph.microsoft.com/v1.0/users"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/approleassignments"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/authentication/methods"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/authentication/passwordmethods"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/authentication/temporaryaccesspassmethods"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/chats"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/chats/getallmessages"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/drives"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/joinedteams"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/memberof"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/messages"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/oauth2permissiongrants"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/onenote/notebooks"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/permissiongrants"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}/transitivememberof"
+      - "https://graph.microsoft.com/v1.0/users/{Config.id}?$select={property}"
+      - "https://graph.microsoft.com/v1.0/users/{id}"
+      - "https://graph.microsoft.com/v1.0/users/{id}/authentication/temporaryaccesspassmethods"
+    resources:
+      - "root"
+      - ".default"
+      - "applications"
+      - "devices"
+      - "directory"
+      - "directoryroles"
+      - "domains"
+      - "external"
+      - "groups"
+      - "identity"
+      - "me"
+      - "organization"
+      - "policies"
+      - "search"
+      - "serviceprincipals"
+      - "sites"
+      - "tenantrelationships"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/.default"
+    resources:
+      - "root"
+      - ".default"
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{Config.tenant}/oauth2/token"
+        - "https://login.microsoftonline.com/{Config.tenant}/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{tenant}/oauth2/token"
+      resources:
+        - "common"
+        - "oauth2"
