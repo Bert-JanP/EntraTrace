@@ -1,0 +1,43 @@
+version: "1.0"
+tool:
+  name: "AzureRecon"
+  repository_url: "https://github.com/3uph/AzureRecon"
+last_checked_utc: "2026-09-21T21:14:29Z"
+last_update_utc: "2026-09-21T21:14:29Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 1
+  api_families:
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/{tenant}/oauth2/token"
+      resources:
+        - "oauth2"
