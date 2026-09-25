@@ -1,0 +1,52 @@
+version: "1.0"
+tool:
+  name: "AzureAiTMFunction"
+  repository_url: "https://github.com/nicolonsky/AzureAiTMFunction"
+last_checked_utc: "2026-09-21T21:15:41Z"
+last_update_utc: "2026-09-21T21:15:41Z"
+user_agents:
+  - "AzureAiTMFunction"
+  - "AzureAiTMFunction/1.0 (Windows NT 10.0; Win64; x64)"
+summary:
+  total_unique_endpoints: 7
+  total_endpoint_mentions: 10
+  files_scanned: 12
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 4
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/organization"
+    resources:
+      - "root"
+      - "me"
+      - "organization"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "common"
