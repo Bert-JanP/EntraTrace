@@ -1,0 +1,77 @@
+version: "1.0"
+tool:
+  name: "M365-Assessment-Toolkit"
+  repository_url: "https://github.com/malcolmmcdonald1982/M365-Assessment-Toolkit"
+last_checked_utc: "2026-09-21T21:14:16Z"
+last_update_utc: "2026-09-21T21:14:16Z"
+user_agents:
+  - "M365-Assessment-Toolkit"
+summary:
+  total_unique_endpoints: 25
+  total_endpoint_mentions: 58
+  files_scanned: 59
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 23
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/policies/identitysecuritydefaultsenforcementpolicy"
+      - "https://graph.microsoft.com/beta/security/alertpolicies"
+      - "https://graph.microsoft.com/beta/security/securescores"
+      - "https://graph.microsoft.com/v1.0/auditlogs/signins"
+      - "https://graph.microsoft.com/v1.0/devicemanagement/mobilethreatdefenseconnectors"
+      - "https://graph.microsoft.com/v1.0/identity/conditionalaccess/policies"
+      - "https://graph.microsoft.com/v1.0/identitygovernance/accessreviews/definitions?`$top=25"
+      - "https://graph.microsoft.com/v1.0/identitygovernance/accessreviews/definitions?`$top=5"
+      - "https://graph.microsoft.com/v1.0/organization?$select=displayName,verifiedDomains"
+      - "https://graph.microsoft.com/v1.0/policies/authenticationmethodspolicy/authenticationmethodconfigurations/$Method"
+      - "https://graph.microsoft.com/v1.0/policies/authenticationmethodspolicy/authenticationmethodconfigurations/microsoftauthenticator"
+      - "https://graph.microsoft.com/v1.0/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/v1.0/policies/crosstenantaccesspolicy/default"
+      - "https://graph.microsoft.com/v1.0/policies/crosstenantaccesspolicy/partners"
+      - "https://graph.microsoft.com/v1.0/security/alerts_v2"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($Role.resourceId)"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($SP.id)/approleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{resource_id}?$select=appRoles,displayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{sp_id}/approleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals?$filter=appId"
+    resources:
+      - "root"
+      - ".default"
+      - "policies"
+      - "security"
+      - "auditlogs"
+      - "devicemanagement"
+      - "identity"
+      - "identitygovernance"
+      - "organization"
+      - "serviceprincipals"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+      resources:
+        - "$TenantId"
+        - "oauth2"
