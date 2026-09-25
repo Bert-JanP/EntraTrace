@@ -21,6 +21,26 @@ summary:
       display_name: "Azure AD Graph"
       host: "graph.windows.net"
       unique_endpoints: 0
+    -
+      family: "microsoft_identity"
+      display_name: "Microsoft Identity Platform"
+      host: "login.microsoftonline.com"
+      unique_endpoints: 0
+    -
+      family: "microsoft_teams"
+      display_name: "Microsoft Teams"
+      host: "teams.microsoft.com"
+      unique_endpoints: 0
+    -
+      family: "sharepoint_online"
+      display_name: "SharePoint Online"
+      host: "sharepoint.com"
+      unique_endpoints: 0
+    -
+      family: "exchange_online"
+      display_name: "Exchange Online"
+      host: "outlook.office365.com"
+      unique_endpoints: 0
 apis:
   microsoft_graph:
     host: "graph.microsoft.com"
@@ -36,6 +56,26 @@ apis:
       - "users"
   azure_resource_manager:
     host: "management.azure.com"
+    endpoints: []
+    resources: []
+  microsoft_identity:
+    host: "login.microsoftonline.com"
+    endpoints:
+      - "https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token"
+    resources:
+      - "{tenantId}"
+  microsoft_teams:
+    host: "teams.microsoft.com"
+    endpoints:
+      - "https://teams.microsoft.com/api/mt/emea/beta/users/tenants"
+    resources:
+      - "api"
+  sharepoint_online:
+    host: "sharepoint.com"
+    endpoints: []
+    resources: []
+  exchange_online:
+    host: "outlook.office365.com"
     endpoints: []
     resources: []
   other_apis:
