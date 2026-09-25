@@ -1,0 +1,44 @@
+version: "1.0"
+tool:
+  name: "o365-attack-toolkit"
+  repository_url: "https://github.com/mdsecactivebreach/o365-attack-toolkit"
+last_checked_utc: "2026-09-21T21:15:23Z"
+last_update_utc: "2026-09-21T21:15:23Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 3
+  total_endpoint_mentions: 4
+  files_scanned: 15
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0"
+    resources:
+      - "v1.0"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?scope=%s&redirect_uri=%s&response_type=code&client_id=%s"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "common"
