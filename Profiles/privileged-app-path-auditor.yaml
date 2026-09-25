@@ -1,0 +1,85 @@
+version: "1.0"
+tool:
+  name: "privileged-app-path-auditor"
+  repository_url: "https://github.com/nicolasblank/privileged-app-path-auditor"
+last_checked_utc: "2026-09-21T21:14:17Z"
+last_update_utc: "2026-09-21T21:14:17Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 40
+  total_endpoint_mentions: 57
+  files_scanned: 26
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 40
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/beta/.*/roledefinitions"
+      - "https://graph.microsoft.com/beta/followup-failed-page"
+      - "https://graph.microsoft.com/beta/reports/serviceprincipalsigninactivities?$top=999"
+      - "https://graph.microsoft.com/beta/rolemanagement/directory/roledefinitions"
+      - "https://graph.microsoft.com/beta/rolemanagement/directory/roledefinitions/omitted-definition"
+      - "https://graph.microsoft.com/groups/group-1/transitivemembers"
+      - "https://graph.microsoft.com/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications/$($app.id)/federatedidentitycredentials"
+      - "https://graph.microsoft.com/v1.0/applications/$($app.id)/owners"
+      - "https://graph.microsoft.com/v1.0/consent-fixture/page-three"
+      - "https://graph.microsoft.com/v1.0/consent-fixture/page-two"
+      - "https://graph.microsoft.com/v1.0/fic-page-two"
+      - "https://graph.microsoft.com/v1.0/followup-failed-page"
+      - "https://graph.microsoft.com/v1.0/groups/$groupId/transitivemembers/microsoft.graph.user"
+      - "https://graph.microsoft.com/v1.0/oauth2permissiongrants?$top=999"
+      - "https://graph.microsoft.com/v1.0/pagination-fixture/$Source"
+      - "https://graph.microsoft.com/v1.0/pagination-fixture/$source"
+      - "https://graph.microsoft.com/v1.0/pagination-fixture/extra-grant"
+      - "https://graph.microsoft.com/v1.0/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments?$expand=principal"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roledefinitions"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($clientId)"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($grant.resourceId)"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$($sp.id)/approleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$resourceId"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$spId"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$spId/owners"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/client-one?$select=displayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/client-sp/approleassignments?$select=id,appRoleId,resourceId,resourceDisplayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/client-two?$select=displayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/client/approleassignments?$select=id,appRoleId,resourceId,resourceDisplayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/client?$select=displayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/delegated-resource?$select=id,appId,displayName"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/graph-sp?*"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/missing-resource?$select=id,appId,displayName,appRoles,oauth2PermissionScopes"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/resource?$select=id,appId,displayName,appRoles,oauth2PermissionScopes"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals?$select=id,appId,displayName,appOwnerOrganizationId,servicePrincipalType,accountEnabled&$top=999"
+      - "https://graph.microsoft.com/v1.0/synthetic/page-two"
+      - "https://graph.microsoft.com/v1.0/users?$select=id,displayName,userPrincipalName&$top=999"
+    resources:
+      - ".*"
+      - "followup-failed-page"
+      - "reports"
+      - "rolemanagement"
+      - "groups"
+      - "policies"
+      - "applications"
+      - "consent-fixture"
+      - "fic-page-two"
+      - "oauth2permissiongrants"
+      - "pagination-fixture"
+      - "serviceprincipals"
+      - "synthetic"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
