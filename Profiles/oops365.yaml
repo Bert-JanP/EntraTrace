@@ -1,0 +1,37 @@
+version: "1.0"
+tool:
+  name: "Oops365"
+  repository_url: "https://github.com/cocomo29/Oops365"
+last_checked_utc: "2026-09-21T21:14:28Z"
+last_update_utc: "2026-09-21T21:14:28Z"
+user_agents:
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+summary:
+  total_unique_endpoints: 1
+  total_endpoint_mentions: 1
+  files_scanned: 8
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "common"
