@@ -1,0 +1,36 @@
+version: "1.0"
+tool:
+  name: "solenya"
+  repository_url: "https://github.com/CultCornholio/solenya"
+last_checked_utc: "2026-09-21T21:15:43Z"
+last_update_utc: "2026-09-21T21:15:43Z"
+user_agents:
+  - "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 48
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/me/mailfolders/inbox/messages"
+    resources:
+      - "root"
+      - "me"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
