@@ -1,0 +1,37 @@
+version: "1.0"
+tool:
+  name: "red-team-tools-for-azure"
+  repository_url: "https://github.com/ws-research/red-team-tools-for-azure"
+last_checked_utc: "2026-09-21T21:14:27Z"
+last_update_utc: "2026-09-21T21:14:27Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 3
+  total_endpoint_mentions: 5
+  files_scanned: 5
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/users"
+      - "https://graph.microsoft.com/v1.0"
+    resources:
+      - ".default"
+      - "users"
+      - "v1.0"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
