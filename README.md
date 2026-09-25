@@ -32,6 +32,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [Graphpython](Profiles/graphpython.yaml) | 3 | 119 | 17 |
 | [GraphRunner](Profiles/graphrunner.yaml) | 4 | 67 | 21 |
 | [GraphSpy](Profiles/graphspy.yaml) | 2 | 38 | 2 |
+| [m365-fatigue](Profiles/m365-fatigue.yaml) | 2 | 4 | 1 |
 | [MFASweep](Profiles/mfasweep.yaml) | 4 | 17 | 11 |
 | [MicroBurst](Profiles/microburst.yaml) | 3 | 78 | 0 |
 | [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
