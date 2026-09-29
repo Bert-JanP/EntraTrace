@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "AzureHound"
   repository_url: "https://github.com/SpecterOps/AzureHound"
-last_checked_utc: "2026-09-28T12:23:18Z"
-last_update_utc: "2026-09-28T12:23:18Z"
+last_checked_utc: "2026-09-29T12:22:18Z"
+last_update_utc: "2026-09-29T12:22:18Z"
 user_agents: []
 summary:
   total_unique_endpoints: 28
