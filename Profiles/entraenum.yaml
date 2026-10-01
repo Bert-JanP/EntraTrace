@@ -1,0 +1,64 @@
+version: "1.0"
+tool:
+  name: "EntraEnum"
+  repository_url: "https://github.com/virgilcj/EntraEnum"
+last_checked_utc: "2026-09-21T21:14:34Z"
+last_update_utc: "2026-09-21T21:14:34Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 13
+  total_endpoint_mentions: 13
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 10
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/auditlogs/signins"
+      - "https://graph.microsoft.com/v1.0/contacts"
+      - "https://graph.microsoft.com/v1.0/devices"
+      - "https://graph.microsoft.com/v1.0/directoryroles"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/subscriptions"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "root"
+      - "applications"
+      - "auditlogs"
+      - "contacts"
+      - "devices"
+      - "directoryroles"
+      - "groups"
+      - "serviceprincipals"
+      - "subscriptions"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$tenantID/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      resources:
+        - "$tenantID"
+        - "common"
