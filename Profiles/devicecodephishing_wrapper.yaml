@@ -1,0 +1,41 @@
+version: "1.0"
+tool:
+  name: "DeviceCodePhishing_wrapper"
+  repository_url: "https://github.com/Cedric-Martz/DeviceCodePhishing_wrapper"
+last_checked_utc: "2026-09-21T21:16:34Z"
+last_update_utc: "2026-09-21T21:16:34Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 8
+  total_endpoint_mentions: 8
+  files_scanned: 7
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 8
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/drive"
+      - "https://graph.microsoft.com/v1.0/me/drive/root/children?$top=20"
+      - "https://graph.microsoft.com/v1.0/me/manager"
+      - "https://graph.microsoft.com/v1.0/me/memberof"
+      - "https://graph.microsoft.com/v1.0/me/messages?$top=5&$select=subject,from,receivedDateTime"
+      - "https://graph.microsoft.com/v1.0/me/messages?$top={download_emails}&$select=subject,from,toRecipients,receivedDateTime,bodyPreview,body,hasAttachments,importance"
+      - "https://graph.microsoft.com/v1.0/organization"
+    resources:
+      - "me"
+      - "organization"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
