@@ -1,0 +1,59 @@
+version: "1.0"
+tool:
+  name: "EntraConnectAttacks"
+  repository_url: "https://github.com/shackcrack007/EntraConnectAttacks"
+last_checked_utc: "2026-09-21T21:14:34Z"
+last_update_utc: "2026-09-21T21:14:34Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 12
+  total_endpoint_mentions: 14
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 10
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/directoryobjects"
+      - "https://graph.microsoft.com/v1.0/directoryroles/roletemplateid=62e90394-69f5-4237-9190-012177145e10/members"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$SPId/approleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$ServicePrincipalToTakeover"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$ServicePrincipalToTakeover/addpassword"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/$ServicePrincipalToTakeover/owners"
+      - "https://graph.microsoft.com/v1.0/users/$AADUserUPN"
+    resources:
+      - ".default"
+      - "applications"
+      - "directoryobjects"
+      - "directoryroles"
+      - "serviceprincipals"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$($AppInformation.appOwnerOrganizationId)/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/$($TenantId)/oauth2/v2.0/token"
+      resources:
+        - "$($AppInformation.appOwnerOrganizationId)"
+        - "$($TenantId)"
