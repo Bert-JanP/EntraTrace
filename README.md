@@ -37,6 +37,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [MSOLSpray](Profiles/msolspray.yaml) | 1 | 1 | 0 |
 | [o365enum](Profiles/o365enum.yaml) | 1 | 1 | 2 |
 | [o365spray](Profiles/o365spray.yaml) | 1 | 1 | 2 |
+| [PhirstPhish](Profiles/phirstphish.yaml) | 4 | 66 | 20 |
 | [pingcastle](Profiles/pingcastle.yaml) | 3 | 14 | 1 |
 | [PowerZure](Profiles/powerzure.yaml) | 3 | 29 | 0 |
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
