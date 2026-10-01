@@ -12,6 +12,7 @@ https://github.com/netwrix/pingcastle
 https://github.com/hausec/PowerZure
 https://github.com/dirkjanm/ROADtools
 https://github.com/wunderwuzzi23/ropci
+https://github.com/adm1nPanda/SharpExfil
 https://github.com/Azure/Stormspotter
 https://github.com/Flangvik/TeamFiltration
 https://github.com/JumpsecLabs/TokenSmith
