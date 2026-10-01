@@ -1,0 +1,51 @@
+version: "1.0"
+tool:
+  name: "OAuth-Device-Code-Phishing"
+  repository_url: "https://github.com/Vishal-Raj007/OAuth-Device-Code-Phishing"
+last_checked_utc: "2026-09-21T21:14:30Z"
+last_update_utc: "2026-09-21T21:14:30Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 5
+  total_endpoint_mentions: 6
+  files_scanned: 3
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 4
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/Common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/common/oauth2/token?api-version=1.0"
+      resources:
+        - "common"
+    -
+      host: "outlook.office.com"
+      endpoints:
+        - "https://outlook.office.com/api/v2.0/me/message"
+      resources:
+        - "api"
