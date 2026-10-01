@@ -1,0 +1,38 @@
+version: "1.0"
+tool:
+  name: "Microsoft365_devicePhish"
+  repository_url: "https://github.com/optiv/Microsoft365_devicePhish"
+last_checked_utc: "2026-09-21T21:14:10Z"
+last_update_utc: "2026-09-21T21:14:10Z"
+user_agents:
+  - "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+summary:
+  total_unique_endpoints: 4
+  total_endpoint_mentions: 5
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 4
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0/me/mailfolders/inbox/messages?select=id,sentDateTime,subject,bodyPreview,toRecipients&top=1"
+      - "https://graph.microsoft.com/v1.0/me/messages"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/devicecode"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/token"
+    resources:
+      - "me"
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
