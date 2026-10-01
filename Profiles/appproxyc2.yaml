@@ -1,0 +1,39 @@
+version: "1.0"
+tool:
+  name: "AppProxyC2"
+  repository_url: "https://github.com/xpn/AppProxyC2"
+last_checked_utc: "2026-09-21T21:14:15Z"
+last_update_utc: "2026-09-21T21:14:15Z"
+user_agents:
+  - "ApplicationProxyConnector/1.5.1975.0"
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 2
+  files_scanned: 9
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2Fproxy.cloudwebappproxy.net%2Fregisterapp&client_id=55747057-9b5d-4bd4-b387-abf52a8bd489&response_type=code&haschrome=1&redirect_uri=https%3A%2F%2Flogin.microsoftonline.com%2Fcommon%2Foauth2%2Fnativeclient&client-request-id=2b10921b-e812-5111-ad0e-1401b2f42bdc&prompt=login&x-client-SKU=PCL.Desktop&x-client-Ver=3.19.8.16603&x-client-CPU=x64&x-client-OS=Microsoft+Windows+NT+10.0.19041.0"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "common"
