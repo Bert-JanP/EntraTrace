@@ -1,0 +1,92 @@
+version: "1.0"
+tool:
+  name: "AzureTokenInspector"
+  repository_url: "https://github.com/NAWardRox/AzureTokenInspector"
+last_checked_utc: "2026-09-21T21:14:31Z"
+last_update_utc: "2026-09-21T21:14:31Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 29
+  total_endpoint_mentions: 31
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 15
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 11
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://api.powerbi.com/v1.0/myorg/capacities"
+      - "https://api.powerbi.com/v1.0/myorg/dashboards"
+      - "https://api.powerbi.com/v1.0/myorg/dataflows"
+      - "https://api.powerbi.com/v1.0/myorg/datasets"
+      - "https://api.powerbi.com/v1.0/myorg/groups"
+      - "https://api.powerbi.com/v1.0/myorg/reports"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/calendar"
+      - "https://graph.microsoft.com/v1.0/me/drive"
+      - "https://graph.microsoft.com/v1.0/me/joinedteams"
+      - "https://graph.microsoft.com/v1.0/me/messages"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "myorg"
+      - "applications"
+      - "groups"
+      - "me"
+      - "serviceprincipals"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.compute/virtualmachines?api-version=2021-11-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.containerservice/managedclusters?api-version=2021-10-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.documentdb/databaseaccounts?api-version=2021-10-15"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.keyvault/vaults?api-version=2021-10-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.security/pricings?api-version=2018-06-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.sql/servers?api-version=2021-11-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.storage/storageaccounts?api-version=2021-09-01"
+      - "https://management.azure.com/subscriptions/{subscription}/providers/microsoft.web/sites?api-version=2021-03-01"
+      - "https://management.azure.com/subscriptions/{subscription}/resourcegroups?api-version=2021-04-01"
+      - "https://management.azure.com/subscriptions?api-version=2020-01-01"
+      - "https://management.azure.com/tenants?api-version=2020-01-01"
+    resources:
+      - "subscriptions"
+      - "tenants"
+  other_apis:
+    -
+      host: "api.github.com"
+      endpoints:
+        - "https://api.github.com/user"
+      resources:
+        - "user"
+    -
+      host: "login.salesforce.com"
+      endpoints:
+        - "https://login.salesforce.com/services/oauth2/userinfo"
+      resources:
+        - "services"
+    -
+      host: "slack.com"
+      endpoints:
+        - "https://slack.com/api/auth.test"
+      resources:
+        - "api"
