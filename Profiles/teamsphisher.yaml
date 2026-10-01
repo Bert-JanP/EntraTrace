@@ -1,0 +1,54 @@
+version: "1.0"
+tool:
+  name: "TeamsPhisher"
+  repository_url: "https://github.com/Octoberfest7/TeamsPhisher"
+last_checked_utc: "2026-09-21T21:14:01Z"
+last_update_utc: "2026-09-21T21:14:01Z"
+user_agents:
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)"
+summary:
+  total_unique_endpoints: 8
+  total_endpoint_mentions: 9
+  files_scanned: 1
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 8
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "amer.ng.msg.teams.microsoft.com"
+      endpoints:
+        - "https://amer.ng.msg.teams.microsoft.com/v1/threads"
+        - "https://amer.ng.msg.teams.microsoft.com/v1/threads/{threadID}"
+        - "https://amer.ng.msg.teams.microsoft.com/v1/users/ME/conversations"
+        - "https://amer.ng.msg.teams.microsoft.com/v1/users/ME/conversations/48%3Anotes/messages"
+      resources:
+        - "v1"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com/.default"
+      resources:
+        - ".default"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/mt/emea/beta/users"
+        - "https://teams.microsoft.com/api/mt/emea/beta/users/%s/externalsearchv3?includeTFLUsers=true"
+        - "https://teams.microsoft.com/api/mt/emea/beta/users/tenants"
+      resources:
+        - "api"
