@@ -1,0 +1,42 @@
+version: "1.0"
+tool:
+  name: "Office365Hacker"
+  repository_url: "https://github.com/YasserREED/Office365Hacker"
+last_checked_utc: "2026-09-21T21:14:22Z"
+last_update_utc: "2026-09-21T21:14:22Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 8
+  total_endpoint_mentions: 11
+  files_scanned: 3
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 8
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/v1.0/me/contacts"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/{file_id}/content"
+      - "https://graph.microsoft.com/v1.0/me/drive/root/children"
+      - "https://graph.microsoft.com/v1.0/me/drive/root:/{onedrive_filename}:/content"
+      - "https://graph.microsoft.com/v1.0/me/messages"
+      - "https://graph.microsoft.com/v1.0/me/sendmail"
+      - "https://graph.microsoft.com/v1.0/users"
+    resources:
+      - "root"
+      - "me"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []

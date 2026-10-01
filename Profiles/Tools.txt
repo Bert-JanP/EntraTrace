@@ -8,6 +8,7 @@ https://github.com/NetSPI/MicroBurst
 https://github.com/dafthack/MSOLSpray
 https://github.com/gremwell/o365enum
 https://github.com/0xZDH/o365spray
+https://github.com/YasserREED/Office365Hacker
 https://github.com/netwrix/pingcastle
 https://github.com/hausec/PowerZure
 https://github.com/dirkjanm/ROADtools
