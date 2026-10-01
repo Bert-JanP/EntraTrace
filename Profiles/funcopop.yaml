@@ -1,0 +1,52 @@
+version: "1.0"
+tool:
+  name: "FuncoPop"
+  repository_url: "https://github.com/NetSPI/FuncoPop"
+last_checked_utc: "2026-09-21T21:14:11Z"
+last_update_utc: "2026-09-21T21:14:11Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 4
+  total_endpoint_mentions: 16
+  files_scanned: 17
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/&api-version=2019-08-01"
+    resources:
+      - "root"
+      - "&api-version=2019-08-01"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis:
+    -
+      host: "$($hostjson.hostname)"
+      endpoints:
+        - "https://$($hostjson.hostname)/api/$($newFolder)?name=$currentApp&code=$functionCode"
+      resources:
+        - "api"
