@@ -1,0 +1,88 @@
+version: "1.0"
+tool:
+  name: "power-pwn"
+  repository_url: "https://github.com/mbrg/power-pwn"
+last_checked_utc: "2026-09-21T21:15:36Z"
+last_update_utc: "2026-09-21T21:15:36Z"
+user_agents:
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+  - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 27
+  total_endpoint_mentions: 37
+  files_scanned: 229
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 20
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 4
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 3
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/providers/microsoft.powerapps/apis"
+      - "https://graph.microsoft.com/providers/microsoft.powerapps/apis/shared_flowmanagement"
+      - "https://graph.microsoft.com/providers/microsoft.powerapps/apis/shared_logicflows"
+    resources:
+      - ".default"
+      - "providers"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://api.bap.microsoft.com/providers/Microsoft.BusinessAppPlatform/environments/{env_id}/generateResourceStorage?api-version=2016-11-01"
+      - "https://api.bap.microsoft.com/providers/Microsoft.BusinessAppPlatform/environments/{env_id}/importPackage?api-version=2016-11-01"
+      - "https://api.bap.microsoft.com/providers/Microsoft.BusinessAppPlatform/environments/{env_id}/listImportParameters?api-version=2016-11-01"
+      - "https://api.bap.microsoft.com/providers/Microsoft.BusinessAppPlatform/environments/{env_id}/validateImportPackage?api-version=2016-11-01"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apis"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apis/{connector_id}"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apps"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apps/{app_id}"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apps/{app_id}/modifyPermissions"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apps/{app_id}/permissions"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/apps/{app_id}/publish"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/connections"
+      - "https://api.powerapps.com/providers/Microsoft.PowerApps/environments"
+      - "https://emea.api.flow.microsoft.com/providers/Microsoft.ProcessSimple/environments/{environment_id}/flows/{flow_name}/triggers/manual/listCallbackUrl?api-version=2016-11-01"
+      - "https://emea.api.flow.microsoft.com/providers/Microsoft.ProcessSimple/environments/{environment_id}/flows?api-version=2016-11-01"
+      - "https://management.azure.com/providers/microsoft.powerapps/apis/shared_azureblob"
+      - "https://management.azure.com/providers/microsoft.powerapps/apis/shared_flowmanagement"
+      - "https://management.azure.com/providers/microsoft.powerapps/apis/shared_gmail"
+      - "https://management.azure.com/providers/microsoft.powerapps/apis/shared_logicflows"
+      - "https://management.azure.com/providers/microsoft.powerapps/apis/shared_uiflow"
+    resources:
+      - "providers"
+  other_apis:
+    -
+      host: "${envprefix}.${envsuffix}.environment.api.powerplatform.com"
+      endpoints:
+        - "https://${envprefix}.${envsuffix}.environment.api.powerplatform.com/powervirtualagents/botsbyschema/${botName}/canvassettings?api-version=2022-03-01-preview"
+      resources:
+        - "powervirtualagents"
+    -
+      host: "aadinternals.azurewebsites.net"
+      endpoints:
+        - "https://aadinternals.azurewebsites.net/api/tenantinfo?tenantId={tenant}"
+      resources:
+        - "api"
+    -
+      host: "api.github.com"
+      endpoints:
+        - "https://api.github.com"
+      resources:
+        - "root"
