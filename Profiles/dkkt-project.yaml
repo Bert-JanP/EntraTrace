@@ -1,0 +1,44 @@
+version: "1.0"
+tool:
+  name: "dkkt-project"
+  repository_url: "https://github.com/7heKnight/dkkt-project"
+last_checked_utc: "2026-09-21T21:14:44Z"
+last_update_utc: "2026-09-21T21:14:44Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 19
+  files_scanned: 19
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints: []
+    resources: []
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/subscriptions/$0/providers/microsoft.security/policies?api-version=2015-06-01-preview"
+    resources:
+      - "subscriptions"
+  other_apis:
+    -
+      host: "login.microsoft.com"
+      endpoints:
+        - "https://login.microsoft.com/common/oauth2/token"
+      resources:
+        - "common"
