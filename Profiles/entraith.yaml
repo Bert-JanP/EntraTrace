@@ -1,0 +1,104 @@
+version: "1.0"
+tool:
+  name: "entraith"
+  repository_url: "https://github.com/bl4cksku11/entraith"
+last_checked_utc: "2026-09-21T21:14:23Z"
+last_update_utc: "2026-09-21T21:14:23Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 26
+  total_endpoint_mentions: 44
+  files_scanned: 22
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 12
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 12
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/me/authentication/methods"
+      - "https://graph.microsoft.com/groups"
+      - "https://graph.microsoft.com/rolemanagement/directory/roleassignments"
+      - "https://graph.microsoft.com/sites?$select=id,displayName,webUrl,createdDateTime"
+      - "https://graph.microsoft.com/userauthenticationmethod.read"
+      - "https://graph.microsoft.com/users"
+      - "https://graph.microsoft.com/users?$search=%s&$top=50&$count=true"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/drive/items/%s/content"
+    resources:
+      - "root"
+      - ".default"
+      - "me"
+      - "groups"
+      - "rolemanagement"
+      - "sites"
+      - "userauthenticationmethod.read"
+      - "users"
+      - "v1.0"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/.default"
+    resources:
+      - "root"
+      - ".default"
+  other_apis:
+    -
+      host: "%s:%d"
+      endpoints:
+        - "http://%s:%d/token"
+      resources:
+        - "token"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+        - "https://api.spaces.skype.com/.default"
+      resources:
+        - "root"
+        - ".default"
+    -
+      host: "enterpriseregistration.windows.net"
+      endpoints:
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device?api-version=2.0"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/key?api-version=1.0"
+      resources:
+        - "enrollmentserver"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/%s/oauth2/devicecode"
+        - "https://login.microsoftonline.com/%s/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/%s/oauth2/v2.0/devicecode"
+        - "https://login.microsoftonline.com/%s/oauth2/v2.0/token"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9ba1a5c7-f17a-4de9-a1f1-6178c8d51223&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2FS-1-15-2-2666988183-1750391847-2906264630-3525785777-2857982319-3063633125-1907478113&response_type=code&scope=openid+offline_access+https%3A%2F%2Fgraph.microsoft.com%2F.default"
+      resources:
+        - "%s"
+        - "common"
+    -
+      host: "mysignins.microsoft.com"
+      endpoints:
+        - "https://mysignins.microsoft.com/api"
+      resources:
+        - "api"
