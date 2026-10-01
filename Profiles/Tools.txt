@@ -1,5 +1,6 @@
 https://github.com/gerenios/aadinternals
 https://github.com/SpecterOps/AzureHound
+https://github.com/Mr-Un1k0d3r/AzureRedOps
 https://github.com/mlcsec/Graphpython
 https://github.com/dafthack/GraphRunner
 https://github.com/RedByte1337/GraphSpy

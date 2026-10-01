@@ -1,0 +1,110 @@
+version: "1.0"
+tool:
+  name: "AzureRedOps"
+  repository_url: "https://github.com/Mr-Un1k0d3r/AzureRedOps"
+last_checked_utc: "2026-09-21T21:14:04Z"
+last_update_utc: "2026-09-21T21:14:04Z"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+summary:
+  total_unique_endpoints: 34
+  total_endpoint_mentions: 51
+  files_scanned: 7
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 22
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 12
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/beta/applications{filter}"
+      - "https://graph.microsoft.com/beta/invitations"
+      - "https://graph.microsoft.com/beta/policies/authorizationpolicy/authorizationpolicy"
+      - "https://graph.microsoft.com/beta/users"
+      - "https://graph.microsoft.com/beta/users{filter}"
+      - "https://graph.microsoft.com/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/policies/conditionalaccesspolicies"
+      - "https://graph.microsoft.com/policies/featurerolloutpolicies"
+      - "https://graph.microsoft.com/v1.0"
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/applications{filter}"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/drive/root:/{name}:/content"
+      - "https://graph.microsoft.com/v1.0/me/messages?$search="
+      - "https://graph.microsoft.com/v1.0/oauth2permissiongrants"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals/{all}"
+      - "https://graph.microsoft.com/v1.0/users{filter}"
+    resources:
+      - "root"
+      - ".default"
+      - "applications{filter}"
+      - "invitations"
+      - "policies"
+      - "users"
+      - "users{filter}"
+      - "v1.0"
+      - "applications"
+      - "groups"
+      - "me"
+      - "oauth2permissiongrants"
+      - "rolemanagement"
+      - "serviceprincipals"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+      resources:
+        - "root"
+    -
+      host: "enterpriseregistration.windows.net"
+      endpoints:
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device?api-version=1.0"
+      resources:
+        - "enrollmentserver"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      resources:
+        - "common"
+    -
+      host: "login.{self.endpoint}"
+      endpoints:
+        - "https://login.{self.endpoint}/common/oauth2/token"
+        - "https://login.{self.endpoint}/{tenant}/oauth2/token"
+        - "https://login.{self.endpoint}/{tenant}/oauth2/v2.0/token"
+      resources:
+        - "common"
+        - "oauth2"
+    -
+      host: "login.{self.microsoft_endpoint}"
+      endpoints:
+        - "https://login.{self.microsoft_endpoint}/{self.tid}/oauth2/v2.0/authorize"
+        - "https://login.{self.microsoft_endpoint}/{self.tid}/oauth2/v2.0/token"
+        - "https://login.{self.microsoft_endpoint}/{tenant}/oauth2/devicecode"
+        - "https://login.{self.microsoft_endpoint}/{tenant}/oauth2/token"
+        - "https://login.{self.microsoft_endpoint}/{tenant}/oauth2/v2.0/authorize"
+        - "https://login.{self.microsoft_endpoint}/{tenant}/oauth2/v2.0/token"
+      resources:
+        - "oauth2"
