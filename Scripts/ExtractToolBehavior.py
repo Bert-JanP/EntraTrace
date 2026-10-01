@@ -62,7 +62,14 @@ URL_PATTERN = re.compile(
     r"(?:https?://|//)[A-Za-z0-9._~:/?#\[\]{}@!$&'()*+,;=%-]+", re.IGNORECASE
 )
 HOST_LITERAL_PATTERN = re.compile(
-    r"(?i)(https?://)?(graph\.microsoft\.com|graph\.windows\.net|management\.azure\.com)"
+    r"(?i)(https?://)?("
+    r"graph\.microsoft\.com|graph\.windows\.net|management\.azure\.com"
+    r"|login\.microsoftonline\.com|login\.windows\.net|login\.microsoft\.com|device\.login\.microsoftonline\.com"
+    r"|autologon\.microsoftazuread-sso\.com"
+    r"|teams\.microsoft\.com|presence\.teams\.microsoft\.com"
+    r"|teams\.live\.com|presence\.teams\.live\.com|api\.spaces\.skype\.com"
+    r"|outlook\.office365\.com|outlook\.office\.com|substrate\.office\.com"
+    r")"
 )
 API_PATH_FRAGMENT_PATTERN = re.compile(
     r"['\"](/?(?:v1\.0|beta|subscriptions|providers|tenants|users|groups|domains|sites|drives|directoryObjects|policies|roleManagement)[^'\"\s]{1,260})['\"]",
@@ -78,13 +85,61 @@ FAMILY_BY_HOST = {
     "graph.microsoft.com": "microsoft_graph",
     "graph.windows.net": "azure_ad_graph",
     "management.azure.com": "azure_resource_manager",
+    "login.microsoftonline.com": "microsoft_identity",
+    "login.windows.net": "microsoft_identity",
+    "login.microsoft.com": "microsoft_identity",
+    "device.login.microsoftonline.com": "microsoft_identity",
+    "autologon.microsoftazuread-sso.com": "microsoft_identity",
+    "teams.microsoft.com": "microsoft_teams",
+    "presence.teams.microsoft.com": "microsoft_teams",
+    "teams.live.com": "microsoft_teams",
+    "presence.teams.live.com": "microsoft_teams",
+    "api.spaces.skype.com": "microsoft_teams",
+    "outlook.office365.com": "exchange_online",
+    "outlook.office.com": "exchange_online",
+    "substrate.office.com": "exchange_online",
 }
+
+# Hosts that are tenant-prefixed (contoso.sharepoint.com, contoso-my.sharepoint.com)
+# and therefore cannot be matched exactly.
+FAMILY_BY_HOST_SUFFIX = {
+    "sharepoint.com": "sharepoint_online",
+}
+
+# Representative host recorded in the profile for each structured family.
+FAMILY_PRIMARY_HOST = {
+    "microsoft_graph": "graph.microsoft.com",
+    "azure_ad_graph": "graph.windows.net",
+    "azure_resource_manager": "management.azure.com",
+    "microsoft_identity": "login.microsoftonline.com",
+    "microsoft_teams": "teams.microsoft.com",
+    "sharepoint_online": "sharepoint.com",
+    "exchange_online": "outlook.office365.com",
+}
+
+STRUCTURED_FAMILIES = tuple(FAMILY_PRIMARY_HOST)
 
 DISPLAY_NAME = {
     "microsoft_graph": "Microsoft Graph",
     "azure_ad_graph": "Azure AD Graph",
     "azure_resource_manager": "Azure Resource Manager",
+    "microsoft_identity": "Microsoft Identity Platform",
+    "microsoft_teams": "Microsoft Teams",
+    "sharepoint_online": "SharePoint Online",
+    "exchange_online": "Exchange Online",
 }
+
+
+def family_for_host(host: str) -> str:
+    """Resolve an API family from a hostname, exact match first then suffix."""
+    host = (host or "").lower()
+    if host in FAMILY_BY_HOST:
+        return FAMILY_BY_HOST[host]
+    for suffix, family in FAMILY_BY_HOST_SUFFIX.items():
+        if host == suffix or host.endswith("." + suffix):
+            return family
+    return "other"
+
 
 KNOWN_API_HOSTS = set(FAMILY_BY_HOST)
 EXCLUDED_HOSTS = {
@@ -272,7 +327,7 @@ def safe_urlparse(url: str):
 def classify_family(url: str) -> tuple[str, str]:
     parsed = safe_urlparse(url)
     host = ((parsed.netloc if parsed else "") or "").lower()
-    family = FAMILY_BY_HOST.get(host, "other")
+    family = family_for_host(host)
 
     if family == "other" and parsed:
         normalized_path = (parsed.path or "").lower().lstrip("/")
@@ -413,7 +468,7 @@ def is_likely_api_url(url: str) -> bool:
     if host.endswith(".git") or path.endswith(".git"):
         return False
 
-    if host in KNOWN_API_HOSTS:
+    if host in KNOWN_API_HOSTS or family_for_host(host) != "other":
         return True
     if "api-version=" in query:
         return True
@@ -640,15 +695,10 @@ def build_profile(
     last_update_utc: str,
 ) -> dict[str, Any]:
     apis: dict[str, Any] = {
-        "microsoft_graph": {"host": "graph.microsoft.com", "endpoints": [], "resources": []},
-        "azure_ad_graph": {"host": "graph.windows.net", "endpoints": [], "resources": []},
-        "azure_resource_manager": {
-            "host": "management.azure.com",
-            "endpoints": [],
-            "resources": [],
-        },
-        "other_apis": [],
+        family: {"host": FAMILY_PRIMARY_HOST[family], "endpoints": [], "resources": []}
+        for family in STRUCTURED_FAMILIES
     }
+    apis["other_apis"] = []
 
     other_by_host: dict[str, dict[str, Any]] = {}
     family_counts: dict[str, int] = {}
@@ -660,7 +710,7 @@ def build_profile(
         hint = data["resource_hint"]
         family_counts[family] = family_counts.get(family, 0) + 1
 
-        if family in {"microsoft_graph", "azure_ad_graph", "azure_resource_manager"}:
+        if family in STRUCTURED_FAMILIES:
             apis[family]["endpoints"].append(endpoint)
             if hint not in apis[family]["resources"]:
                 apis[family]["resources"].append(hint)
