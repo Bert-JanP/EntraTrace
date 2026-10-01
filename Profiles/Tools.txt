@@ -10,6 +10,7 @@ https://github.com/gremwell/o365enum
 https://github.com/0xZDH/o365spray
 https://github.com/netwrix/pingcastle
 https://github.com/hausec/PowerZure
+https://github.com/ws-research/red-team-tools-for-azure
 https://github.com/dirkjanm/ROADtools
 https://github.com/wunderwuzzi23/ropci
 https://github.com/Azure/Stormspotter
