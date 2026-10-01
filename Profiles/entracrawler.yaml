@@ -1,0 +1,66 @@
+version: "1.0"
+tool:
+  name: "entracrawler"
+  repository_url: "https://github.com/amirr0r/entracrawler"
+last_checked_utc: "2026-09-21T21:14:30Z"
+last_update_utc: "2026-09-21T21:14:30Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 19
+  total_endpoint_mentions: 21
+  files_scanned: 17
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 14
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 5
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/v1.0/applications"
+      - "https://graph.microsoft.com/v1.0/directory/administrativeunits/{au_id}"
+      - "https://graph.microsoft.com/v1.0/directory/administrativeunits/{au_id}/members"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/{obj_id}"
+      - "https://graph.microsoft.com/v1.0/groups"
+      - "https://graph.microsoft.com/v1.0/me"
+      - "https://graph.microsoft.com/v1.0/me/memberof?$select=id,displayName"
+      - "https://graph.microsoft.com/v1.0/me/ownedobjects?$select=id,displayName,appId&$top=999"
+      - "https://graph.microsoft.com/v1.0/me/ownedobjects?$top=1"
+      - "https://graph.microsoft.com/v1.0/me?$select=id,displayName"
+      - "https://graph.microsoft.com/v1.0/organization"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roleassignments"
+      - "https://graph.microsoft.com/v1.0/rolemanagement/directory/roledefinitions/{rid}"
+      - "https://graph.microsoft.com/v1.0/serviceprincipals"
+    resources:
+      - "applications"
+      - "directory"
+      - "directoryobjects"
+      - "groups"
+      - "me"
+      - "organization"
+      - "rolemanagement"
+      - "serviceprincipals"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/providers/microsoft.management/managementgroups?api-version=2020-05-01"
+      - "https://management.azure.com/subscriptions/{sid}/resourcegroups/{rg_name}"
+      - "https://management.azure.com/subscriptions/{sid}/resourcegroups?api-version=2021-04-01"
+      - "https://management.azure.com/subscriptions/{sid}/resources?api-version=2021-04-01"
+    resources:
+      - "root"
+      - "providers"
+      - "subscriptions"
+  other_apis: []
