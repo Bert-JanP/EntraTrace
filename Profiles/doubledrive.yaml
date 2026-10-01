@@ -1,0 +1,69 @@
+version: "1.0"
+tool:
+  name: "DoubleDrive"
+  repository_url: "https://github.com/SafeBreach-Labs/DoubleDrive"
+last_checked_utc: "2026-09-21T21:14:06Z"
+last_update_utc: "2026-09-21T21:14:06Z"
+user_agents:
+  - "okhttp/4.9.3"
+summary:
+  total_unique_endpoints: 16
+  total_endpoint_mentions: 18
+  files_scanned: 40
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 9
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 7
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://api.onedrive.com/v1.0/drive/root/subscriptions"
+      - "https://api.onedrive.com/v1.0/drive/root/subscriptions/{subscription_id}"
+      - "https://api.onedrive.com/v1.0/drive/userPreferences/email"
+      - "https://api.onedrive.com/v1.0/drives/me"
+      - "https://api.onedrive.com/v1.0/drives/me/items/root:{onedrive_file_path}:/oneDrive.createUploadSession"
+      - "https://api.onedrive.com/v1.0/drives/me/items/{item_id}"
+      - "https://api.onedrive.com/v1.0/drives/me/items/{onedrive_folder.id}/children"
+      - "https://api.onedrive.com/v1.0/drives/me/items/{onedrive_item.id}"
+      - "https://api.onedrive.com/v1.0/drives/{onedrive_drive_id}/items/{onedrive_item_id}"
+    resources:
+      - "drive"
+      - "drives"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "skyapi.live.net"
+      endpoints:
+        - "https://skyapi.live.net/API/2/DeleteAll"
+        - "https://skyapi.live.net/API/2/DeleteItems"
+        - "https://skyapi.live.net/API/2/SetPermissions"
+      resources:
+        - "api"
+    -
+      host: "www.1secmail.com"
+      endpoints:
+        - "https://www.1secmail.com/api/v1?action=getDomainList"
+        - "https://www.1secmail.com/api/v1?action=getMessages&login={self.username}&domain={self.domain}"
+        - "https://www.1secmail.com/api/v1?action=readMessage&login={self.username}&domain={self.domain}&id={message_id}"
+      resources:
+        - "api"
+    -
+      host: "www.googleapis.com"
+      endpoints:
+        - "https://www.googleapis.com/drive/v2/files/trash"
+      resources:
+        - "drive"
