@@ -39,6 +39,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 | [o365spray](Profiles/o365spray.yaml) | 1 | 1 | 2 |
 | [pingcastle](Profiles/pingcastle.yaml) | 3 | 14 | 1 |
 | [PowerZure](Profiles/powerzure.yaml) | 3 | 29 | 0 |
+| [RinP-Kodes-M365-Stealer](Profiles/rinp-kodes-m365-stealer.yaml) | 4 | 132 | 33 |
 | [ROADtools](Profiles/roadtools.yaml) | 4 | 434 | 7 |
 | [ropci](Profiles/ropci.yaml) | 3 | 15 | 0 |
 | [Stormspotter](Profiles/stormspotter.yaml) | 3 | 4 | 0 |
