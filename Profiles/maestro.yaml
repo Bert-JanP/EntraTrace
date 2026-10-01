@@ -1,0 +1,98 @@
+version: "1.0"
+tool:
+  name: "Maestro"
+  repository_url: "https://github.com/Mayyhem/Maestro"
+last_checked_utc: "2026-09-21T21:15:27Z"
+last_update_utc: "2026-09-21T21:15:27Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 33
+  total_endpoint_mentions: 44
+  files_scanned: 91
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 26
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 7
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/beta/deviceappmanagement/mobileapps"
+      - "https://graph.microsoft.com/beta/deviceappmanagement/mobileapps/{appId}"
+      - "https://graph.microsoft.com/beta/deviceappmanagement/mobileapps/{appId}/assign"
+      - "https://graph.microsoft.com/beta/devicemanagement/assignmentfilters"
+      - "https://graph.microsoft.com/beta/devicemanagement/assignmentfilters/{filterId}"
+      - "https://graph.microsoft.com/beta/devicemanagement/deviceconfigurations"
+      - "https://graph.microsoft.com/beta/devicemanagement/deviceconfigurations/{policyId}"
+      - "https://graph.microsoft.com/beta/devicemanagement/deviceconfigurations/{policyId}/assign"
+      - "https://graph.microsoft.com/beta/devicemanagement/devicehealthscripts"
+      - "https://graph.microsoft.com/beta/devicemanagement/devicehealthscripts/{scriptId}"
+      - "https://graph.microsoft.com/beta/devicemanagement/devicehealthscripts/{scriptId}/assign"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices/executeaction"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices/{deviceId}/createquery"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices/{deviceId}/devicehealthscriptstates"
+      - "https://graph.microsoft.com/beta/devicemanagement/manageddevices/{deviceId}/queryresults/{queryId}"
+      - "https://graph.microsoft.com/beta/groups"
+      - "https://graph.microsoft.com/beta/groups/{groupId}/members?$select=id,deviceId,displayName,userType,appId,mail"
+      - "https://graph.microsoft.com/beta/users"
+      - "https://graph.microsoft.com/v1.0/$batch"
+      - "https://graph.microsoft.com/v1.0/devices"
+      - "https://graph.microsoft.com/v1.0/directoryobjects/{memberId}"
+      - "https://graph.microsoft.com/v1.0/groups/{groupId}"
+      - "https://graph.microsoft.com/v1.0/groups/{groupId}/members/$ref"
+      - "https://graph.microsoft.com/v1.0/me"
+    resources:
+      - "root"
+      - "deviceappmanagement"
+      - "devicemanagement"
+      - "groups"
+      - "users"
+      - "$batch"
+      - "devices"
+      - "directoryobjects"
+      - "me"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis:
+    -
+      host: "intune.microsoft.com"
+      endpoints:
+        - "https://intune.microsoft.com/api/DelegationToken"
+      resources:
+        - "api"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/common/oauth2/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/authorize?sso_nonce={nonce}"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+        - "https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token"
+      resources:
+        - "common"
+        - "oauth2"
+    -
+      host: "portal.azure.com"
+      endpoints:
+        - "https://portal.azure.com/api/DelegationToken"
+      resources:
+        - "api"
+    -
+      host: "{options.target}"
+      endpoints:
+        - "https://{options.target}/api/DelegationToken"
+      resources:
+        - "api"
