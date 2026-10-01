@@ -1,0 +1,53 @@
+version: "1.0"
+tool:
+  name: "oidc-code-to-cloud"
+  repository_url: "https://github.com/O3-Cyber/oidc-code-to-cloud"
+last_checked_utc: "2026-09-21T21:14:23Z"
+last_update_utc: "2026-09-21T21:14:23Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 11
+  total_endpoint_mentions: 11
+  files_scanned: 8
+  api_families:
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 9
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/v1.0/{endpoint}"
+    resources:
+      - ".default"
+      - "{endpoint}"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/.default"
+      - "https://management.azure.com/providers/microsoft.management/managementgroups/{management_group_id}/providers/microsoft.authorization/roleassignments?api-version=2022-04-01"
+      - "https://management.azure.com/providers/microsoft.management/managementgroups?api-version=2020-05-01"
+      - "https://management.azure.com/subscriptions/{sub_id}/providers/microsoft.authorization/roleassignments?api-version=2022-04-01"
+      - "https://management.azure.com/subscriptions/{sub_id}/resourcegroups/{resource_group_name}"
+      - "https://management.azure.com/subscriptions/{sub_id}/resourcegroups/{resource_group_name}/providers/microsoft.authorization/roleassignments?api-version=2022-04-01"
+      - "https://management.azure.com/subscriptions/{sub_id}/resourcegroups?api-version=2021-04-01"
+      - "https://management.azure.com/subscriptions?api-version=2020-01-01"
+      - "https://management.azure.com/{endpoint}?api-version=2022-04-01"
+    resources:
+      - ".default"
+      - "providers"
+      - "subscriptions"
+      - "{endpoint}"
+  other_apis: []
