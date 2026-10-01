@@ -1,0 +1,42 @@
+version: "1.0"
+tool:
+  name: "AzRed"
+  repository_url: "https://github.com/unkusr0x00/AzRed"
+last_checked_utc: "2026-09-21T21:14:38Z"
+last_update_utc: "2026-09-21T21:14:38Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 3
+  total_endpoint_mentions: 6
+  files_scanned: 1
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 2
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "http://169.254.169.254/metadata/identity/oauth2/token"
+      - "https://graph.microsoft.com"
+    resources:
+      - "metadata"
+      - "root"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+    resources:
+      - "root"
+  other_apis: []
