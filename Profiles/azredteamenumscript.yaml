@@ -1,0 +1,263 @@
+version: "1.0"
+tool:
+  name: "AzRedTeamEnumScript"
+  repository_url: "https://github.com/n3t1nv4d3/AzRedTeamEnumScript"
+last_checked_utc: "2026-09-21T21:15:51Z"
+last_update_utc: "2026-09-21T21:15:51Z"
+user_agents:
+  - "Android/8.0"
+  - "AutodiscoverClient"
+  - "Dalvik/2.1.0 (Linux; U; Android 8.1.0; AADInternals)"
+  - "Dsreg/10.0 (Windows 10.0.18363.0)"
+  - "ENROLLClient"
+  - "MSFT OMA DM Client/1.2.0.1"
+  - "Microsoft SkyDriveSync 19.192.0926.0012 ship; Windows NT 10.0 (17763)"
+  - "Microsoft SkyDriveSync 20.169.0823.0006 ship; Mac OS X 10.15.7"
+  - "Microsoft WinRM Client"
+  - "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Tablet PC 2.0; Microsoft Outlook 16.0.4266)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Teams/1.3.00.24755 Chrome/69.0.3497.128 Electron/4.2.12 Safari/537.36"
+  - "Outlook-Android/2.0"
+  - "PassthroughAuthenticationConnector/1.5.643.0"
+  - "SyncFabricConnector/1.1.96.0"
+summary:
+  total_unique_endpoints: 95
+  total_endpoint_mentions: 368
+  files_scanned: 123
+  api_families:
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 42
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 22
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 16
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 15
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+      - "https://graph.microsoft.com/beta/$metadata"
+      - "https://graph.microsoft.com/beta/directoryobjects/$id"
+      - "https://graph.microsoft.com/beta/invitations"
+      - "https://graph.microsoft.com/beta/organization"
+      - "https://graph.microsoft.com/groups/$GroupId"
+      - "https://graph.microsoft.com/groups/$GroupId/members"
+      - "https://graph.microsoft.com/groups/$GroupId/owners"
+      - "https://graph.microsoft.com/policies/authorizationpolicy"
+      - "https://graph.microsoft.com/policies/authorizationpolicy/authorizationpolicy"
+      - "https://graph.microsoft.com/users/$ObjectId"
+      - "https://graph.microsoft.com/users/$UserPrincipalName"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/approleassignments"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/directreports"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/licensedetails"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/manager"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/memberof"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/owneddevices"
+      - "https://graph.microsoft.com/users/$UserPrincipalName/registereddevices"
+      - "https://graph.microsoft.com/users/invite"
+      - "https://graph.microsoft.com/users/isupnuniqueorpending/$EmailAddress"
+      - "https://graph.microsoft.com/users?searchText=&top=100&nextLink=&orderByThumbnails=false&maxThumbnailCount=999&filterValue=All&state=All&adminUnit="
+    resources:
+      - "root"
+      - "$metadata"
+      - "directoryobjects"
+      - "invitations"
+      - "organization"
+      - "groups"
+      - "policies"
+      - "users"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+      - "https://graph.windows.net/$TenantId/$Command"
+      - "https://graph.windows.net/$tenantId/devices"
+      - "https://graph.windows.net/$tenantId/devices/$($ObjectId)?$select&api-version=1.61-internal"
+      - "https://graph.windows.net/$tenantId/devices/$ObjectId"
+      - "https://graph.windows.net/$tenantId/devices?$select&api-version=1.61-internal"
+      - "https://graph.windows.net/85b5ff1e-0402-400c-9e3c0f9e965325d1$metadata"
+      - "https://graph.windows.net/groups/$GroupId"
+      - "https://graph.windows.net/me/owneddevices?$select&api-version=1.61-internal"
+      - "https://graph.windows.net/myorganization/domains?api-version=1.61-internal"
+      - "https://graph.windows.net/users/$ObjectId"
+      - "https://graph.windows.net/users/$UserPrincipalName"
+      - "https://graph.windows.net/users/invite"
+      - "https://graph.windows.net/users/isupnuniqueorpending/$EmailAddress"
+      - "https://graph.windows.net/users?searchText=&top=100&nextLink=&orderByThumbnails=false&maxThumbnailCount=999&filterValue=All&state=All&adminUnit="
+    resources:
+      - "root"
+      - "$TenantId"
+      - "$tenantId"
+      - "85b5ff1e-0402-400c-9e3c0f9e965325d1$metadata"
+      - "groups"
+      - "me"
+      - "myorganization"
+      - "users"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com"
+      - "https://management.azure.com/api/invoke"
+      - "https://management.azure.com/batch?api-version=2015-11-01"
+      - "https://management.azure.com/providers/microsoft.aadiam/diagnosticsettings/$Name"
+      - "https://management.azure.com/providers/microsoft.aadiam/diagnosticsettings?api-version=2017-04-01-preview"
+      - "https://management.azure.com/providers/microsoft.authorization/elevateaccess?api-version=2015-07-01"
+      - "https://management.azure.com/providers/microsoft.portal/consoles/default?api-version=2020-04-01-preview"
+      - "https://management.azure.com/providers/microsoft.resourcegraph/resources?api-version=2019-04-01"
+      - "https://management.azure.com/subscriptions/$Subscription/providers/microsoft.authorization/classicadministrators?api-version=2015-06-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/providers/microsoft.authorization/roleassignments/$(New-Guid)?api-version=2018-09-01-preview"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/providers/microsoft.authorization/roledefinitions"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/providers/microsoft.compute/virtualmachines?api-version=2019-12-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/resourcegroups/$ResourceGroup/providers/microsoft.compute/virtualmachines/$Server/runcommand?api-version=2018-04-01"
+      - "https://management.azure.com/subscriptions/$SubscriptionId/resourcegroups?api-version=2019-10-01"
+      - "https://management.azure.com/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d"
+      - "https://management.azure.com/subscriptions?api-version=2016-06-01"
+    resources:
+      - "root"
+      - "api"
+      - "batch"
+      - "providers"
+      - "subscriptions"
+  other_apis:
+    -
+      host: "',$registry,'"
+      endpoints:
+        - "https://',$registry,'/v2/',$_,'/tags/list"
+        - "https://',$registry,'/v2/_catalog"
+      resources:
+        - "v2"
+    -
+      host: "api.bing.microsoft.com"
+      endpoints:
+        - "https://api.bing.microsoft.com/v7.0/search?q=$BingQuery&count=50"
+      resources:
+        - "v7.0"
+    -
+      host: "api.diagnostics.office.com"
+      endpoints:
+        - "https://api.diagnostics.office.com"
+        - "https://api.diagnostics.office.com/v1/analysis"
+        - "https://api.diagnostics.office.com/v1/cloudcheck"
+      resources:
+        - "root"
+        - "v1"
+    -
+      host: "api.ipgeolocationapi.com"
+      endpoints:
+        - "https://api.ipgeolocationapi.com/geolocate/$IpAddress"
+      resources:
+        - "geolocate"
+    -
+      host: "api.spaces.skype.com"
+      endpoints:
+        - "https://api.spaces.skype.com"
+      resources:
+        - "root"
+    -
+      host: "docs.docker.com"
+      endpoints:
+        - "https://docs.docker.com/registry/spec/api"
+      resources:
+        - "registry"
+    -
+      host: "enterpriseregistration.windows.net"
+      endpoints:
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device/$($deviceID)?api-version=1.0"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device/$($deviceId)?api-version=1.0"
+        - "https://enterpriseregistration.windows.net/EnrollmentServer/device?api-version=1.0"
+      resources:
+        - "enrollmentserver"
+    -
+      host: "login.microsoftonline.com"
+      endpoints:
+        - "https://login.microsoftonline.com/$Tenant/oauth2/authorize?resource=$Resource&client_id=$client_id&response_type=code&haschrome=1&redirect_uri=$auth_redirect&client-request-id=$request_id&prompt=login&scope=openid"
+        - "https://login.microsoftonline.com/$Tenant/oauth2/token"
+        - "https://login.microsoftonline.com/$Tenant/oauth2/token?api-version=1.0"
+        - "https://login.microsoftonline.com/$TenantId/oauth2/token"
+        - "https://login.microsoftonline.com/$tenant/oauth2/devicecode?api-version=1.0"
+        - "https://login.microsoftonline.com/$tenantId/oauth2/token"
+        - "https://login.microsoftonline.com/5b62a25d-60c6-40e6-aace-8a43e8b8ba4a/oauth2/authorize"
+        - "https://login.microsoftonline.com/5b62a25d-60c6-40e6-aace-8a43e8b8ba4a/oauth2/checkses"
+        - "https://login.microsoftonline.com/5b62a25d-60c6-40e6-aace-8a43e8b8ba4a/oauth2/logout"
+        - "https://login.microsoftonline.com/5b62a25d-60c6-40e6-aace-8a43e8b8ba4a/oauth2/token"
+        - "https://login.microsoftonline.com/Common/oauth2/authorize?resource=$Resource&client_id=$ClientId&response_type=code&redirect_uri=$RedirectUri&client-request-id=$requestId&mscrid=$mscrid"
+        - "https://login.microsoftonline.com/common/federation/oauth2"
+        - "https://login.microsoftonline.com/common/oauth2/authorize"
+        - "https://login.microsoftonline.com/common/oauth2/authorize?resource=$Resource&response_type=token&client_id=$clientId&redirect_uri=$redirect_uri&state=$state&login_hint=$UserPrincipalName&client-request-id=$request_id&x-client-SKU=Js&x-client-Ver=1.0.17&nonce=$nonce&amr_values=mfa"
+        - "https://login.microsoftonline.com/common/oauth2/nativeclient"
+        - "https://login.microsoftonline.com/common/oauth2/token"
+      resources:
+        - "$Tenant"
+        - "$TenantId"
+        - "$tenant"
+        - "$tenantId"
+        - "5b62a25d-60c6-40e6-aace-8a43e8b8ba4a"
+        - "common"
+    -
+      host: "login.windows.net"
+      endpoints:
+        - "https://login.windows.net/common/oauth2/token"
+      resources:
+        - "common"
+    -
+      host: "main.iam.ad.ext.azure.com"
+      endpoints:
+        - "https://main.iam.ad.ext.azure.com/api/$command"
+        - "https://main.iam.ad.ext.azure.com/api/MsGraph/v1.0/organization"
+      resources:
+        - "api"
+    -
+      host: "msmamservice.api.application"
+      endpoints:
+        - "https://msmamservice.api.application"
+      resources:
+        - "root"
+    -
+      host: "outlook.office.com"
+      endpoints:
+        - "https://outlook.office.com/api"
+        - "https://outlook.office.com/api/$Api/$Command"
+        - "https://outlook.office.com/scheduling/api"
+      resources:
+        - "api"
+        - "scheduling"
+    -
+      host: "portal.azure.com"
+      endpoints:
+        - "https://portal.azure.com/api/$command"
+        - "https://portal.azure.com/api/DelegationToken?feature.tokencaching=true"
+      resources:
+        - "api"
+    -
+      host: "presence.teams.microsoft.com"
+      endpoints:
+        - "https://presence.teams.microsoft.com/v1/me/forceavailability"
+        - "https://presence.teams.microsoft.com/v1/me/publishnote"
+      resources:
+        - "v1"
+    -
+      host: "substrate.office.com"
+      endpoints:
+        - "https://substrate.office.com/search/api/v1/suggestions"
+      resources:
+        - "search"
+    -
+      host: "teams.microsoft.com"
+      endpoints:
+        - "https://teams.microsoft.com/api/authsvc/v1.0/authz"
+        - "https://teams.microsoft.com/api/mt/part/emea-02/beta/users/$recipient/externalsearchv3"
+      resources:
+        - "api"
