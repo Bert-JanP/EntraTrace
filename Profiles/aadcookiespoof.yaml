@@ -1,0 +1,58 @@
+version: "1.0"
+tool:
+  name: "aadcookiespoof"
+  repository_url: "https://github.com/jsa2/aadcookiespoof"
+last_checked_utc: "2026-09-21T21:14:20Z"
+last_update_utc: "2026-09-21T21:14:20Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 8
+  total_endpoint_mentions: 17
+  files_scanned: 14
+  api_families:
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 5
+    -
+      family: "azure_resource_manager"
+      display_name: "Azure Resource Manager"
+      host: "management.azure.com"
+      unique_endpoints: 2
+    -
+      family: "other"
+      host: "multiple"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com/.default"
+      - "https://graph.microsoft.com/v1.0/me/drive/root:/foldera/${data2.info.seed}.json:/content"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=${client_id}"
+      - "https://login.microsoftonline.com/organizations/oauth2/v2.0/token"
+    resources:
+      - ".default"
+      - "me"
+      - "organizations"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints: []
+    resources: []
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints:
+      - "https://management.azure.com/subscriptions?api-version=2020-01-01"
+      - "https://management.azure.com/user_impersonation"
+    resources:
+      - "subscriptions"
+      - "user_impersonation"
+  other_apis:
+    -
+      host: "randomuser.me"
+      endpoints:
+        - "https://randomuser.me/api"
+      resources:
+        - "api"

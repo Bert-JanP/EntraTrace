@@ -1,3 +1,4 @@
+https://github.com/jsa2/aadcookiespoof
 https://github.com/gerenios/aadinternals
 https://github.com/SpecterOps/AzureHound
 https://github.com/mlcsec/Graphpython
