@@ -1,0 +1,40 @@
+version: "1.0"
+tool:
+  name: "Azure-AccessPermissions"
+  repository_url: "https://github.com/csandker/Azure-AccessPermissions"
+last_checked_utc: "2026-09-21T21:14:07Z"
+last_update_utc: "2026-09-21T21:14:07Z"
+user_agents: []
+summary:
+  total_unique_endpoints: 2
+  total_endpoint_mentions: 3
+  files_scanned: 1
+  api_families:
+    -
+      family: "azure_ad_graph"
+      display_name: "Azure AD Graph"
+      host: "graph.windows.net"
+      unique_endpoints: 1
+    -
+      family: "microsoft_graph"
+      display_name: "Microsoft Graph"
+      host: "graph.microsoft.com"
+      unique_endpoints: 1
+apis:
+  microsoft_graph:
+    host: "graph.microsoft.com"
+    endpoints:
+      - "https://graph.microsoft.com"
+    resources:
+      - "root"
+  azure_ad_graph:
+    host: "graph.windows.net"
+    endpoints:
+      - "https://graph.windows.net"
+    resources:
+      - "root"
+  azure_resource_manager:
+    host: "management.azure.com"
+    endpoints: []
+    resources: []
+  other_apis: []
