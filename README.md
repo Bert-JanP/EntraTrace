@@ -27,6 +27,7 @@ The goal is to make offensive tooling behavior easier for defensive teams to und
 <!-- TOOL_PROFILE_TABLE_START -->
 | Tool | Unique APIs | Unique API calls | UserAgents |
 | --- | --- | --- | --- |
+| [365-Stealer](Profiles/365-stealer.yaml) | 2 | 16 | 0 |
 | [aadinternals](Profiles/aadinternals.yaml) | 4 | 110 | 18 |
 | [AzureHound](Profiles/azurehound.yaml) | 2 | 28 | 0 |
 | [Graphpython](Profiles/graphpython.yaml) | 3 | 119 | 17 |

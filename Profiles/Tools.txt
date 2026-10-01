@@ -1,3 +1,4 @@
+https://github.com/AlteredSecurity/365-Stealer
 https://github.com/gerenios/aadinternals
 https://github.com/SpecterOps/AzureHound
 https://github.com/mlcsec/Graphpython
