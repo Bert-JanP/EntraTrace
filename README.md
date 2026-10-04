@@ -65,10 +65,6 @@ EntraTrace can be used to:
 * Research the behavior of offensive identity tooling
 * Improve defensive visibility into identity attack techniques
 
-## AI-Assisted Development
-
-> 🤖 **EntraTrace is developed with the assistance of AI.** AI is used throughout the development and research process, with human review and validation of the resulting work.
-
 ## Local Deployment
 
 The repository is updated daily, but local deployment is supported. To run locally from the repository root with Python. Use the built-in help output to confirm the available options before running them.
@@ -86,6 +82,10 @@ python .\Scripts\SummarizeUserAgents.py --profiles-dir .\Profiles --output .\Ind
 - `SummarizeUserAgents.py` exports user-agent data from profile YAML files into a hunting CSV.
 - `ExtractToolBehavior.py` reads repository URLs from `Profiles\Tools.txt` when present, and otherwise falls back to every `repository_url` found in the YAML profile files in the output directory.
 - Run either script with `-h` or `--help` to view the full parameter set and behavior.
+
+## AI-Assisted Development
+
+> 🤖 **EntraTrace is developed with the assistance of AI.** AI is used throughout the development and research process, with human review and validation of the resulting work.
 
 ## Related Content
 - [Investigating Microsoft Graph Activity Logs](https://kqlquery.com/posts/graphactivitylogs/)
