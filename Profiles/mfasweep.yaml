@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "MFASweep"
   repository_url: "https://github.com/dafthack/MFASweep"
-last_checked_utc: "2026-10-03T13:45:49Z"
-last_update_utc: "2026-10-03T13:45:49Z"
+last_checked_utc: "2026-10-04T13:59:18Z"
+last_update_utc: "2026-10-04T13:59:18Z"
 user_agents:
   - "$UserAgent"
   - "Apple-iPhone9C1/1602.92"
