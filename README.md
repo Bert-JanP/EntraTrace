@@ -6,7 +6,7 @@ The project builds a automatic knowledge base around tools such as **AzureHound,
 
 ## Project Status
 
-🚧 **Early development**
+🚧 **Development**
 
 The project is actively being developed. Data, tooling coverage, and functionality will evolve over time.
 
@@ -64,6 +64,12 @@ EntraTrace can be used to:
 * Identify tooling during incident response
 * Research the behavior of offensive identity tooling
 * Improve defensive visibility into identity attack techniques
+
+## Hunting Queries
+The following KQL hunting queries can be used to perform IOC sweeping on your log data:
+- [EntraTrace - Sign-in UserAgent Matches](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/EntraTrace%20-%20Sign-in%20UserAgent%20Matches.md)
+- [EntraTrace - Azure AD Graph UserAgent Matches](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/EntraTrace%20-%20Azure%20AD%20Graph%20UserAgent%20Matches.md)
+- [EntraTrace - Microsoft Graph UserAgent Matches](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/EntraTrace%20-%20Microsoft%20Graph%20UserAgent%20Matches.md)
 
 ## Local Deployment
 
