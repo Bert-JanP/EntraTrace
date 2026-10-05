@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "TeamsEnum"
   repository_url: "https://github.com/lucidra-security/TeamsEnum"
-last_checked_utc: "2026-10-04T15:56:24Z"
-last_update_utc: "2026-10-04T15:56:24Z"
+last_checked_utc: "2026-10-05T12:23:11Z"
+last_update_utc: "2026-10-05T12:23:11Z"
 user_agents:
   - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)"
 summary:
