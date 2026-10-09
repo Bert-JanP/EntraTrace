@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "pingcastle"
   repository_url: "https://github.com/netwrix/pingcastle"
-last_checked_utc: "2026-10-08T12:21:58Z"
-last_update_utc: "2026-10-08T12:21:58Z"
+last_checked_utc: "2026-10-09T12:20:21Z"
+last_update_utc: "2026-10-09T12:20:21Z"
 user_agents:
   - "PingCastleAutoUpdater"
 summary:
