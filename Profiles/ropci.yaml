@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "ropci"
   repository_url: "https://github.com/wunderwuzzi23/ropci"
-last_checked_utc: "2026-10-12T12:29:53Z"
-last_update_utc: "2026-10-12T12:29:53Z"
+last_checked_utc: "2026-10-13T12:22:45Z"
+last_update_utc: "2026-10-13T12:22:45Z"
 user_agents: []
 summary:
   total_unique_endpoints: 15
