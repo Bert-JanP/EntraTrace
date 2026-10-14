@@ -2,14 +2,14 @@ version: "1.0"
 tool:
   name: "pingcastle"
   repository_url: "https://github.com/netwrix/pingcastle"
-last_checked_utc: "2026-10-13T12:22:41Z"
-last_update_utc: "2026-10-13T12:22:41Z"
+last_checked_utc: "2026-10-14T12:20:59Z"
+last_update_utc: "2026-10-14T12:20:59Z"
 user_agents:
   - "PingCastleAutoUpdater"
 summary:
   total_unique_endpoints: 14
-  total_endpoint_mentions: 16
-  files_scanned: 543
+  total_endpoint_mentions: 15
+  files_scanned: 561
   api_families:
     -
       family: "other"
