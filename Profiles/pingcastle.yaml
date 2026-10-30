@@ -2,19 +2,19 @@ version: "1.0"
 tool:
   name: "pingcastle"
   repository_url: "https://github.com/netwrix/pingcastle"
-last_checked_utc: "2026-10-29T12:15:27Z"
-last_update_utc: "2026-10-29T12:15:27Z"
+last_checked_utc: "2026-10-30T12:15:09Z"
+last_update_utc: "2026-10-30T12:15:09Z"
 user_agents:
   - "PingCastleAutoUpdater"
 summary:
-  total_unique_endpoints: 14
-  total_endpoint_mentions: 15
-  files_scanned: 561
+  total_unique_endpoints: 15
+  total_endpoint_mentions: 16
+  files_scanned: 569
   api_families:
     -
       family: "other"
       host: "multiple"
-      unique_endpoints: 8
+      unique_endpoints: 9
     -
       family: "microsoft_graph"
       display_name: "Microsoft Graph"
@@ -77,5 +77,11 @@ apis:
       host: "main.iam.ad.ext.azure.com"
       endpoints:
         - "https://main.iam.ad.ext.azure.com/api/Directories"
+      resources:
+        - "api"
+    -
+      host: "server"
+      endpoints:
+        - "https://server/api/Release"
       resources:
         - "api"
