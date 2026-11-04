@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "MicroBurst"
   repository_url: "https://github.com/NetSPI/MicroBurst"
-last_checked_utc: "2026-11-03T12:12:46Z"
-last_update_utc: "2026-11-03T12:12:46Z"
+last_checked_utc: "2026-11-04T12:12:53Z"
+last_update_utc: "2026-11-04T12:12:53Z"
 user_agents: []
 summary:
   total_unique_endpoints: 78
