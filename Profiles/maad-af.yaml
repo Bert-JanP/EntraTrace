@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "MAAD-AF"
   repository_url: "https://github.com/vectra-ai-research/MAAD-AF"
-last_checked_utc: "2026-11-05T12:13:24Z"
-last_update_utc: "2026-11-05T12:13:24Z"
+last_checked_utc: "2026-11-06T12:13:02Z"
+last_update_utc: "2026-11-06T12:13:02Z"
 user_agents: []
 summary:
   total_unique_endpoints: 2
