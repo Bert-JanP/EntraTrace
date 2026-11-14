@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "PowerZure"
   repository_url: "https://github.com/hausec/PowerZure"
-last_checked_utc: "2026-11-13T12:12:26Z"
-last_update_utc: "2026-11-13T12:12:26Z"
+last_checked_utc: "2026-11-14T12:11:15Z"
+last_update_utc: "2026-11-14T12:11:15Z"
 user_agents: []
 summary:
   total_unique_endpoints: 29
