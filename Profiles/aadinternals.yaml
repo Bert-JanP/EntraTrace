@@ -2,8 +2,8 @@ version: "1.0"
 tool:
   name: "aadinternals"
   repository_url: "https://github.com/gerenios/aadinternals"
-last_checked_utc: "2026-11-15T12:11:32Z"
-last_update_utc: "2026-11-15T12:11:32Z"
+last_checked_utc: "2026-11-16T12:16:48Z"
+last_update_utc: "2026-11-16T12:16:48Z"
 user_agents:
   - "AADInternals"
   - "Android/8.0"
